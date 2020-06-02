@@ -73,22 +73,17 @@ namespace AdminLabrary.View.insertUpdateDelete
                 {
                     using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
                     {
-                        alqu.Id_Lector = idLector;
-                        alqu.Id_libro = IdLibro;
-                        alqu.Entregado = idAdmin;
-                        alqu.cantidad = int.Parse(txtCantidad.Text);
-                        alqu.fecha_salida = Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd"));
-                        DateTime fecha = Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd"));
-                        alqu.fecha_prevista_de_entrega = fecha.AddDays(8);
-                        db.Alquileres.Add(alqu);
+                        Alquileres alquiler = new Alquileres();
+                        alquiler.Id_Lector = idLector;
+                        alquiler.Id_libro = IdLibro;
+                        alquiler.Entregado = idAdmin;
+                        alquiler.cantidad = int.Parse(txtCantidad.Text);
+                        alquiler.fecha_salida = Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd"));
+                        alquiler.fecha_prevista_de_entrega = Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd")).AddDays(8);
+                        db.Alquileres.Add(alquiler);
                         db.SaveChanges();
                         frmPrincipal.prestamos.CargarDatos();
-                        txtLector.Text = "";
-                        txtLibro.Text = "";
-                        IdEntregado = 0;
-                        idAlquiler = 0;
-                        IdLibro = 0;
-                        idLector = 0;
+                        limpiar();
                         this.Close();
                     }
                 }
@@ -109,11 +104,11 @@ namespace AdminLabrary.View.insertUpdateDelete
         {
             using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
             {
-                if (int.Parse(txtCantidad.Text) > cantidad || int.Parse(txtCantidad.Text) > 0)
+                if (int.Parse(txtCantidad.Text) > cantidad || int.Parse(txtCantidad.Text) < 0)
                 {
                     MessageBox.Show("Cantidad incorrecta");
                 }
-                else if (int.Parse(txtCantidad.Text) < cantidad && int.Parse(txtCantidad.Text)>0)
+                else if (int.Parse(txtCantidad.Text) < cantidad && int.Parse(txtCantidad.Text) > 0)
                 {
                     alqu = db.Alquileres.Where(buscarID => buscarID.Id_alquiler == idAlquiler).First();
                     alqu.Id_Lector = idLector;
@@ -129,7 +124,7 @@ namespace AdminLabrary.View.insertUpdateDelete
                     Alquileres alqui = new Alquileres();
                     alqui.Id_Lector = idLector;
                     alqui.Id_libro = IdLibro;
-                    alqui.cantidad = cantidad -int.Parse(txtCantidad.Text);
+                    alqui.cantidad = cantidad - int.Parse(txtCantidad.Text);
                     alqui.Entregado = IdEntregado;
                     alqui.fecha_salida = fecha_salida;
                     alqui.fecha_prevista_de_entrega = fecha_pre;
@@ -151,7 +146,7 @@ namespace AdminLabrary.View.insertUpdateDelete
                     db.SaveChanges();
                 }
 
-               
+
 
             }
             limpiar();
@@ -168,6 +163,7 @@ namespace AdminLabrary.View.insertUpdateDelete
             idAlquiler = 0;
             IdLibro = 0;
             idLector = 0;
+            
            
 
         }
