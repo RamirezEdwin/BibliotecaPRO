@@ -17,6 +17,7 @@ namespace AdminLabrary.Model
         public int id_soli { get; set; }
         public int id_lector { get; set; }
         public int libros { get; set; }
+        public Nullable<int> estado { get; set; }
     
         public virtual Lectores Lectores { get; set; }
         public virtual Libros Libros1 { get; set; }
