@@ -283,7 +283,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNombre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmLibrosCRUD";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLibrosCRUD";
             this.Load += new System.EventHandler(this.frmLibrosCRUD_Load);
             this.ResumeLayout(false);

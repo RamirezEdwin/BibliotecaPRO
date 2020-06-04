@@ -41,37 +41,49 @@ namespace AdminLabrary.View.insertUpdateDelete
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
+            if (txtContraseña.Text != ""&& txtLector.Text != "" && txtUsuario.Text != "")
             {
-                if(rbtnLector.Checked == true)
+                using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
                 {
-                    rol.Usuario = txtUsuario.Text;
-                    rol.Contraseña = txtContraseña.Text;
-                    rol.Id_Lector = IDLector;
-                    rol.Rol = 0;
-                    rol.estado = 0;
-                    db.Roles.Add(rol);
-                    db.SaveChanges();
-                    Limpiar();
-                    frmPrincipal.admin.CargarDatos();
-                    this.Close();
+                    if (rbtnLector.Checked == true)
+                    {
+                        rol.Usuario = txtUsuario.Text;
+                        rol.Contraseña = txtContraseña.Text;
+                        rol.Id_Lector = IDLector;
+                        rol.Rol = 0;
+                        rol.estado = 0;
+                        db.Roles.Add(rol);
+                        db.SaveChanges();
+                        Limpiar();
+                        frmPrincipal.r.CargarDatos();
+                        frmPrincipal.admin.CargarDatos();
+                        this.Close();
+                    }
+                    else
+                    {
+                        rol.Usuario = txtUsuario.Text;
+                        rol.Contraseña = txtContraseña.Text;
+                        rol.Id_Lector = IDLector;
+                        rol.Rol = 1;
+                        rol.estado = 0;
+                        db.Roles.Add(rol);
+                        db.SaveChanges();
+                        Limpiar();
+                        frmPrincipal.r.CargarDatos();
+                        frmPrincipal.admin.CargarDatos();
+                        this.Close();
+                    }
+
+
                 }
-                else
-                {
-                    rol.Usuario = txtUsuario.Text;
-                    rol.Contraseña = txtContraseña.Text;
-                    rol.Id_Lector = IDLector;
-                    rol.Rol = 1;
-                    rol.estado = 0;
-                    db.Roles.Add(rol);
-                    db.SaveChanges();
-                    Limpiar();
-                    frmPrincipal.admin.CargarDatos();
-                    this.Close();
-                }
-               
 
             }
+            else
+            {
+                MessageBox.Show("Todos los campos son obligatorios");
+            }
+
+        
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -89,6 +101,7 @@ namespace AdminLabrary.View.insertUpdateDelete
                     db.Entry(rol).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                     Limpiar();
+                    frmPrincipal.r.CargarDatos();
                     frmPrincipal.admin.CargarDatos();
                     this.Close();
                 }
@@ -103,6 +116,7 @@ namespace AdminLabrary.View.insertUpdateDelete
                     db.Entry(rol).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                     Limpiar();
+                    frmPrincipal.r.CargarDatos();
                     frmPrincipal.admin.CargarDatos();
                     this.Close();
                 }
@@ -126,6 +140,7 @@ namespace AdminLabrary.View.insertUpdateDelete
                     db.Entry(rol).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                     Limpiar();
+                    frmPrincipal.r.CargarDatos();
                     frmPrincipal.admin.CargarDatos();
                     this.Close();
                 }
@@ -140,6 +155,7 @@ namespace AdminLabrary.View.insertUpdateDelete
                     db.Entry(rol).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                     Limpiar();
+                    frmPrincipal.r.CargarDatos();
                     frmPrincipal.admin.CargarDatos();
                     this.Close();
                 }

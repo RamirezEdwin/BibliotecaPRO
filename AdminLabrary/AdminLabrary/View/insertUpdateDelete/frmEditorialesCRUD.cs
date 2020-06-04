@@ -30,7 +30,7 @@ namespace AdminLabrary.View.insertUpdateDelete
         public int ID;
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtEditorial.Text != "")
+            if (txtEditorial.Text != "" && txtDirecion.Text!="")
             {
                 using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
                 {
@@ -50,7 +50,7 @@ namespace AdminLabrary.View.insertUpdateDelete
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (txtEditorial.Text != "")
+            if (txtEditorial.Text != "" && txtDirecion.Text != "")
             {
                 using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
                 {

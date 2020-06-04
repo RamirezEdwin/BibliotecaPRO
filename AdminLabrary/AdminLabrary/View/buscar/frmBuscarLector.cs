@@ -105,6 +105,10 @@ namespace AdminLabrary.View.buscar
                 string Nombre = dgvLecto.CurrentRow.Cells[1].Value.ToString();
                 frmPrincipal.admin.admin.txtLector.Text = Nombre;
                 frmPrincipal.admin.admin.IDLector = int.Parse(id);
+                string idro = dgvLecto.CurrentRow.Cells[0].Value.ToString();
+                string Nombrer = dgvLecto.CurrentRow.Cells[1].Value.ToString();
+                frmPrincipal.r.admin.txtLector.Text = Nombre;
+                frmPrincipal.r.admin.IDLector = int.Parse(id);
                 this.Close();
             }
             else

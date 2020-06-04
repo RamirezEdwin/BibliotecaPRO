@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrestamos));
             this.dgvPrestamos = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,17 +50,19 @@
             this.rbtnAdministrador = new System.Windows.Forms.RadioButton();
             this.btnRetrazo = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvPrestamos
             // 
             this.dgvPrestamos.AllowUserToAddRows = false;
             this.dgvPrestamos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvPrestamos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvPrestamos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPrestamos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -82,11 +84,11 @@
             this.dgvPrestamos.Location = new System.Drawing.Point(12, 140);
             this.dgvPrestamos.Name = "dgvPrestamos";
             this.dgvPrestamos.ReadOnly = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvPrestamos.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvPrestamos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPrestamos.Size = new System.Drawing.Size(917, 399);
             this.dgvPrestamos.TabIndex = 2;
             this.dgvPrestamos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrestamos_CellClick);
@@ -163,24 +165,44 @@
             // btnRecibir
             // 
             this.btnRecibir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnRecibir.BackColor = System.Drawing.Color.Chartreuse;
+            this.btnRecibir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRecibir.Enabled = false;
-            this.btnRecibir.Location = new System.Drawing.Point(193, 89);
+            this.btnRecibir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRecibir.FlatAppearance.BorderSize = 2;
+            this.btnRecibir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRecibir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnRecibir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecibir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecibir.Image = ((System.Drawing.Image)(resources.GetObject("btnRecibir.Image")));
+            this.btnRecibir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRecibir.Location = new System.Drawing.Point(193, 84);
             this.btnRecibir.Name = "btnRecibir";
-            this.btnRecibir.Size = new System.Drawing.Size(142, 36);
+            this.btnRecibir.Size = new System.Drawing.Size(142, 45);
             this.btnRecibir.TabIndex = 14;
-            this.btnRecibir.Text = "RECIBIR";
-            this.btnRecibir.UseVisualStyleBackColor = true;
+            this.btnRecibir.Text = "   RECIBIR";
+            this.btnRecibir.UseVisualStyleBackColor = false;
             this.btnRecibir.Click += new System.EventHandler(this.btnRecibir_Click);
             // 
             // btnVer
             // 
             this.btnVer.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnVer.Location = new System.Drawing.Point(365, 89);
+            this.btnVer.BackColor = System.Drawing.Color.Chartreuse;
+            this.btnVer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVer.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnVer.FlatAppearance.BorderSize = 2;
+            this.btnVer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnVer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVer.Image = ((System.Drawing.Image)(resources.GetObject("btnVer.Image")));
+            this.btnVer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVer.Location = new System.Drawing.Point(370, 84);
             this.btnVer.Name = "btnVer";
-            this.btnVer.Size = new System.Drawing.Size(142, 36);
+            this.btnVer.Size = new System.Drawing.Size(144, 45);
             this.btnVer.TabIndex = 15;
-            this.btnVer.Text = "PRESTAMOS FINALIZADOS";
-            this.btnVer.UseVisualStyleBackColor = true;
+            this.btnVer.Text = "         PRESTAMOS         FINALIZADOS";
+            this.btnVer.UseVisualStyleBackColor = false;
             this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
             // 
             // txtBuscar
@@ -197,6 +219,7 @@
             // 
             this.rbtnLector.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rbtnLector.AutoSize = true;
+            this.rbtnLector.BackColor = System.Drawing.SystemColors.Control;
             this.rbtnLector.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.rbtnLector.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
             this.rbtnLector.Location = new System.Drawing.Point(718, 103);
@@ -205,7 +228,7 @@
             this.rbtnLector.TabIndex = 17;
             this.rbtnLector.TabStop = true;
             this.rbtnLector.Text = "Lector";
-            this.rbtnLector.UseVisualStyleBackColor = true;
+            this.rbtnLector.UseVisualStyleBackColor = false;
             // 
             // rbtnLibro
             // 
@@ -238,12 +261,23 @@
             // btnRetrazo
             // 
             this.btnRetrazo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnRetrazo.Location = new System.Drawing.Point(535, 89);
+            this.btnRetrazo.BackColor = System.Drawing.Color.Chartreuse;
+            this.btnRetrazo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRetrazo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRetrazo.FlatAppearance.BorderSize = 2;
+            this.btnRetrazo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRetrazo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnRetrazo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRetrazo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRetrazo.Image = ((System.Drawing.Image)(resources.GetObject("btnRetrazo.Image")));
+            this.btnRetrazo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRetrazo.Location = new System.Drawing.Point(541, 84);
             this.btnRetrazo.Name = "btnRetrazo";
-            this.btnRetrazo.Size = new System.Drawing.Size(142, 36);
+            this.btnRetrazo.Size = new System.Drawing.Size(151, 45);
             this.btnRetrazo.TabIndex = 20;
             this.btnRetrazo.Text = "HISTORIAL CON RETRASO";
-            this.btnRetrazo.UseVisualStyleBackColor = true;
+            this.btnRetrazo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRetrazo.UseVisualStyleBackColor = false;
             this.btnRetrazo.Click += new System.EventHandler(this.btnRetrazo_Click);
             // 
             // btnNuevo
@@ -259,19 +293,31 @@
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(12, 85);
+            this.btnNuevo.Location = new System.Drawing.Point(12, 84);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(142, 42);
+            this.btnNuevo.Size = new System.Drawing.Size(142, 45);
             this.btnNuevo.TabIndex = 21;
             this.btnNuevo.Text = "NUEVO";
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(899, 70);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
             // 
             // frmPrestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 551);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnRetrazo);
             this.Controls.Add(this.rbtnAdministrador);
@@ -285,6 +331,7 @@
             this.Text = "frmPrestamos";
             this.Load += new System.EventHandler(this.frmPrestamos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,5 +358,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IDLibro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Entregadoid;
         private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

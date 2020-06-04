@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarAlquiler));
             this.dgvAlquiler = new System.Windows.Forms.DataGridView();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lector = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Libro = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,7 +37,10 @@
             this.Entregado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha_Entrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Recibido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlquiler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvAlquiler
@@ -64,14 +67,6 @@
             this.dgvAlquiler.TabIndex = 12;
             this.dgvAlquiler.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlquiler_CellDoubleClick);
             this.dgvAlquiler.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvAlquiler_KeyDown);
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Location = new System.Drawing.Point(12, 29);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(244, 20);
-            this.txtBuscar.TabIndex = 11;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // Id
             // 
@@ -121,17 +116,42 @@
             this.Recibido.Name = "Recibido";
             this.Recibido.ReadOnly = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1021, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtBuscar.Location = new System.Drawing.Point(840, 12);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(211, 26);
+            this.txtBuscar.TabIndex = 23;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
             // frmBuscarAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1063, 345);
-            this.Controls.Add(this.dgvAlquiler);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.dgvAlquiler);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmBuscarAlquiler";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBuscarAlquiler";
             this.Load += new System.EventHandler(this.frmBuscarAlquiler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlquiler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,7 +160,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvAlquiler;
-        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lector;
         private System.Windows.Forms.DataGridViewTextBoxColumn Libro;
@@ -148,5 +167,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Entregado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Entrega;
         private System.Windows.Forms.DataGridViewTextBoxColumn Recibido;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtBuscar;
     }
 }
