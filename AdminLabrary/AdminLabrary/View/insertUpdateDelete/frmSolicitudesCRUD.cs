@@ -16,7 +16,17 @@ namespace AdminLabrary.View.insertUpdateDelete
         public frmSolicitudesCRUD()
         {
             InitializeComponent();
+            limpiar();
         }
+        public void limpiar()
+        {
+            
+            txtCantidad.Text = "";
+
+        }
+
+        public int cantidad;
+        public int idlibro;
         solicitudes soli = new solicitudes();
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -26,6 +36,7 @@ namespace AdminLabrary.View.insertUpdateDelete
                 {
                     if (txtCantidad.Text != "" && txtLibro.Text != "")
                     {
+
                        
                     }
                 }

@@ -88,6 +88,7 @@
           <Property Name="id_soli" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_lector" Type="int" Nullable="false" />
           <Property Name="libros" Type="int" Nullable="false" />
+          <Property Name="Cantidad" Type="int" />
           <Property Name="estado" Type="int" />
         </EntityType>
         <Association Name="FK__Alquilere__Entre__4316F928">
@@ -396,6 +397,7 @@
           <Property Name="estado" Type="Int32" />
           <NavigationProperty Name="Lectores" Relationship="BibliotecaprogramModel.FK__solicitud__id_le__46E78A0C" FromRole="solicitudes" ToRole="Lectores" />
           <NavigationProperty Name="Libros1" Relationship="BibliotecaprogramModel.FK__solicitud__libro__47DBAE45" FromRole="solicitudes" ToRole="Libros" />
+          <Property Name="Cantidad" Type="Int32" />
         </EntityType>
         <Association Name="FK__Alquilere__Entre__4316F928">
           <End Type="BibliotecaprogramModel.Roles" Role="Roles" Multiplicity="1" />
@@ -597,6 +599,7 @@
           <EntitySetMapping Name="solicitudes">
             <EntityTypeMapping TypeName="BibliotecaprogramModel.solicitudes">
               <MappingFragment StoreEntitySet="solicitudes">
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
                 <ScalarProperty Name="estado" ColumnName="estado" />
                 <ScalarProperty Name="libros" ColumnName="libros" />
                 <ScalarProperty Name="id_lector" ColumnName="id_lector" />

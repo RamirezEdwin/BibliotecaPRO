@@ -17,8 +17,9 @@ namespace AdminLabrary.View.principales
         {
             InitializeComponent();
         }
+       
 
-        private void btnNuevo_Click(object sender, EventArgs e)
+            private void btnNuevo_Click(object sender, EventArgs e)
         {
             frmSolicitudesCRUD solicitud = new frmSolicitudesCRUD();
             solicitud.Show();
