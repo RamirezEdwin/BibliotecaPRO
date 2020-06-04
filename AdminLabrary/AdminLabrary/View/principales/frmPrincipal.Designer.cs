@@ -367,6 +367,7 @@
             this.btnRoles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRoles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRoles.UseVisualStyleBackColor = false;
+            this.btnRoles.Click += new System.EventHandler(this.btnRoles_Click);
             // 
             // button2
             // 

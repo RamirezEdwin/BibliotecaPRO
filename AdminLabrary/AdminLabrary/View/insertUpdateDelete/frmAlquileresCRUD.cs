@@ -68,29 +68,48 @@ namespace AdminLabrary.View.insertUpdateDelete
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            int Cantidad;
               if (int.Parse(txtCantidad.Text) <= cantidad) {
                 if (txtLector.Text != "" && txtLibro.Text != "" && int.Parse(txtCantidad.Text) > 0)
                 {
+                    
                     using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
                     {
-                        Alquileres alquiler = new Alquileres();
-                        alquiler.Id_Lector = idLector;
-                        alquiler.Id_libro = IdLibro;
-                        alquiler.Entregado = idAdmin;
-                        alquiler.cantidad = int.Parse(txtCantidad.Text);
-                        alquiler.fecha_salida = Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd"));
-                        alquiler.fecha_prevista_de_entrega = Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd")).AddDays(8);
-                        db.Alquileres.Add(alquiler);
-                        db.SaveChanges();
-                        frmPrincipal.prestamos.CargarDatos();
-                        limpiar();
-                        this.Close();
+                        var lista = from lis in db.Libros
+                                    where lis.Id_libro == IdLibro
+                                    select new
+                                    {
+                                        cantidad = lis.cantidad
+                                    };
+                        foreach(var i in lista)
+                        {
+                            cantidad = i.cantidad;
+                        }
+
+                        if(cantidad >= int.Parse(txtCantidad.Text))
+                        {
+                            Alquileres alquiler = new Alquileres();
+                            alquiler.Id_Lector = idLector;
+                            alquiler.Id_libro = IdLibro;
+                            alquiler.Entregado = idAdmin;
+                            alquiler.cantidad = int.Parse(txtCantidad.Text);
+                            alquiler.fecha_salida = Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd"));
+                            alquiler.fecha_prevista_de_entrega = Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd")).AddDays(8);
+                            db.Alquileres.Add(alquiler);
+                            db.SaveChanges();
+                            frmPrincipal.prestamos.CargarDatos();
+                            limpiar();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("La cantidad de libros en existencia es: " + cantidad.ToString());
+                        }
+                        
+                        
                     }
                 }
-                else
-                {
-                    MessageBox.Show(idAdmin.ToString() + idLector.ToString() + IdLibro.ToString());
-                }
+               
             }
             else
             {

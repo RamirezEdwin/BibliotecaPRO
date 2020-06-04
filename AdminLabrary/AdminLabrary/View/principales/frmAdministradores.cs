@@ -52,32 +52,9 @@ namespace AdminLabrary.formularios.principales
         }
 
         public frmAdministradoresCRUD admin = new frmAdministradoresCRUD();
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            admin.btnEditar.Enabled = false;
-            admin.btnEliminar.Enabled = false;
-            admin.btnSeleccionar.Enabled = true;
-            admin.btnGuardar.Enabled = true;
-            admin.rbtnLector.Checked = true;
-            admin.Limpiar();
-            admin.ShowDialog();
-        }
+        
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            admin.btnEditar.Enabled = false;
-            admin.btnEliminar.Enabled = true;
-            admin.btnSeleccionar.Enabled = false;
-            admin.btnGuardar.Enabled = false;
-            admin.txtContraseña.Enabled = false;
-            admin.txtUsuario.Enabled = false;
-            btnEditar.Enabled = false;
-            btnEliminar.Enabled = false;
-            admin.rbtnAdmi.Checked = true;
-            Seleccionar();
-            admin.ShowDialog();
-
-        }
+        
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -86,7 +63,6 @@ namespace AdminLabrary.formularios.principales
             admin.btnSeleccionar.Enabled = true;
             admin.btnGuardar.Enabled = false;
             btnEditar.Enabled = false;
-            btnEliminar.Enabled = false;
             admin.rbtnAdmi.Checked = true;
             Seleccionar();
             admin.ShowDialog();
@@ -96,7 +72,7 @@ namespace AdminLabrary.formularios.principales
         private void dgvAdmi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btnEditar.Enabled = true;
-            btnEliminar.Enabled = true;
+           
         }
         void Seleccionar()
         {

@@ -238,6 +238,12 @@
     <Compile Include="View\insertUpdateDelete\frmSolicitudesCRUD.Designer.cs">
       <DependentUpon>frmSolicitudesCRUD.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\principales\frmRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\principales\frmRoles.Designer.cs">
+      <DependentUpon>frmRoles.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\principales\frmSolicitudes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -375,6 +381,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\principales\frmRoles.resx">
+      <DependentUpon>frmRoles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\principales\frmSolicitudes.resx">
       <DependentUpon>frmSolicitudes.cs</DependentUpon>

@@ -204,6 +204,11 @@ namespace AdminLabrary.formularios.principales
         {
 
         }
+         public static frmRoles r = new frmRoles();
+        private void btnRoles_Click(object sender, EventArgs e)
+        {
+            MostrarPanel(r);
+        }
     }
 
 }
