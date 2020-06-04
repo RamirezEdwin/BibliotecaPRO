@@ -36,7 +36,7 @@ namespace AdminLabrary.View.principales
                             where admin.Usuario == txtUsuario.Text
                             && admin.Contraseña == txtContraseña.Text
                             && admin.estado == 0
-                            && admin.Rol ==0
+                            && admin.Rol ==1
 
                             select new
                             {
