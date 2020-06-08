@@ -57,15 +57,16 @@ namespace AdminLabrary.View.buscar
                 using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
                 {
                     dgvLecto.Rows.Clear();
+                    
                     string buscar = txtBuscar.Text;
-                    var listaL = from LEC in db.Lectores
-                                 where LEC.Nombres.Contains(buscar)
-                                  && LEC.estado == 0
+                    var listaL = from rol in db.Roles
+                                 where rol.Usuario.Contains(buscar)
+                                  && rol.estado == 0
                                  select new
                                  {
-                                     ID = LEC.Id_Lector,
-                                     Nombres = LEC.Nombres,
-                                     Apellidos = LEC.Apellidos
+                                     ID = rol.Id_rol,
+                                     Nombres = rol.Usuario,
+                                     
                                  };
                     foreach (var i in listaL)
                     {
@@ -83,7 +84,7 @@ namespace AdminLabrary.View.buscar
                         }
                         if (cantidad < 3)
                         {
-                            dgvLecto.Rows.Add(i.ID, i.Nombres, i.Apellidos,cantidad);
+                            dgvLecto.Rows.Add(i.ID, i.Nombres, "",cantidad);
                         }
                     }
 
