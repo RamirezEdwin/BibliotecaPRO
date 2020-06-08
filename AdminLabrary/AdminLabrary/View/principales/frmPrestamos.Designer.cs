@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrestamos));
             this.dgvPrestamos = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,18 +51,22 @@
             this.btnRetrazo = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvPrestamos
             // 
             this.dgvPrestamos.AllowUserToAddRows = false;
             this.dgvPrestamos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvPrestamos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvPrestamos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPrestamos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -81,15 +85,15 @@
             this.IDLibro,
             this.Entregadoid});
             this.dgvPrestamos.GridColor = System.Drawing.Color.Lime;
-            this.dgvPrestamos.Location = new System.Drawing.Point(12, 140);
+            this.dgvPrestamos.Location = new System.Drawing.Point(-2, 223);
             this.dgvPrestamos.Name = "dgvPrestamos";
             this.dgvPrestamos.ReadOnly = true;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvPrestamos.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvPrestamos.Size = new System.Drawing.Size(917, 399);
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvPrestamos.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvPrestamos.Size = new System.Drawing.Size(952, 324);
             this.dgvPrestamos.TabIndex = 2;
             this.dgvPrestamos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrestamos_CellClick);
             this.dgvPrestamos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrestamos_CellContentClick);
@@ -176,7 +180,7 @@
             this.btnRecibir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecibir.Image = ((System.Drawing.Image)(resources.GetObject("btnRecibir.Image")));
             this.btnRecibir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRecibir.Location = new System.Drawing.Point(193, 84);
+            this.btnRecibir.Location = new System.Drawing.Point(189, 156);
             this.btnRecibir.Name = "btnRecibir";
             this.btnRecibir.Size = new System.Drawing.Size(142, 45);
             this.btnRecibir.TabIndex = 14;
@@ -197,7 +201,7 @@
             this.btnVer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVer.Image = ((System.Drawing.Image)(resources.GetObject("btnVer.Image")));
             this.btnVer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVer.Location = new System.Drawing.Point(370, 84);
+            this.btnVer.Location = new System.Drawing.Point(369, 156);
             this.btnVer.Name = "btnVer";
             this.btnVer.Size = new System.Drawing.Size(144, 45);
             this.btnVer.TabIndex = 15;
@@ -207,9 +211,9 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtBuscar.Location = new System.Drawing.Point(718, 70);
+            this.txtBuscar.Location = new System.Drawing.Point(718, 156);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(211, 26);
             this.txtBuscar.TabIndex = 16;
@@ -217,12 +221,12 @@
             // 
             // rbtnLector
             // 
-            this.rbtnLector.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rbtnLector.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rbtnLector.AutoSize = true;
-            this.rbtnLector.BackColor = System.Drawing.SystemColors.Control;
+            this.rbtnLector.BackColor = System.Drawing.Color.Transparent;
             this.rbtnLector.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.rbtnLector.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
-            this.rbtnLector.Location = new System.Drawing.Point(718, 103);
+            this.rbtnLector.Location = new System.Drawing.Point(718, 189);
             this.rbtnLector.Name = "rbtnLector";
             this.rbtnLector.Size = new System.Drawing.Size(55, 17);
             this.rbtnLector.TabIndex = 17;
@@ -232,11 +236,11 @@
             // 
             // rbtnLibro
             // 
-            this.rbtnLibro.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rbtnLibro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rbtnLibro.AutoSize = true;
             this.rbtnLibro.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.rbtnLibro.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
-            this.rbtnLibro.Location = new System.Drawing.Point(779, 103);
+            this.rbtnLibro.Location = new System.Drawing.Point(779, 189);
             this.rbtnLibro.Name = "rbtnLibro";
             this.rbtnLibro.Size = new System.Drawing.Size(48, 17);
             this.rbtnLibro.TabIndex = 18;
@@ -246,11 +250,11 @@
             // 
             // rbtnAdministrador
             // 
-            this.rbtnAdministrador.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rbtnAdministrador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rbtnAdministrador.AutoSize = true;
             this.rbtnAdministrador.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.rbtnAdministrador.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
-            this.rbtnAdministrador.Location = new System.Drawing.Point(841, 102);
+            this.rbtnAdministrador.Location = new System.Drawing.Point(841, 188);
             this.rbtnAdministrador.Name = "rbtnAdministrador";
             this.rbtnAdministrador.Size = new System.Drawing.Size(88, 17);
             this.rbtnAdministrador.TabIndex = 19;
@@ -271,7 +275,7 @@
             this.btnRetrazo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRetrazo.Image = ((System.Drawing.Image)(resources.GetObject("btnRetrazo.Image")));
             this.btnRetrazo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRetrazo.Location = new System.Drawing.Point(541, 84);
+            this.btnRetrazo.Location = new System.Drawing.Point(541, 156);
             this.btnRetrazo.Name = "btnRetrazo";
             this.btnRetrazo.Size = new System.Drawing.Size(151, 45);
             this.btnRetrazo.TabIndex = 20;
@@ -293,7 +297,7 @@
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(12, 84);
+            this.btnNuevo.Location = new System.Drawing.Point(12, 156);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(142, 45);
             this.btnNuevo.TabIndex = 21;
@@ -303,20 +307,46 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(899, 70);
+            this.pictureBox1.Location = new System.Drawing.Point(899, 156);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(633, -1);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(296, 83);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 24;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-2, -1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(942, 218);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 25;
+            this.pictureBox2.TabStop = false;
+            // 
             // frmPrestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 551);
+            this.Controls.Add(this.dgvPrestamos);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnRetrazo);
@@ -326,12 +356,14 @@
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnVer);
             this.Controls.Add(this.btnRecibir);
-            this.Controls.Add(this.dgvPrestamos);
+            this.Controls.Add(this.pictureBox2);
             this.Name = "frmPrestamos";
             this.Text = "frmPrestamos";
             this.Load += new System.EventHandler(this.frmPrestamos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,5 +391,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Entregadoid;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

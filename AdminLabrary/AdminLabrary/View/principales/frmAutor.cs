@@ -109,5 +109,15 @@ namespace AdminLabrary.formularios.principales
             btnEditar.Enabled = false;
             autor.ShowDialog();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
