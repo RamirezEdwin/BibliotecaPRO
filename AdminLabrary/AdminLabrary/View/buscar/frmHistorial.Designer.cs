@@ -32,15 +32,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHistorial));
             this.dgvAlquiler = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lector = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Libro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Entregado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ratraso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlquiler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +62,7 @@
             this.dgvAlquiler.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.Lector,
+            this.usuario,
             this.Libro,
             this.Entregado,
             this.Estado,
@@ -80,48 +82,6 @@
             this.dgvAlquiler.Size = new System.Drawing.Size(917, 374);
             this.dgvAlquiler.TabIndex = 14;
             this.dgvAlquiler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlquiler_CellContentClick);
-            // 
-            // Id
-            // 
-            this.Id.FillWeight = 30F;
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // Lector
-            // 
-            this.Lector.FillWeight = 120F;
-            this.Lector.HeaderText = "Lector";
-            this.Lector.Name = "Lector";
-            this.Lector.ReadOnly = true;
-            // 
-            // Libro
-            // 
-            this.Libro.FillWeight = 120F;
-            this.Libro.HeaderText = "Libro";
-            this.Libro.Name = "Libro";
-            this.Libro.ReadOnly = true;
-            // 
-            // Entregado
-            // 
-            this.Entregado.FillWeight = 50F;
-            this.Entregado.HeaderText = "Admin";
-            this.Entregado.Name = "Entregado";
-            this.Entregado.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.FillWeight = 80F;
-            this.Estado.HeaderText = "Estado del prestamo";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            // 
-            // Ratraso
-            // 
-            this.Ratraso.FillWeight = 40F;
-            this.Ratraso.HeaderText = "Retraso en dias";
-            this.Ratraso.Name = "Ratraso";
-            this.Ratraso.ReadOnly = true;
             // 
             // label1
             // 
@@ -155,6 +115,54 @@
             this.txtBuscar.TabIndex = 25;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
+            // Id
+            // 
+            this.Id.FillWeight = 30F;
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // Lector
+            // 
+            this.Lector.FillWeight = 120F;
+            this.Lector.HeaderText = "Lector";
+            this.Lector.Name = "Lector";
+            this.Lector.ReadOnly = true;
+            // 
+            // usuario
+            // 
+            this.usuario.HeaderText = "Usuario";
+            this.usuario.Name = "usuario";
+            this.usuario.ReadOnly = true;
+            // 
+            // Libro
+            // 
+            this.Libro.FillWeight = 120F;
+            this.Libro.HeaderText = "Libro";
+            this.Libro.Name = "Libro";
+            this.Libro.ReadOnly = true;
+            // 
+            // Entregado
+            // 
+            this.Entregado.FillWeight = 50F;
+            this.Entregado.HeaderText = "Admin";
+            this.Entregado.Name = "Entregado";
+            this.Entregado.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.FillWeight = 80F;
+            this.Estado.HeaderText = "Estado del prestamo";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
+            // Ratraso
+            // 
+            this.Ratraso.FillWeight = 40F;
+            this.Ratraso.HeaderText = "Retraso en dias";
+            this.Ratraso.Name = "Ratraso";
+            this.Ratraso.ReadOnly = true;
+            // 
             // frmHistorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -182,13 +190,14 @@
 
         private System.Windows.Forms.DataGridView dgvAlquiler;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lector;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Libro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Entregado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ratraso;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtBuscar;
     }
 }

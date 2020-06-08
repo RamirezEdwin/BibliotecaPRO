@@ -26,25 +26,25 @@ namespace AdminLabrary.View.principales
         {
             using ( BibliotecaprogramEntities db = new BibliotecaprogramEntities())
             {
-               
+                dgvSolicitudes.Rows.Clear();
                 if (Loging == 0)
                 {
                     var lista = from solic in db.solicitudes 
-                                from Lec in db.Lectores
+                                from rol in db.Roles
                                 from Lib in db.Libros
                                 
                                 where solic.id_lector == ID
-                                where solic.id_lector == Lec.Id_Lector 
+                                where solic.id_lector == rol.Id_rol 
                                 where solic.libros == Lib.Id_libro
                                 where solic.estado == 0
                                 select new
                                 {
                                     ID = solic.id_soli,
-                                    Lector = Lec.Nombres,
+                                    Lector = rol.Usuario,
                                     Libros = Lib.Nombre,
                                     Cantidad = solic.Cantidad,
                                     Estado = solic.estado,
-                                    Id_Lector = solic.id_lector,
+                                    Id_Lector = rol.Id_rol,
                                     Id_Libro = solic.libros
 
                                 };
