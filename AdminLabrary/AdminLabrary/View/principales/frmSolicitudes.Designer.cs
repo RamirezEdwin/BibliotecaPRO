@@ -183,8 +183,7 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-<<<<<<< HEAD
-=======
+
             // IdSolicitud
             // 
             this.IdSolicitud.HeaderText = "ID";
@@ -223,7 +222,7 @@
             this.Id_Libro.ReadOnly = true;
             this.Id_Libro.Visible = false;
             // 
->>>>>>> 334432c95612731e3f215d6a2896cfd38a70b8bb
+
             // frmSolicitudes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
