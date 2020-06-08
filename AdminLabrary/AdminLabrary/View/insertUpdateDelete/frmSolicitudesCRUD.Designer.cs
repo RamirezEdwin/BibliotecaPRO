@@ -35,6 +35,7 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnSeleccionarLector = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -50,7 +51,6 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Enabled = false;
             this.txtCantidad.Location = new System.Drawing.Point(124, 132);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(235, 20);
@@ -127,12 +127,31 @@
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
+            // btnSeleccionarLector
+            // 
+            this.btnSeleccionarLector.BackColor = System.Drawing.Color.Lime;
+            this.btnSeleccionarLector.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSeleccionarLector.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnSeleccionarLector.FlatAppearance.BorderSize = 2;
+            this.btnSeleccionarLector.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnSeleccionarLector.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnSeleccionarLector.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionarLector.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.btnSeleccionarLector.Location = new System.Drawing.Point(365, 48);
+            this.btnSeleccionarLector.Name = "btnSeleccionarLector";
+            this.btnSeleccionarLector.Size = new System.Drawing.Size(111, 29);
+            this.btnSeleccionarLector.TabIndex = 33;
+            this.btnSeleccionarLector.Text = "SELECCIONAR";
+            this.btnSeleccionarLector.UseVisualStyleBackColor = false;
+            this.btnSeleccionarLector.Click += new System.EventHandler(this.btnSeleccionarLector_Click);
+            // 
             // frmSolicitudesCRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(486, 246);
+            this.Controls.Add(this.btnSeleccionarLector);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnGuardar);
@@ -156,5 +175,6 @@
         public System.Windows.Forms.Button btnActualizar;
         public System.Windows.Forms.Button btnGuardar;
         public System.Windows.Forms.Button btnEliminar;
+        public System.Windows.Forms.Button btnSeleccionarLector;
     }
 }

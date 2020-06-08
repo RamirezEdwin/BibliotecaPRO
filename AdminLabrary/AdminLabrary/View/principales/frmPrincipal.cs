@@ -209,6 +209,13 @@ namespace AdminLabrary.formularios.principales
         {
             MostrarPanel(r);
         }
+        public static frmSolicitudes Sol = new frmSolicitudes();
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Sol.CargarDatos();
+
+            MostrarPanel(Sol);
+        }
     }
 
 }

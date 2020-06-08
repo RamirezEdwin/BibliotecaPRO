@@ -54,7 +54,10 @@ namespace AdminLabrary.View.principales
                     foreach (var i in lista)
                     {
                         frmPrincipal.prestamos.alquiler.idAdmin = i.ID;
+                        frmPrincipal.Sol.solicitud.idlector = i.ID;
+                        frmPrincipal.Sol.ID = i.ID;
                     }
+                    frmPrincipal.Sol.Loging = 0;
                     f.ShowDialog();
                     this.Close();
 

@@ -62,12 +62,24 @@ namespace AdminLabrary.View.buscar
         public int indicador;
         void seleccionar()
         {
-            String Id = dgvLibro.CurrentRow.Cells[0].Value.ToString();
-            String Nombre = dgvLibro.CurrentRow.Cells[1].Value.ToString();
-            frmPrincipal.prestamos.alquiler.txtLibro.Text = Nombre;
-            frmPrincipal.prestamos.alquiler.IdLibro = int.Parse(Id);
-            this.Close();
-            
+            if (indicador == 0)
+            {
+                String Id = dgvLibro.CurrentRow.Cells[0].Value.ToString();
+                String Nombre = dgvLibro.CurrentRow.Cells[1].Value.ToString();
+                frmPrincipal.prestamos.alquiler.txtLibro.Text = Nombre;
+                frmPrincipal.prestamos.alquiler.IdLibro = int.Parse(Id);
+                this.Close();
+
+            }
+            else
+            {
+                String Id = dgvLibro.CurrentRow.Cells[0].Value.ToString();
+                String Nombre = dgvLibro.CurrentRow.Cells[1].Value.ToString();
+                frmPrincipal.Sol.solicitud.txtLibro.Text = Nombre;
+                frmPrincipal.Sol.solicitud.idlibro = int.Parse(Id);
+                this.Close();
+            }
+
         }
 
         private void dgvLibro_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
