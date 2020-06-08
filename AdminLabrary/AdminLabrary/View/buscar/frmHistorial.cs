@@ -29,42 +29,39 @@ namespace AdminLabrary.View.buscar
             using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
             {
                 string buscar = txtBuscar.Text;
-                
+
                 var lista = from al in db.Alquileres
-                            from usu in db.Roles
+                            from lec in db.Lectores
                             from li in db.Libros
                             from adm in db.Roles
-                            from lec in db.Lectores
-                            where lec.Id_Lector == usu.Id_Lector
-                            where al.Id_Lector == usu.Id_rol
+                            where al.Id_Lector == lec.Id_Lector
                             && al.Id_libro == li.Id_libro
                             && al.Entregado == adm.Id_rol
                             && lec.Nombres.Contains(buscar)
-                            
-                            
+
+
                             select new
                             {
-                                ID= al.Id_alquiler,
+                                ID = al.Id_alquiler,
                                 Lector = lec.Nombres,
-                                usuario = usu.Usuario,
                                 Libro = li.Nombre,
                                 entregado = adm.Usuario,
                                 fechaS = al.fecha_salida,
                                 fechaP = al.fecha_prevista_de_entrega,
-                                fecha =  al.fecha_de_entrega,
+                                fecha = al.fecha_de_entrega,
                                 recibido = al.Recibido
                             };
-                foreach(var i in lista)
+                foreach (var i in lista)
                 {
                     DateTime fechasalida = i.fechaS;
                     DateTime fechaPre = i.fechaP;
                     TimeSpan con = DateTime.Now - fechaPre;
-                  
+
                     if (i.recibido == null)
                     {
                         if (int.Parse(con.Days.ToString()) > 0)
                         {
-                            dgvAlquiler.Rows.Add(i.ID, i.Lector,i.usuario, i.Libro, i.entregado,"Pendiente", con.Days);
+                            dgvAlquiler.Rows.Add(i.ID, i.Lector, i.Libro, i.entregado, "Pendiente", con.Days);
                         }
                     }
                     else
@@ -73,7 +70,7 @@ namespace AdminLabrary.View.buscar
                         TimeSpan contadorEn = fechaPre - fechaentrega;
                         if (contadorEn.Days < 0)
                         {
-                            dgvAlquiler.Rows.Add(i.ID, i.Lector,i.usuario, i.Libro, i.entregado,"Entregado", - contadorEn.Days );
+                            dgvAlquiler.Rows.Add(i.ID, i.Lector, i.Libro, i.entregado, "Entregado", -contadorEn.Days);
                         }
                     }
                 }

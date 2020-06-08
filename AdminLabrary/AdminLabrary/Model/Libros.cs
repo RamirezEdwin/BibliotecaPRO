@@ -17,8 +17,8 @@ namespace AdminLabrary.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Libros()
         {
-            this.Alquileres = new HashSet<Alquileres>();
             this.solicitudes = new HashSet<solicitudes>();
+            this.Alquileres = new HashSet<Alquileres>();
         }
     
         public int Id_libro { get; set; }
@@ -31,12 +31,12 @@ namespace AdminLabrary.Model
         public int Id_categoria { get; set; }
         public Nullable<int> estado { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Alquileres> Alquileres { get; set; }
         public virtual Autores Autores { get; set; }
         public virtual Categorias Categorias { get; set; }
         public virtual Editoriales Editoriales { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<solicitudes> solicitudes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Alquileres> Alquileres { get; set; }
     }
 }

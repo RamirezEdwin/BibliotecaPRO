@@ -19,7 +19,7 @@ namespace AdminLabrary.View.principales
         public frmLogin()
         {
             InitializeComponent();
-            txtContraseña.PasswordChar = '*';
+          
 
         }
 
@@ -36,13 +36,15 @@ namespace AdminLabrary.View.principales
                             where admin.Usuario == txtUsuario.Text
                             && admin.Contraseña == txtContraseña.Text
                             && admin.estado == 0
-                            && admin.Rol ==1
+                           
 
                             select new
                             {
                                 ID = admin.Id_rol,
                                 Nombre = admin.Usuario,
-                                contaseña = admin.Contraseña
+                                contaseña = admin.Contraseña,
+                                idLector = admin.Id_Lector,
+                                rol = admin.Rol
                             };
 
 
@@ -53,13 +55,31 @@ namespace AdminLabrary.View.principales
                     f.lblUsuarioARecibir.Text = usu;
                     foreach (var i in lista)
                     {
-                        frmPrincipal.prestamos.alquiler.idAdmin = i.ID;
-                        frmPrincipal.Sol.solicitud.idlector = i.ID;
-                        frmPrincipal.Sol.ID = i.ID;
+                        if(i.rol == 0)
+                        {
+                            frmPrincipal.Sol.solicitud.idlector = i.idLector;
+                            frmPrincipal.Sol.ID = i.idLector;
+                            frmPrincipal.Sol.Loging = 0;
+                            frmLogin.f.rol = 0;
+                            frmLogin.f.roles();
+                            
+
+                        }
+                        else
+                        {
+                            frmPrincipal.prestamos.alquiler.idAdmin = i.ID;
+                            frmPrincipal.Sol.solicitud.idlector = i.idLector;
+                            frmPrincipal.Sol.ID = i.idLector;
+                            frmPrincipal.Sol.Loging = 1;
+                            frmLogin.f.rol = 1;
+                            frmLogin.f.roles();
+                           
+                        }
+                        
                     }
-                    frmPrincipal.Sol.Loging = 0;
-                    f.ShowDialog();
-                    this.Close();
+                    f.Show();
+                    this.Hide();
+
 
                 }
                 else
@@ -82,7 +102,15 @@ namespace AdminLabrary.View.principales
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            txtContraseña.PasswordChar = '*';
             
         }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+       
     }
 }

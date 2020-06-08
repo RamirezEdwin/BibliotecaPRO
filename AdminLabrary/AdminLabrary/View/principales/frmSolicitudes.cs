@@ -30,21 +30,21 @@ namespace AdminLabrary.View.principales
                 if (Loging == 0)
                 {
                     var lista = from solic in db.solicitudes 
-                                from rol in db.Roles
+                                from lec in db.Lectores
                                 from Lib in db.Libros
                                 
                                 where solic.id_lector == ID
-                                where solic.id_lector == rol.Id_rol 
+                                where solic.id_lector == lec.Id_Lector
                                 where solic.libros == Lib.Id_libro
                                 where solic.estado == 0
                                 select new
                                 {
                                     ID = solic.id_soli,
-                                    Lector = rol.Usuario,
+                                    Lector = lec.Nombres,
                                     Libros = Lib.Nombre,
                                     Cantidad = solic.Cantidad,
                                     Estado = solic.estado,
-                                    Id_Lector = rol.Id_rol,
+                                    Id_Lector = lec.Id_Lector,
                                     Id_Libro = solic.libros
 
                                 };
@@ -58,8 +58,9 @@ namespace AdminLabrary.View.principales
                         }
                     }
                 }
-                else
+                else if (Loging == 1)
                 {
+                  
                     var lista = from solic in db.solicitudes
                                 from Lec in db.Lectores
                                 from Lib in db.Libros
@@ -83,7 +84,7 @@ namespace AdminLabrary.View.principales
                         if (iterar.Estado == 0)
                         {
                             dgvSolicitudes.Rows.Add(iterar.ID, iterar.Lector, iterar.Libros, iterar.Cantidad,
-                            iterar.Id_Lector, iterar.Id_Libro, "Inactivo");
+                            iterar.Id_Lector, iterar.Id_Libro, "activo");
                         }
                     }
                 }

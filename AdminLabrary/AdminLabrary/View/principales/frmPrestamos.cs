@@ -36,25 +36,23 @@ namespace AdminLabrary.View.principales
                 {
                     string buscar = txtBuscar.Text;
                     var lista = from pre in db.Alquileres
-                                from li in db.Libros  
+                                from li in db.Libros
+                                from le in db.Lectores
                                 from ad in db.Roles
-                                from lec in db.Lectores
-                                from adm in db.Roles
-                                where pre.Id_Lector ==  ad.Id_rol
+                                where pre.Id_Lector == le.Id_Lector
                                 && pre.Id_libro == li.Id_libro
-                                && pre.Entregado == adm.Id_rol
+                                && pre.Entregado == ad.Id_rol
                                 && pre.Recibido == null
-                                && lec.Nombres.Contains(buscar)
-                                && lec.Id_Lector == ad.Id_Lector
-                                
+                                && le.Nombres.Contains(buscar)
+
 
                                 select new
                                 {
                                     ID = pre.Id_alquiler,
-                                    Lector = lec.Nombres,
+                                    Lector = le.Nombres,
                                     Libro = li.Nombre,
-                                    Cantidad =pre.cantidad,
-                                    Entregado = adm.Usuario,
+                                    Cantidad = pre.cantidad,
+                                    Entregado = ad.Usuario,
                                     Fecha_salida = pre.fecha_salida,
                                     Fecha_prevista_Entrega = pre.fecha_prevista_de_entrega,
                                     IDLector = pre.Id_Lector,
@@ -64,87 +62,83 @@ namespace AdminLabrary.View.principales
 
                     foreach (var i in lista)
                     {
-                        dgvPrestamos.Rows.Add(i.ID, i.Lector, i.Libro,i.Cantidad, i.Entregado, i.Fecha_salida, i.Fecha_prevista_Entrega, i.IDLector, i.IDLibro, i.IDEntregado);
+                        dgvPrestamos.Rows.Add(i.ID, i.Lector, i.Libro, i.Cantidad, i.Entregado, i.Fecha_salida, i.Fecha_prevista_Entrega, i.IDLector, i.IDLibro, i.IDEntregado);
 
                     }
                 }
                 else if (rbtnLibro.Checked == true)
                 {
-                    string buscar = txtBuscar.Text;
-                    var lista = from pre in db.Alquileres
-                                from li in db.Libros
-                                from ad in db.Roles
-                                from adm in db.Roles
-                                from lec in db.Lectores
-                              
-                                where pre.Id_Lector == ad.Id_rol
-                                && pre.Id_libro == li.Id_libro
-                                && pre.Entregado == adm.Id_rol
-                                && pre.Recibido == null
-                                && li.Nombre.Contains(buscar)
-                                && lec.Id_Lector == ad.Id_Lector
-
-
-
-                                select new
-                                {
-                                    ID = pre.Id_alquiler,
-                                    Lector = lec.Nombres,
-                                    Libro = li.Nombre,
-                                    Cantidad = pre.cantidad,
-                                    Entregado = adm.Usuario,
-                                    Fecha_salida = pre.fecha_salida,
-                                    Fecha_prevista_Entrega = pre.fecha_prevista_de_entrega,
-                                    IDLector = pre.Id_Lector,
-                                    IDLibro = pre.Id_libro,
-                                    IDEntregado = pre.Entregado
-                                };
-
-                    foreach (var i in lista)
                     {
-                        dgvPrestamos.Rows.Add(i.ID, i.Lector, i.Libro, i.Cantidad, i.Entregado, i.Fecha_salida, i.Fecha_prevista_Entrega, i.IDLector, i.IDLibro, i.IDEntregado);
+                        string buscar = txtBuscar.Text;
+                        var lista = from pre in db.Alquileres
+                                    from li in db.Libros
+                                    from le in db.Lectores
+                                    from ad in db.Roles
+                                    where pre.Id_Lector == le.Id_Lector
+                                    && pre.Id_libro == li.Id_libro
+                                    && pre.Entregado == ad.Id_rol
+                                    && pre.Recibido == null
+                                    && li.Nombre.Contains(buscar)
 
+
+                                    select new
+                                    {
+                                        ID = pre.Id_alquiler,
+                                        Lector = le.Nombres,
+                                        Libro = li.Nombre,
+                                        Cantidad = pre.cantidad,
+                                        Entregado = ad.Usuario,
+                                        Fecha_salida = pre.fecha_salida,
+                                        Fecha_prevista_Entrega = pre.fecha_prevista_de_entrega,
+                                        IDLector = pre.Id_Lector,
+                                        IDLibro = pre.Id_libro,
+                                        IDEntregado = pre.Entregado
+                                    };
+
+                        foreach (var i in lista)
+                        {
+                            dgvPrestamos.Rows.Add(i.ID, i.Lector, i.Libro, i.Cantidad, i.Entregado, i.Fecha_salida, i.Fecha_prevista_Entrega, i.IDLector, i.IDLibro, i.IDEntregado);
+
+                        }
                     }
                 }
                 else if (rbtnAdministrador.Checked == true)
                 {
-                    string buscar = txtBuscar.Text;
-                    var lista = from pre in db.Alquileres
-                                from li in db.Libros
-                                from ad in db.Roles
-                                from adm in db.Roles
-                                from lec in db.Lectores
-
-                                where pre.Id_Lector == ad.Id_rol
-                                && pre.Id_libro == li.Id_libro
-                                && pre.Entregado == adm.Id_rol
-                                && pre.Recibido == null
-                                && lec.Id_Lector == ad.Id_Lector
-                                && adm.Usuario.Contains(buscar)
-
-
-                                select new
-                                {
-                                    ID = pre.Id_alquiler,
-                                    Lector = lec.Nombres ,
-                                    Libro = li.Nombre,
-                                    Cantidad = pre.cantidad,
-                                    Entregado = adm.Usuario,
-                                    Fecha_salida = pre.fecha_salida,
-                                    Fecha_prevista_Entrega = pre.fecha_prevista_de_entrega,
-                                    IDLector = pre.Id_Lector,
-                                    IDLibro = pre.Id_libro,
-                                    IDEntregado = pre.Entregado
-                                };
-
-                    foreach (var i in lista)
                     {
-                        dgvPrestamos.Rows.Add(i.ID, i.Lector, i.Libro, i.Cantidad, i.Entregado, i.Fecha_salida, i.Fecha_prevista_Entrega, i.IDLector, i.IDLibro, i.IDEntregado);
+                        string buscar = txtBuscar.Text;
+                        var lista = from pre in db.Alquileres
+                                    from li in db.Libros
+                                    from le in db.Lectores
+                                    from ad in db.Roles
+                                    where pre.Id_Lector == le.Id_Lector
+                                    && pre.Id_libro == li.Id_libro
+                                    && pre.Entregado == ad.Id_rol
+                                    && pre.Recibido == null
+                                    && ad.Usuario.Contains(buscar)
 
+
+                                    select new
+                                    {
+                                        ID = pre.Id_alquiler,
+                                        Lector = le.Nombres,
+                                        Libro = li.Nombre,
+                                        Cantidad = pre.cantidad,
+                                        Entregado = ad.Usuario,
+                                        Fecha_salida = pre.fecha_salida,
+                                        Fecha_prevista_Entrega = pre.fecha_prevista_de_entrega,
+                                        IDLector = pre.Id_Lector,
+                                        IDLibro = pre.Id_libro,
+                                        IDEntregado = pre.Entregado
+                                    };
+
+                        foreach (var i in lista)
+                        {
+                            dgvPrestamos.Rows.Add(i.ID, i.Lector, i.Libro, i.Cantidad, i.Entregado, i.Fecha_salida, i.Fecha_prevista_Entrega, i.IDLector, i.IDLibro, i.IDEntregado);
+
+                        }
                     }
-                }
 
-                
+                }
             }
 
         }
@@ -206,3 +200,4 @@ namespace AdminLabrary.View.principales
         }
     }
 }
+

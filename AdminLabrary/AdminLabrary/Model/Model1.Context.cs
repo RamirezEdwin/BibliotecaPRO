@@ -25,7 +25,6 @@ namespace AdminLabrary.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Alquileres> Alquileres { get; set; }
         public virtual DbSet<Autores> Autores { get; set; }
         public virtual DbSet<Categorias> Categorias { get; set; }
         public virtual DbSet<Editoriales> Editoriales { get; set; }
@@ -33,5 +32,6 @@ namespace AdminLabrary.Model
         public virtual DbSet<Libros> Libros { get; set; }
         public virtual DbSet<Roles> Roles { get; set; }
         public virtual DbSet<solicitudes> solicitudes { get; set; }
+        public virtual DbSet<Alquileres> Alquileres { get; set; }
     }
 }

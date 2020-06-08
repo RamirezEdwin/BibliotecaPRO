@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSolicitudes));
             this.dgvSolicitudes = new System.Windows.Forms.DataGridView();
             this.IdSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,17 +41,19 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvSolicitudes
             // 
             this.dgvSolicitudes.AllowUserToAddRows = false;
             this.dgvSolicitudes.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvSolicitudes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvSolicitudes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSolicitudes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -66,15 +68,15 @@
             this.Id_Lector,
             this.Id_Libro});
             this.dgvSolicitudes.GridColor = System.Drawing.Color.Lime;
-            this.dgvSolicitudes.Location = new System.Drawing.Point(18, 116);
+            this.dgvSolicitudes.Location = new System.Drawing.Point(-2, 222);
             this.dgvSolicitudes.Name = "dgvSolicitudes";
             this.dgvSolicitudes.ReadOnly = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvSolicitudes.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvSolicitudes.Size = new System.Drawing.Size(917, 374);
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvSolicitudes.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvSolicitudes.Size = new System.Drawing.Size(952, 374);
             this.dgvSolicitudes.TabIndex = 10;
             this.dgvSolicitudes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSolicitudes_CellClick);
             // 
@@ -131,7 +133,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.Red;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(793, 38);
+            this.btnEliminar.Location = new System.Drawing.Point(634, 156);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(142, 42);
             this.btnEliminar.TabIndex = 18;
@@ -154,7 +156,7 @@
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(417, 38);
+            this.btnEditar.Location = new System.Drawing.Point(325, 156);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(142, 42);
             this.btnEditar.TabIndex = 17;
@@ -175,7 +177,7 @@
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(19, 38);
+            this.btnNuevo.Location = new System.Drawing.Point(12, 156);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(142, 42);
             this.btnNuevo.TabIndex = 16;
@@ -183,51 +185,23 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-
-            // IdSolicitud
+            // pictureBox1
             // 
-            this.IdSolicitud.HeaderText = "ID";
-            this.IdSolicitud.Name = "IdSolicitud";
-            this.IdSolicitud.ReadOnly = true;
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(611, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(329, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
             // 
-            // Lector
-            // 
-            this.Lector.HeaderText = "Lector";
-            this.Lector.Name = "Lector";
-            this.Lector.ReadOnly = true;
-            // 
-            // Libros
-            // 
-            this.Libros.HeaderText = "Libros";
-            this.Libros.Name = "Libros";
-            this.Libros.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // Id_Lector
-            // 
-            this.Id_Lector.HeaderText = "Id_Lector";
-            this.Id_Lector.Name = "Id_Lector";
-            this.Id_Lector.ReadOnly = true;
-            this.Id_Lector.Visible = false;
-            // 
-            // Id_Libro
-            // 
-            this.Id_Libro.HeaderText = "Id_Libro";
-            this.Id_Libro.Name = "Id_Libro";
-            this.Id_Libro.ReadOnly = true;
-            this.Id_Libro.Visible = false;
-            // 
-
             // frmSolicitudes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 551);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
@@ -236,6 +210,7 @@
             this.Text = "frmSolicitudes";
             this.Load += new System.EventHandler(this.frmSolicitudes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -251,5 +226,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Lector;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Libro;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

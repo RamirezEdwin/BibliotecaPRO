@@ -63,7 +63,8 @@ namespace AdminLabrary.formularios.principales
         public static frmEditorial Editorial = new frmEditorial();
         private void btnProductos_Click(object sender, EventArgs e)
         {
-
+            color = 5;
+            cambiarcolor();
             MostrarPanel(Editorial);
 
         }
@@ -141,6 +142,8 @@ namespace AdminLabrary.formularios.principales
         public static frmAdministradores admin = new frmAdministradores();
         private void btnAdministrador_Click(object sender, EventArgs e)
         {
+            color = 3;
+            cambiarcolor();
             MostrarPanel(admin);
         }
 
@@ -148,28 +151,160 @@ namespace AdminLabrary.formularios.principales
         public static frmLectores lector = new frmLectores();
         private void btnLectores_Click(object sender, EventArgs e)
         {
-
+            color = 8;
+            cambiarcolor();
             MostrarPanel(lector);
 
         }
         public static frmCategoria categoria = new frmCategoria();
         private void btnCategoria_Click(object sender, EventArgs e)
         {
-
+            color = 4;
+            cambiarcolor();
             MostrarPanel(categoria);
 
         }
         public static frmLibros Lib = new frmLibros();
         private void btnLibros_Click(object sender, EventArgs e)
         {
+            color = 2;
+            cambiarcolor();
             Lib.CargaDratos();
 
             MostrarPanel(Lib);
 
         }
+
+        int color;
+        void cambiarcolor()
+        {
+            if(color == 0)
+            {
+                btnPrestamos.BackColor = Color.Teal;
+                btnSolicitudes.BackColor = Color.FromArgb(64,64,64,64);
+                btnLibros.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnAdmin.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnCategoria.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnEditorial.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnAutor.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnRoles.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnLectores.BackColor = Color.FromArgb(64, 64, 64, 64);
+            }else if (color == 1)
+            {
+                btnPrestamos.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnSolicitudes.BackColor = Color.Teal;
+                btnLibros.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnAdmin.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnCategoria.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnEditorial.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnAutor.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnRoles.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnLectores.BackColor = Color.FromArgb(64, 64, 64, 64);
+            }
+            else if (color == 2)
+            {
+                btnPrestamos.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnSolicitudes.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnLibros.BackColor = Color.Teal;
+                btnAdmin.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnCategoria.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnEditorial.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnAutor.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnRoles.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnLectores.BackColor = Color.FromArgb(64, 64, 64, 64);
+            }
+            else if (color == 3)
+            {
+                btnPrestamos.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnSolicitudes.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnLibros.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnAdmin.BackColor = Color.Teal;
+                btnCategoria.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnEditorial.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnAutor.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnRoles.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnLectores.BackColor = Color.FromArgb(64, 64, 64, 64);
+            }
+            else if (color == 4)
+            {
+                btnPrestamos.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnSolicitudes.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnLibros.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnAdmin.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnCategoria.BackColor = Color.Teal;
+                btnEditorial.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnAutor.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnRoles.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnLectores.BackColor = Color.FromArgb(64, 64, 64, 64);
+            }
+            else if (color == 5)
+            {
+                btnPrestamos.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnSolicitudes.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnLibros.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnAdmin.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnCategoria.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnEditorial.BackColor = Color.Teal;
+                btnAutor.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnRoles.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnLectores.BackColor = Color.FromArgb(64, 64, 64, 64);
+            }
+            else if (color == 6)
+            {
+                btnPrestamos.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnSolicitudes.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnLibros.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnAdmin.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnCategoria.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnEditorial.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnAutor.BackColor = Color.Teal;
+                btnRoles.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnLectores.BackColor = Color.FromArgb(64, 64, 64, 64);
+            }
+            else if (color == 7)
+            {
+                btnPrestamos.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnSolicitudes.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnLibros.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnAdmin.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnCategoria.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnEditorial.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnAutor.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnRoles.BackColor = Color.Teal;
+                btnLectores.BackColor = Color.FromArgb(64, 64, 64, 64);
+            }
+            else if (color == 8)
+            {
+                btnPrestamos.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnSolicitudes.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnLibros.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnAdmin.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnCategoria.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnEditorial.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnAutor.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnRoles.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnLectores.BackColor = Color.Teal;
+            }
+            else if (color == 9)
+            {
+                btnPrestamos.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnSolicitudes.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnLibros.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnAdmin.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnCategoria.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnEditorial.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnAutor.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnRoles.BackColor = Color.FromArgb(64, 64, 64, 64);
+                btnLectores.BackColor = Color.FromArgb(64, 64, 64, 64);
+            }
+
+        }
+
         public static frmPrestamos prestamos = new frmPrestamos();
         private void btnPrestamos_Click(object sender, EventArgs e)
         {
+            color = 0;
+            cambiarcolor();
             MostrarPanel(prestamos);
 
 
@@ -178,6 +313,8 @@ namespace AdminLabrary.formularios.principales
         public static frmAutor Autor = new frmAutor();
         private void btnAutor_Click(object sender, EventArgs e)
         {
+            color = 6;
+            cambiarcolor();
             MostrarPanel(Autor);
         }
 
@@ -207,14 +344,39 @@ namespace AdminLabrary.formularios.principales
          public static frmRoles r = new frmRoles();
         private void btnRoles_Click(object sender, EventArgs e)
         {
+            color = 7;
+            cambiarcolor();
             MostrarPanel(r);
         }
         public static frmSolicitudes Sol = new frmSolicitudes();
         private void button2_Click(object sender, EventArgs e)
         {
+            color = 1;
+            cambiarcolor();
             Sol.CargarDatos();
 
             MostrarPanel(Sol);
+        }
+
+        private void PictureBox5_Click(object sender, EventArgs e)
+        {
+            picLogo.BringToFront();
+            color = 9;
+            cambiarcolor();
+        }
+        public int rol;
+        public void roles()
+        {
+            if (rol == 0)
+            {
+                btnPrestamos.Hide();
+                btnAdmin.Hide();
+                btnCategoria.Hide();
+                btnAutor.Hide();
+                btnEditorial.Hide();
+                btnRoles.Hide();
+                btnLectores.Hide();
+            }
         }
     }
 

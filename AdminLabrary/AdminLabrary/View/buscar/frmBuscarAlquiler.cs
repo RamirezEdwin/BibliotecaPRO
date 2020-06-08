@@ -31,22 +31,20 @@ namespace AdminLabrary.View.buscar
                 dgvAlquiler.Rows.Clear();
                 string buscar = txtBuscar.Text;
                 var ListaA = from Alq in db.Alquileres
-                             from Lec in db.Roles
+                             from Lec in db.Lectores
                              from Lib in db.Libros
                              from admi in db.Roles
                              from admin in db.Roles
-                             from lect in db.Lectores
                              where Alq.Entregado == admi.Id_rol
                              where Alq.Recibido == admin.Id_rol
-                             where Lec.Id_rol == Alq.Id_Lector
+                             where Lec.Id_Lector == Alq.Id_Lector
                              where Alq.Id_libro == Lib.Id_libro
-                             where lect.Id_Lector == Lec.Id_Lector
                              where Alq.Recibido != null
-                             where lect.Nombres.Contains(buscar)
+                             where Lec.Nombres.Contains(buscar)
                              select new
                              {
                                  ID = Alq.Id_alquiler,
-                                 Lector = lect.Nombres,
+                                 Lector = Lec.Nombres,
                                  Libro = Lib.Nombre,
                                  entregado = admi.Usuario,
                                  Cantidad = Alq.cantidad,
@@ -55,7 +53,7 @@ namespace AdminLabrary.View.buscar
                              };
                 foreach (var iterar in ListaA)
                 {
-                    dgvAlquiler.Rows.Add(iterar.ID, iterar.Lector, iterar.Libro,iterar.Cantidad,iterar.entregado,  iterar.Fecha_Entrega, iterar.Recibido);
+                    dgvAlquiler.Rows.Add(iterar.ID, iterar.Lector, iterar.Libro, iterar.Cantidad, iterar.entregado, iterar.Fecha_Entrega, iterar.Recibido);
                 }
             }
         }
@@ -85,7 +83,7 @@ namespace AdminLabrary.View.buscar
 
         private void dgvAlquiler_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 seleccionar();
             }

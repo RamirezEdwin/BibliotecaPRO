@@ -47,10 +47,10 @@
             this.btnAdmin = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.PictureBox();
             this.btnRoles = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSolicitudes = new System.Windows.Forms.Button();
             this.PanelMenu = new System.Windows.Forms.Panel();
             this.pPrincipal = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.PanelBarraTitulo.SuspendLayout();
@@ -59,7 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             this.PanelMenu.SuspendLayout();
             this.pPrincipal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCerrar
@@ -171,6 +171,7 @@
             this.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBox5.TabIndex = 18;
             this.PictureBox5.TabStop = false;
+            this.PictureBox5.Click += new System.EventHandler(this.PictureBox5_Click);
             // 
             // Panel10
             // 
@@ -184,8 +185,8 @@
             // 
             this.btnEditorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnEditorial.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditorial.FlatAppearance.BorderSize = 0;
-            this.btnEditorial.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnEditorial.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEditorial.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnEditorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnEditorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -194,7 +195,7 @@
             this.btnEditorial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditorial.Location = new System.Drawing.Point(18, 452);
             this.btnEditorial.Name = "btnEditorial";
-            this.btnEditorial.Size = new System.Drawing.Size(167, 56);
+            this.btnEditorial.Size = new System.Drawing.Size(187, 56);
             this.btnEditorial.TabIndex = 2;
             this.btnEditorial.Text = "  Editorial";
             this.btnEditorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -206,8 +207,8 @@
             // 
             this.btnCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCategoria.FlatAppearance.BorderSize = 0;
-            this.btnCategoria.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnCategoria.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCategoria.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnCategoria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -216,7 +217,7 @@
             this.btnCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCategoria.Location = new System.Drawing.Point(17, 384);
             this.btnCategoria.Name = "btnCategoria";
-            this.btnCategoria.Size = new System.Drawing.Size(168, 62);
+            this.btnCategoria.Size = new System.Drawing.Size(188, 62);
             this.btnCategoria.TabIndex = 4;
             this.btnCategoria.Text = "  Categoria";
             this.btnCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -228,8 +229,8 @@
             // 
             this.btnLibros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnLibros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLibros.FlatAppearance.BorderSize = 0;
-            this.btnLibros.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnLibros.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLibros.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnLibros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnLibros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLibros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -250,8 +251,8 @@
             // 
             this.btnLectores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnLectores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLectores.FlatAppearance.BorderSize = 0;
-            this.btnLectores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnLectores.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLectores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnLectores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnLectores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLectores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -260,7 +261,7 @@
             this.btnLectores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLectores.Location = new System.Drawing.Point(17, 634);
             this.btnLectores.Name = "btnLectores";
-            this.btnLectores.Size = new System.Drawing.Size(168, 52);
+            this.btnLectores.Size = new System.Drawing.Size(188, 52);
             this.btnLectores.TabIndex = 6;
             this.btnLectores.Text = "  Lectores";
             this.btnLectores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -272,8 +273,8 @@
             // 
             this.btnPrestamos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnPrestamos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPrestamos.FlatAppearance.BorderSize = 0;
-            this.btnPrestamos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnPrestamos.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnPrestamos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnPrestamos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnPrestamos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrestamos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -294,8 +295,8 @@
             // 
             this.btnAutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAutor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAutor.FlatAppearance.BorderSize = 0;
-            this.btnAutor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnAutor.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAutor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnAutor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -304,7 +305,7 @@
             this.btnAutor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAutor.Location = new System.Drawing.Point(18, 514);
             this.btnAutor.Name = "btnAutor";
-            this.btnAutor.Size = new System.Drawing.Size(167, 52);
+            this.btnAutor.Size = new System.Drawing.Size(187, 52);
             this.btnAutor.TabIndex = 17;
             this.btnAutor.Text = "  Autor";
             this.btnAutor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -316,8 +317,8 @@
             // 
             this.btnAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdmin.FlatAppearance.BorderSize = 0;
-            this.btnAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnAdmin.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -351,8 +352,8 @@
             // 
             this.btnRoles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnRoles.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRoles.FlatAppearance.BorderSize = 0;
-            this.btnRoles.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnRoles.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRoles.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnRoles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnRoles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -361,7 +362,7 @@
             this.btnRoles.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRoles.Location = new System.Drawing.Point(18, 572);
             this.btnRoles.Name = "btnRoles";
-            this.btnRoles.Size = new System.Drawing.Size(167, 56);
+            this.btnRoles.Size = new System.Drawing.Size(187, 56);
             this.btnRoles.TabIndex = 19;
             this.btnRoles.Text = "Roles";
             this.btnRoles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -369,33 +370,33 @@
             this.btnRoles.UseVisualStyleBackColor = false;
             this.btnRoles.Click += new System.EventHandler(this.btnRoles_Click);
             // 
-            // button2
+            // btnSolicitudes
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(16, 201);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(189, 56);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Solicitudes";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnSolicitudes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSolicitudes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSolicitudes.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSolicitudes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnSolicitudes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnSolicitudes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSolicitudes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSolicitudes.ForeColor = System.Drawing.Color.White;
+            this.btnSolicitudes.Image = ((System.Drawing.Image)(resources.GetObject("btnSolicitudes.Image")));
+            this.btnSolicitudes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSolicitudes.Location = new System.Drawing.Point(16, 201);
+            this.btnSolicitudes.Name = "btnSolicitudes";
+            this.btnSolicitudes.Size = new System.Drawing.Size(189, 56);
+            this.btnSolicitudes.TabIndex = 20;
+            this.btnSolicitudes.Text = "Solicitudes";
+            this.btnSolicitudes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSolicitudes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSolicitudes.UseVisualStyleBackColor = false;
+            this.btnSolicitudes.Click += new System.EventHandler(this.button2_Click);
             // 
             // PanelMenu
             // 
             this.PanelMenu.AutoScroll = true;
             this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.PanelMenu.Controls.Add(this.button2);
+            this.PanelMenu.Controls.Add(this.btnSolicitudes);
             this.PanelMenu.Controls.Add(this.btnRoles);
             this.PanelMenu.Controls.Add(this.btnMenu);
             this.PanelMenu.Controls.Add(this.btnAdmin);
@@ -420,26 +421,26 @@
             this.pPrincipal.AutoSize = true;
             this.pPrincipal.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pPrincipal.BackColor = System.Drawing.Color.White;
-            this.pPrincipal.Controls.Add(this.pictureBox1);
+            this.pPrincipal.Controls.Add(this.picLogo);
             this.pPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pPrincipal.Location = new System.Drawing.Point(236, 32);
             this.pPrincipal.Name = "pPrincipal";
             this.pPrincipal.Size = new System.Drawing.Size(946, 629);
             this.pPrincipal.TabIndex = 19;
             // 
-            // pictureBox1
+            // picLogo
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.picLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(39, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(904, 561);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
+            this.picLogo.BackColor = System.Drawing.Color.White;
+            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
+            this.picLogo.Location = new System.Drawing.Point(-5, 0);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(948, 629);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 24;
+            this.picLogo.TabStop = false;
             // 
             // frmPrincipal
             // 
@@ -464,7 +465,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             this.PanelMenu.ResumeLayout(false);
             this.pPrincipal.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -489,9 +490,9 @@
         internal System.Windows.Forms.Button btnAdmin;
         internal System.Windows.Forms.PictureBox btnMenu;
         internal System.Windows.Forms.Button btnRoles;
-        internal System.Windows.Forms.Button button2;
+        internal System.Windows.Forms.Button btnSolicitudes;
         internal System.Windows.Forms.Panel PanelMenu;
         private System.Windows.Forms.Panel pPrincipal;
-        internal System.Windows.Forms.PictureBox pictureBox1;
+        internal System.Windows.Forms.PictureBox picLogo;
     }
 }

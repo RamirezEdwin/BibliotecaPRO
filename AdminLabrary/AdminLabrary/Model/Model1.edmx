@@ -104,11 +104,11 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__Alquilere__Id_Le__4BAC3F29">
-          <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+          <End Role="Lectores" Type="Self.Lectores" Multiplicity="1" />
           <End Role="Alquileres" Type="Self.Alquileres" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Roles">
-              <PropertyRef Name="Id_rol" />
+            <Principal Role="Lectores">
+              <PropertyRef Name="Id_Lector" />
             </Principal>
             <Dependent Role="Alquileres">
               <PropertyRef Name="Id_Lector" />
@@ -213,7 +213,7 @@
             <End Role="Alquileres" EntitySet="Alquileres" />
           </AssociationSet>
           <AssociationSet Name="FK__Alquilere__Id_Le__4BAC3F29" Association="Self.FK__Alquilere__Id_Le__4BAC3F29">
-            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Lectores" EntitySet="Lectores" />
             <End Role="Alquileres" EntitySet="Alquileres" />
           </AssociationSet>
           <AssociationSet Name="FK__Alquilere__Id_li__4CA06362" Association="Self.FK__Alquilere__Id_li__4CA06362">
@@ -250,7 +250,6 @@
     <edmx:ConceptualModels>
       <Schema Namespace="BibliotecaprogramModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="BibliotecaprogramEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Alquileres" EntityType="BibliotecaprogramModel.Alquileres" />
           <EntitySet Name="Autores" EntityType="BibliotecaprogramModel.Autores" />
           <EntitySet Name="Categorias" EntityType="BibliotecaprogramModel.Categorias" />
           <EntitySet Name="Editoriales" EntityType="BibliotecaprogramModel.Editoriales" />
@@ -258,22 +257,6 @@
           <EntitySet Name="Libros" EntityType="BibliotecaprogramModel.Libros" />
           <EntitySet Name="Roles" EntityType="BibliotecaprogramModel.Roles" />
           <EntitySet Name="solicitudes" EntityType="BibliotecaprogramModel.solicitudes" />
-          <AssociationSet Name="FK__Alquilere__Entre__4316F928" Association="BibliotecaprogramModel.FK__Alquilere__Entre__4316F928">
-            <End Role="Roles" EntitySet="Roles" />
-            <End Role="Alquileres" EntitySet="Alquileres" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Alquilere__Id_Le__4BAC3F29" Association="BibliotecaprogramModel.FK__Alquilere__Id_Le__4BAC3F29">
-            <End Role="Lectores" EntitySet="Lectores" />
-            <End Role="Alquileres" EntitySet="Alquileres" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Alquilere__Id_li__4CA06362" Association="BibliotecaprogramModel.FK__Alquilere__Id_li__4CA06362">
-            <End Role="Libros" EntitySet="Libros" />
-            <End Role="Alquileres" EntitySet="Alquileres" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Alquilere__Recib__440B1D61" Association="BibliotecaprogramModel.FK__Alquilere__Recib__440B1D61">
-            <End Role="Roles" EntitySet="Roles" />
-            <End Role="Alquileres" EntitySet="Alquileres" />
-          </AssociationSet>
           <AssociationSet Name="FK__Libros__Id_autor__4AB81AF0" Association="BibliotecaprogramModel.FK__Libros__Id_autor__4AB81AF0">
             <End Role="Autores" EntitySet="Autores" />
             <End Role="Libros" EntitySet="Libros" />
@@ -294,30 +277,24 @@
             <End Role="Libros" EntitySet="Libros" />
             <End Role="solicitudes" EntitySet="solicitudes" />
           </AssociationSet>
-          <AssociationSet Name="FK__Alquilere__Id_Le__4BAC3F291" Association="BibliotecaprogramModel.FK__Alquilere__Id_Le__4BAC3F291">
+          <EntitySet Name="Alquileres" EntityType="BibliotecaprogramModel.Alquileres" />
+          <AssociationSet Name="FK__Alquilere__Entre__4316F928" Association="BibliotecaprogramModel.FK__Alquilere__Entre__4316F928">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Alquileres" EntitySet="Alquileres" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Alquilere__Id_Le__4BAC3F29" Association="BibliotecaprogramModel.FK__Alquilere__Id_Le__4BAC3F29">
+            <End Role="Lectores" EntitySet="Lectores" />
+            <End Role="Alquileres" EntitySet="Alquileres" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Alquilere__Id_li__4CA06362" Association="BibliotecaprogramModel.FK__Alquilere__Id_li__4CA06362">
+            <End Role="Libros" EntitySet="Libros" />
+            <End Role="Alquileres" EntitySet="Alquileres" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Alquilere__Recib__440B1D61" Association="BibliotecaprogramModel.FK__Alquilere__Recib__440B1D61">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="Alquileres" EntitySet="Alquileres" />
           </AssociationSet>
         </EntityContainer>
-        <EntityType Name="Alquileres">
-          <Key>
-            <PropertyRef Name="Id_alquiler" />
-          </Key>
-          <Property Name="Id_alquiler" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Id_Lector" Type="Int32" Nullable="false" />
-          <Property Name="Id_libro" Type="Int32" Nullable="false" />
-          <Property Name="cantidad" Type="Int32" Nullable="false" />
-          <Property Name="Entregado" Type="Int32" Nullable="false" />
-          <Property Name="fecha_salida" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="fecha_prevista_de_entrega" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="fecha_de_entrega" Type="DateTime" Precision="0" />
-          <Property Name="Recibido" Type="Int32" />
-          <NavigationProperty Name="Roles" Relationship="BibliotecaprogramModel.FK__Alquilere__Entre__4316F928" FromRole="Alquileres" ToRole="Roles" />
-          <NavigationProperty Name="Lectores" Relationship="BibliotecaprogramModel.FK__Alquilere__Id_Le__4BAC3F29" FromRole="Alquileres" ToRole="Lectores" />
-          <NavigationProperty Name="Libros" Relationship="BibliotecaprogramModel.FK__Alquilere__Id_li__4CA06362" FromRole="Alquileres" ToRole="Libros" />
-          <NavigationProperty Name="Roles1" Relationship="BibliotecaprogramModel.FK__Alquilere__Recib__440B1D61" FromRole="Alquileres" ToRole="Roles" />
-          <NavigationProperty Name="Roles11" Relationship="BibliotecaprogramModel.FK__Alquilere__Id_Le__4BAC3F291" FromRole="Alquileres" ToRole="Roles" />
-        </EntityType>
         <EntityType Name="Autores">
           <Key>
             <PropertyRef Name="Id_autor" />
@@ -357,8 +334,8 @@
           <Property Name="Nombres" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="estado" Type="Int32" />
-          <NavigationProperty Name="Alquileres" Relationship="BibliotecaprogramModel.FK__Alquilere__Id_Le__4BAC3F29" FromRole="Lectores" ToRole="Alquileres" />
           <NavigationProperty Name="solicitudes" Relationship="BibliotecaprogramModel.FK__solicitud__id_le__46E78A0C" FromRole="Lectores" ToRole="solicitudes" />
+          <NavigationProperty Name="Alquileres" Relationship="BibliotecaprogramModel.FK__Alquilere__Id_Le__4BAC3F29" FromRole="Lectores" ToRole="Alquileres" />
         </EntityType>
         <EntityType Name="Libros">
           <Key>
@@ -373,11 +350,11 @@
           <Property Name="Id_Editorial" Type="Int32" Nullable="false" />
           <Property Name="Id_categoria" Type="Int32" Nullable="false" />
           <Property Name="estado" Type="Int32" />
-          <NavigationProperty Name="Alquileres" Relationship="BibliotecaprogramModel.FK__Alquilere__Id_li__4CA06362" FromRole="Libros" ToRole="Alquileres" />
           <NavigationProperty Name="Autores" Relationship="BibliotecaprogramModel.FK__Libros__Id_autor__4AB81AF0" FromRole="Libros" ToRole="Autores" />
           <NavigationProperty Name="Categorias" Relationship="BibliotecaprogramModel.FK__Libros__Id_categ__49C3F6B7" FromRole="Libros" ToRole="Categorias" />
           <NavigationProperty Name="Editoriales" Relationship="BibliotecaprogramModel.FK__Libros__Id_Edito__48CFD27E" FromRole="Libros" ToRole="Editoriales" />
           <NavigationProperty Name="solicitudes" Relationship="BibliotecaprogramModel.FK__solicitud__libro__47DBAE45" FromRole="Libros" ToRole="solicitudes" />
+          <NavigationProperty Name="Alquileres" Relationship="BibliotecaprogramModel.FK__Alquilere__Id_li__4CA06362" FromRole="Libros" ToRole="Alquileres" />
         </EntityType>
         <EntityType Name="Roles">
           <Key>
@@ -391,8 +368,7 @@
           <Property Name="Rol" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Alquileres" Relationship="BibliotecaprogramModel.FK__Alquilere__Entre__4316F928" FromRole="Roles" ToRole="Alquileres" />
           <NavigationProperty Name="Alquileres1" Relationship="BibliotecaprogramModel.FK__Alquilere__Recib__440B1D61" FromRole="Roles" ToRole="Alquileres" />
-          <NavigationProperty Name="Alquileres11" Relationship="BibliotecaprogramModel.FK__Alquilere__Id_Le__4BAC3F291" FromRole="Roles" ToRole="Alquileres" />
-        </EntityType>
+          </EntityType>
         <EntityType Name="solicitudes">
           <Key>
             <PropertyRef Name="id_soli" />
@@ -405,54 +381,6 @@
           <NavigationProperty Name="Libros1" Relationship="BibliotecaprogramModel.FK__solicitud__libro__47DBAE45" FromRole="solicitudes" ToRole="Libros" />
           <Property Name="Cantidad" Type="Int32" />
         </EntityType>
-        <Association Name="FK__Alquilere__Entre__4316F928">
-          <End Type="BibliotecaprogramModel.Roles" Role="Roles" Multiplicity="1" />
-          <End Type="BibliotecaprogramModel.Alquileres" Role="Alquileres" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Roles">
-              <PropertyRef Name="Id_rol" />
-            </Principal>
-            <Dependent Role="Alquileres">
-              <PropertyRef Name="Entregado" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Alquilere__Id_Le__4BAC3F29">
-          <End Type="BibliotecaprogramModel.Lectores" Role="Lectores" Multiplicity="1" />
-          <End Type="BibliotecaprogramModel.Alquileres" Role="Alquileres" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Lectores">
-              <PropertyRef Name="Id_Lector" />
-            </Principal>
-            <Dependent Role="Alquileres">
-              <PropertyRef Name="Id_Lector" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Alquilere__Id_li__4CA06362">
-          <End Type="BibliotecaprogramModel.Libros" Role="Libros" Multiplicity="1" />
-          <End Type="BibliotecaprogramModel.Alquileres" Role="Alquileres" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Libros">
-              <PropertyRef Name="Id_libro" />
-            </Principal>
-            <Dependent Role="Alquileres">
-              <PropertyRef Name="Id_libro" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Alquilere__Recib__440B1D61">
-          <End Type="BibliotecaprogramModel.Roles" Role="Roles" Multiplicity="0..1" />
-          <End Type="BibliotecaprogramModel.Alquileres" Role="Alquileres" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Roles">
-              <PropertyRef Name="Id_rol" />
-            </Principal>
-            <Dependent Role="Alquileres">
-              <PropertyRef Name="Recibido" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__Libros__Id_autor__4AB81AF0">
           <End Type="BibliotecaprogramModel.Autores" Role="Autores" Multiplicity="1" />
           <End Type="BibliotecaprogramModel.Libros" Role="Libros" Multiplicity="*" />
@@ -513,7 +441,25 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Alquilere__Id_Le__4BAC3F291">
+        <EntityType Name="Alquileres">
+          <Key>
+            <PropertyRef Name="Id_alquiler" />
+          </Key>
+          <Property Name="Id_alquiler" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_Lector" Type="Int32" Nullable="false" />
+          <Property Name="Id_libro" Type="Int32" Nullable="false" />
+          <Property Name="cantidad" Type="Int32" Nullable="false" />
+          <Property Name="Entregado" Type="Int32" Nullable="false" />
+          <Property Name="fecha_salida" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="fecha_prevista_de_entrega" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="fecha_de_entrega" Type="DateTime" Precision="0" />
+          <Property Name="Recibido" Type="Int32" />
+          <NavigationProperty Name="Roles" Relationship="BibliotecaprogramModel.FK__Alquilere__Entre__4316F928" FromRole="Alquileres" ToRole="Roles" />
+          <NavigationProperty Name="Lectores" Relationship="BibliotecaprogramModel.FK__Alquilere__Id_Le__4BAC3F29" FromRole="Alquileres" ToRole="Lectores" />
+          <NavigationProperty Name="Libros" Relationship="BibliotecaprogramModel.FK__Alquilere__Id_li__4CA06362" FromRole="Alquileres" ToRole="Libros" />
+          <NavigationProperty Name="Roles1" Relationship="BibliotecaprogramModel.FK__Alquilere__Recib__440B1D61" FromRole="Alquileres" ToRole="Roles" />
+        </EntityType>
+        <Association Name="FK__Alquilere__Entre__4316F928">
           <End Type="BibliotecaprogramModel.Roles" Role="Roles" Multiplicity="1" />
           <End Type="BibliotecaprogramModel.Alquileres" Role="Alquileres" Multiplicity="*" />
           <ReferentialConstraint>
@@ -521,7 +467,43 @@
               <PropertyRef Name="Id_rol" />
             </Principal>
             <Dependent Role="Alquileres">
+              <PropertyRef Name="Entregado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Alquilere__Id_Le__4BAC3F29">
+          <End Type="BibliotecaprogramModel.Lectores" Role="Lectores" Multiplicity="1" />
+          <End Type="BibliotecaprogramModel.Alquileres" Role="Alquileres" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lectores">
               <PropertyRef Name="Id_Lector" />
+            </Principal>
+            <Dependent Role="Alquileres">
+              <PropertyRef Name="Id_Lector" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Alquilere__Id_li__4CA06362">
+          <End Type="BibliotecaprogramModel.Libros" Role="Libros" Multiplicity="1" />
+          <End Type="BibliotecaprogramModel.Alquileres" Role="Alquileres" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Libros">
+              <PropertyRef Name="Id_libro" />
+            </Principal>
+            <Dependent Role="Alquileres">
+              <PropertyRef Name="Id_libro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Alquilere__Recib__440B1D61">
+          <End Type="BibliotecaprogramModel.Roles" Role="Roles" Multiplicity="0..1" />
+          <End Type="BibliotecaprogramModel.Alquileres" Role="Alquileres" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id_rol" />
+            </Principal>
+            <Dependent Role="Alquileres">
+              <PropertyRef Name="Recibido" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -531,21 +513,6 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="BibliotecaprogramModelStoreContainer" CdmEntityContainer="BibliotecaprogramEntities">
-          <EntitySetMapping Name="Alquileres">
-            <EntityTypeMapping TypeName="BibliotecaprogramModel.Alquileres">
-              <MappingFragment StoreEntitySet="Alquileres">
-                <ScalarProperty Name="Recibido" ColumnName="Recibido" />
-                <ScalarProperty Name="fecha_de_entrega" ColumnName="fecha_de_entrega" />
-                <ScalarProperty Name="fecha_prevista_de_entrega" ColumnName="fecha_prevista_de_entrega" />
-                <ScalarProperty Name="fecha_salida" ColumnName="fecha_salida" />
-                <ScalarProperty Name="Entregado" ColumnName="Entregado" />
-                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
-                <ScalarProperty Name="Id_libro" ColumnName="Id_libro" />
-                <ScalarProperty Name="Id_Lector" ColumnName="Id_Lector" />
-                <ScalarProperty Name="Id_alquiler" ColumnName="Id_alquiler" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Autores">
             <EntityTypeMapping TypeName="BibliotecaprogramModel.Autores">
               <MappingFragment StoreEntitySet="Autores">
@@ -622,6 +589,21 @@
                 <ScalarProperty Name="libros" ColumnName="libros" />
                 <ScalarProperty Name="id_lector" ColumnName="id_lector" />
                 <ScalarProperty Name="id_soli" ColumnName="id_soli" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Alquileres">
+            <EntityTypeMapping TypeName="BibliotecaprogramModel.Alquileres">
+              <MappingFragment StoreEntitySet="Alquileres">
+                <ScalarProperty Name="Recibido" ColumnName="Recibido" />
+                <ScalarProperty Name="fecha_de_entrega" ColumnName="fecha_de_entrega" />
+                <ScalarProperty Name="fecha_prevista_de_entrega" ColumnName="fecha_prevista_de_entrega" />
+                <ScalarProperty Name="fecha_salida" ColumnName="fecha_salida" />
+                <ScalarProperty Name="Entregado" ColumnName="Entregado" />
+                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+                <ScalarProperty Name="Id_libro" ColumnName="Id_libro" />
+                <ScalarProperty Name="Id_Lector" ColumnName="Id_Lector" />
+                <ScalarProperty Name="Id_alquiler" ColumnName="Id_alquiler" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

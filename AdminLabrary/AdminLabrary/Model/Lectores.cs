@@ -17,8 +17,8 @@ namespace AdminLabrary.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Lectores()
         {
-            this.Alquileres = new HashSet<Alquileres>();
             this.solicitudes = new HashSet<solicitudes>();
+            this.Alquileres = new HashSet<Alquileres>();
         }
     
         public int Id_Lector { get; set; }
@@ -27,8 +27,8 @@ namespace AdminLabrary.Model
         public Nullable<int> estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Alquileres> Alquileres { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<solicitudes> solicitudes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Alquileres> Alquileres { get; set; }
     }
 }

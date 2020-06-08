@@ -23,11 +23,12 @@ namespace AdminLabrary.View.insertUpdateDelete
         public int IDLector;
         public int IDAdmin;
         Roles rol = new Roles();
+
         private void frmAdministradoresCRUD_Load(object sender, EventArgs e)
         {
             
             txtContraseña.UseSystemPasswordChar = true;
-
+            picOcultar.Hide();
         }
 
         public void Limpiar()
@@ -176,11 +177,15 @@ namespace AdminLabrary.View.insertUpdateDelete
            
             if (mostrar==0)
             {
+                picVer.Hide();
+                picOcultar.Show();
                 txtContraseña.UseSystemPasswordChar = false;
                 mostrar = 1;
             }
             else
             {
+                picVer.Show();
+                picOcultar.Hide();
                 txtContraseña.UseSystemPasswordChar = true;
                 mostrar =0;
             }
