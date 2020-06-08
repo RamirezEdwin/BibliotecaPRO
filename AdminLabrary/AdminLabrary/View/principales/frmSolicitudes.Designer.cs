@@ -183,6 +183,47 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+<<<<<<< HEAD
+=======
+            // IdSolicitud
+            // 
+            this.IdSolicitud.HeaderText = "ID";
+            this.IdSolicitud.Name = "IdSolicitud";
+            this.IdSolicitud.ReadOnly = true;
+            // 
+            // Lector
+            // 
+            this.Lector.HeaderText = "Lector";
+            this.Lector.Name = "Lector";
+            this.Lector.ReadOnly = true;
+            // 
+            // Libros
+            // 
+            this.Libros.HeaderText = "Libros";
+            this.Libros.Name = "Libros";
+            this.Libros.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // Id_Lector
+            // 
+            this.Id_Lector.HeaderText = "Id_Lector";
+            this.Id_Lector.Name = "Id_Lector";
+            this.Id_Lector.ReadOnly = true;
+            this.Id_Lector.Visible = false;
+            // 
+            // Id_Libro
+            // 
+            this.Id_Libro.HeaderText = "Id_Libro";
+            this.Id_Libro.Name = "Id_Libro";
+            this.Id_Libro.ReadOnly = true;
+            this.Id_Libro.Visible = false;
+            // 
+>>>>>>> 334432c95612731e3f215d6a2896cfd38a70b8bb
             // frmSolicitudes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

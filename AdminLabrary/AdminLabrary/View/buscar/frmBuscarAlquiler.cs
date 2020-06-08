@@ -31,20 +31,22 @@ namespace AdminLabrary.View.buscar
                 dgvAlquiler.Rows.Clear();
                 string buscar = txtBuscar.Text;
                 var ListaA = from Alq in db.Alquileres
-                             from Lec in db.Lectores
+                             from Lec in db.Roles
                              from Lib in db.Libros
                              from admi in db.Roles
                              from admin in db.Roles
+                             from lect in db.Lectores
                              where Alq.Entregado == admi.Id_rol
                              where Alq.Recibido == admin.Id_rol
-                             where Lec.Id_Lector == Alq.Id_Lector
+                             where Lec.Id_rol == Alq.Id_Lector
                              where Alq.Id_libro == Lib.Id_libro
+                             where lect.Id_Lector == Lec.Id_Lector
                              where Alq.Recibido != null
-                             where Lec.Nombres.Contains(buscar)
+                             where lect.Nombres.Contains(buscar)
                              select new
                              {
                                  ID = Alq.Id_alquiler,
-                                 Lector = Lec.Nombres,
+                                 Lector = lect.Nombres,
                                  Libro = Lib.Nombre,
                                  entregado = admi.Usuario,
                                  Cantidad = Alq.cantidad,

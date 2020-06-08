@@ -28,5 +28,6 @@ namespace AdminLabrary.Model
         public virtual Lectores Lectores { get; set; }
         public virtual Libros Libros { get; set; }
         public virtual Roles Roles1 { get; set; }
+        public virtual Roles Roles11 { get; set; }
     }
 }
