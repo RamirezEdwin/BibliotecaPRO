@@ -20,36 +20,37 @@ namespace AdminLabrary.View.buscar
             InitializeComponent();
         }
 
-       
+
         private void frmBuscarLector_Load(object sender, EventArgs e)
         {
             filtro();
 
         }
-       public  void filtro()
+        public void filtro()
         {
-            if(indicador == 1) {
+            if (indicador == 1)
+            {
                 using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
                 {
-                    
+
                     dgvLecto.Rows.Clear();
                     string buscar = txtBuscar.Text;
                     var listaL = from LEC in db.Lectores
                                  where !(from adm in db.Roles select adm.Id_Lector).Contains(LEC.Id_Lector)
                                  && LEC.Nombres.Contains(buscar)
-                                 && LEC.estado ==0
+                                 && LEC.estado == 0
                                  select new
                                  {
                                      ID = LEC.Id_Lector,
                                      Nombres = LEC.Nombres,
                                      Apellidos = LEC.Apellidos
                                  };
-                  foreach(var i in listaL)
+                    foreach (var i in listaL)
                     {
 
                         dgvLecto.Rows.Add(i.ID, i.Nombres, i.Apellidos);
                     }
-                    
+
                 }
             }
             else
@@ -57,16 +58,19 @@ namespace AdminLabrary.View.buscar
                 using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
                 {
                     dgvLecto.Rows.Clear();
-                    
+
                     string buscar = txtBuscar.Text;
                     var listaL = from rol in db.Roles
-                                 where rol.Usuario.Contains(buscar)
+                                 from Lec in db.Lectores
+                                 where Lec.Nombres.Contains(buscar)
                                   && rol.estado == 0
+                                  && rol.Id_Lector == Lec.Id_Lector
                                  select new
                                  {
                                      ID = rol.Id_rol,
-                                     Nombres = rol.Usuario,
-                                     
+                                     Nombres = Lec.Nombres,
+                                     apellidos = Lec.Apellidos
+
                                  };
                     foreach (var i in listaL)
                     {
@@ -78,13 +82,13 @@ namespace AdminLabrary.View.buscar
                                     {
                                         cantidad = pres.cantidad
                                     };
-                       foreach(var it in lista)
+                        foreach (var it in lista)
                         {
-                            cantidad +=it.cantidad;
+                            cantidad += it.cantidad;
                         }
                         if (cantidad < 3)
                         {
-                            dgvLecto.Rows.Add(i.ID, i.Nombres, "",cantidad);
+                            dgvLecto.Rows.Add(i.ID, i.Nombres, i.apellidos, cantidad);
                         }
                     }
 
@@ -99,7 +103,7 @@ namespace AdminLabrary.View.buscar
         }
         void seleccionar()
         {
-           
+
             if (indicador == 1)
             {
                 string id = dgvLecto.CurrentRow.Cells[0].Value.ToString();
@@ -116,16 +120,16 @@ namespace AdminLabrary.View.buscar
             {
                 string idl = dgvLecto.CurrentRow.Cells[0].Value.ToString();
                 string Nombrel = dgvLecto.CurrentRow.Cells[1].Value.ToString();
-                frmPrincipal.prestamos.alquiler.cantidad = 3- int.Parse(dgvLecto.CurrentRow.Cells[3].Value.ToString());
-                frmPrincipal.prestamos.alquiler.txtCantidad.Text =(3-int.Parse(dgvLecto.CurrentRow.Cells[3].Value.ToString()) ).ToString();
+                frmPrincipal.prestamos.alquiler.cantidad = 3 - int.Parse(dgvLecto.CurrentRow.Cells[3].Value.ToString());
+                frmPrincipal.prestamos.alquiler.txtCantidad.Text = (3 - int.Parse(dgvLecto.CurrentRow.Cells[3].Value.ToString())).ToString();
                 frmPrincipal.prestamos.alquiler.txtLector.Text = Nombrel;
                 frmPrincipal.prestamos.alquiler.idLector = int.Parse(idl);
                 this.Close();
             }
         }
 
-        
-      
+
+
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
