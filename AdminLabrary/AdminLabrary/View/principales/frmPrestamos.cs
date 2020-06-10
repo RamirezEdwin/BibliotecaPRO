@@ -150,6 +150,10 @@ namespace AdminLabrary.View.principales
             alquiler.txtCantidad.Enabled = true;
             btnRecibir.Enabled = false;
             alquiler.indicador = 1;
+            alquiler.btnGuardar.Show();
+            alquiler.btnRecibir.Show();
+            alquiler.btnSeleccionarLector.Show();
+            alquiler.btnSeleccionarLibro.Show();
             alquiler.ShowDialog();
 
         }
@@ -173,6 +177,10 @@ namespace AdminLabrary.View.principales
             alquiler.fecha_pre = Convert.ToDateTime(dgvPrestamos.CurrentRow.Cells[5].Value.ToString());
             alquiler.idAlquiler = int.Parse(dgvPrestamos.CurrentRow.Cells[0].Value.ToString());
             alquiler.indicador = 2;
+            alquiler.btnGuardar.Hide();
+            alquiler.btnRecibir.Show();
+            alquiler.btnSeleccionarLector.Hide();
+            alquiler.btnSeleccionarLibro.Hide();
             alquiler.ShowDialog();
         }
 
