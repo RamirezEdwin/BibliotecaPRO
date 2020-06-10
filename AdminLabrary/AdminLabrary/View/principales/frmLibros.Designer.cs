@@ -289,10 +289,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Autor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Editorial;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Categoria;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Button btnEliminar;
+        public System.Windows.Forms.Button btnEditar;
+        public System.Windows.Forms.Button btnNuevo;
     }
 }

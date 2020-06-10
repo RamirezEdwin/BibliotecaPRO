@@ -369,6 +369,11 @@ namespace AdminLabrary.formularios.principales
         {
             if (rol == 0)
             {
+                frmPrincipal.Lib.btnEditar.Hide();
+                frmPrincipal.Lib.btnEliminar.Hide();
+                frmPrincipal.Lib.btnNuevo.Hide();
+                frmPrincipal.Sol.btnRecibir.Hide();
+                frmPrincipal.Sol.btnRetrazo.Hide();
                 btnPrestamos.Hide();
                 btnAdmin.Hide();
                 btnCategoria.Hide();

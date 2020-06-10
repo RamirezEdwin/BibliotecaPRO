@@ -292,7 +292,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Libro;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnRetrazo;
-        private System.Windows.Forms.Button btnRecibir;
+        public System.Windows.Forms.Button btnRetrazo;
+        public System.Windows.Forms.Button btnRecibir;
     }
 }
