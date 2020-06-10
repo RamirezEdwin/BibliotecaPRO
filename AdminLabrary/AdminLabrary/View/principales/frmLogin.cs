@@ -86,7 +86,7 @@ namespace AdminLabrary.View.principales
                 {
                     txtUsuario.Text = "";
                     txtContraseña.Text = "";
-
+                    txtUsuario.Focus();
                     MessageBox.Show("Usuario o contraseña incorrecto", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 

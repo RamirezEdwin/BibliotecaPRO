@@ -157,6 +157,7 @@ namespace AdminLabrary.View.principales
             solicitud.btnEliminar.Show();
             solicitud.btnEliminar.Enabled = true;
             solicitud.btnSeleccionarLector.Hide();
+            solicitud.txtCantidad.Enabled = false;
             btnEliminar.Enabled = false;
             btnEditar.Enabled = false;
             Seleccionar();
