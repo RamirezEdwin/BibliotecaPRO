@@ -64,6 +64,8 @@ namespace AdminLabrary.View.principales
         public frmAdministradoresCRUD admin = new frmAdministradoresCRUD();
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            admin.btnGuardar.Show();
+            admin.btnGuardar.Enabled = true;
             admin.btnEditar.Hide();
             admin.btnEliminar.Hide();
             admin.btnSeleccionar.Show();
@@ -75,11 +77,12 @@ namespace AdminLabrary.View.principales
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+
+            admin.btnGuardar.Hide();
             admin.btnEliminar.Show();
             admin.btnEditar.Hide();
             admin.btnEliminar.Enabled = true;
             admin.btnSeleccionar.Hide();
-            admin.btnGuardar.Hide();
             admin.txtContraseña.Enabled = false;
             admin.txtUsuario.Enabled = false;
             btnEditar.Enabled = false;
@@ -92,10 +95,11 @@ namespace AdminLabrary.View.principales
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            admin.btnGuardar.Hide();
             admin.btnEditar.Show();
             admin.btnEliminar.Hide();
+            admin.btnEditar.Enabled = true;
             admin.btnSeleccionar.Enabled = true;
-            admin.btnGuardar.Hide();
             btnEditar.Enabled = false;
             btnEliminar.Enabled = false;
             admin.rbtnAdmi.Checked = true;
