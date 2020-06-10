@@ -66,8 +66,8 @@ namespace AdminLabrary.View.principales
         {
             admin.btnEditar.Hide();
             admin.btnEliminar.Hide();
-            admin.btnSeleccionar.Enabled = true;
-            admin.btnGuardar.Enabled = true;
+            admin.btnSeleccionar.Show();
+            admin.btnGuardar.Show() ;
             admin.rbtnLector.Checked = true;
             admin.Limpiar();
             admin.ShowDialog();
@@ -75,6 +75,7 @@ namespace AdminLabrary.View.principales
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            admin.btnEliminar.Show();
             admin.btnEditar.Hide();
             admin.btnEliminar.Enabled = true;
             admin.btnSeleccionar.Hide();
@@ -91,7 +92,7 @@ namespace AdminLabrary.View.principales
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            admin.btnEditar.Enabled = true;
+            admin.btnEditar.Show();
             admin.btnEliminar.Hide();
             admin.btnSeleccionar.Enabled = true;
             admin.btnGuardar.Hide();
