@@ -117,6 +117,7 @@ namespace AdminLabrary.View.principales
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             solicitud.btnGuardar.Show();
+            solicitud.btnGuardar.Enabled = true;
             solicitud.btnActualizar.Hide();
             solicitud.btnEliminar.Hide();
             solicitud.limpiar();
@@ -134,6 +135,7 @@ namespace AdminLabrary.View.principales
         {
             solicitud.btnGuardar.Hide();
             solicitud.btnActualizar.Show();
+            solicitud.btnGuardar.Enabled = true;
             solicitud.btnEliminar.Hide();
             btnEliminar.Enabled = false;
             btnEditar.Enabled = false;
@@ -153,6 +155,8 @@ namespace AdminLabrary.View.principales
             solicitud.btnGuardar.Hide();
             solicitud.btnActualizar.Hide();
             solicitud.btnEliminar.Show();
+            solicitud.btnEliminar.Enabled = true;
+            solicitud.btnSeleccionarLector.Hide();
             btnEliminar.Enabled = false;
             btnEditar.Enabled = false;
             Seleccionar();
@@ -181,7 +185,9 @@ namespace AdminLabrary.View.principales
             frmPrincipal.prestamos.alquiler.txtCantidad.Text = Cantidad;
             frmPrincipal.prestamos.alquiler.solicitud = int.Parse(dgvSolicitudes.CurrentRow.Cells[0].Value.ToString());
             frmPrincipal.prestamos.alquiler.txtCantidad.Enabled = false;
-            frmPrincipal.prestamos.alquiler.btnRecibir.Hide();
+            frmPrincipal.prestamos.alquiler.btnRecibir.Show();
+            frmPrincipal.prestamos.alquiler.btnRecibir.Enabled = true;
+            frmPrincipal.prestamos.alquiler.btnGuardar.Hide();
             frmPrincipal.prestamos.alquiler.btnSeleccionarLector.Hide();
             frmPrincipal.prestamos.alquiler.btnSeleccionarLibro.Hide();
             frmPrincipal.prestamos.alquiler.ShowDialog();

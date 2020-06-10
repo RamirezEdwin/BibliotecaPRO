@@ -66,6 +66,8 @@ namespace AdminLabrary.View.principales
         {
             admin.btnEditar.Hide();
             admin.btnEliminar.Hide();
+            admin.btnGuardar.Show();
+            admin.btnSeleccionar.Show();
             admin.btnSeleccionar.Enabled = true;
             admin.btnGuardar.Enabled = true;
             admin.rbtnLector.Checked = true;
@@ -77,6 +79,7 @@ namespace AdminLabrary.View.principales
         {
             admin.btnEditar.Hide();
             admin.btnEliminar.Enabled = true;
+            admin.btnEliminar.Show();
             admin.btnSeleccionar.Hide();
             admin.btnGuardar.Hide();
             admin.txtContraseña.Enabled = false;

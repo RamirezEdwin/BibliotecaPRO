@@ -64,6 +64,7 @@ namespace AdminLabrary.formularios.principales
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             Libros.btnGuardar.Show();
+            Libros.btnGuardar.Enabled = true;
             Libros.btnActualizar.Hide();
             Libros.btnEliminar.Hide();
             Libros.limpiar();
@@ -84,6 +85,7 @@ namespace AdminLabrary.formularios.principales
         {
             Libros.btnGuardar.Hide();
             Libros.btnActualizar.Show();
+            Libros.btnActualizar.Enabled = true;
             Libros.btnEliminar.Hide();
             btnEliminar.Enabled = false;
             Libros.indi = 0;
@@ -126,6 +128,7 @@ namespace AdminLabrary.formularios.principales
             Libros.btnSeleccionarA.Hide();
             Libros.btnSeleccionarE.Hide();
             Libros.btnEliminar.Show();
+            Libros.btnEliminar.Enabled = true;
             btnEliminar.Enabled = false;
             btnEditar.Enabled = false;
             Libros.indi = 1;
