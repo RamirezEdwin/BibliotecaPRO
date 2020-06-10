@@ -322,13 +322,14 @@ namespace AdminLabrary.formularios.principales
         private void btnMenu_Click(object sender, EventArgs e)
         {
             PanelMenu.Hide();
-
+            picce2.Show();
             btnMostrar.Show();
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
             PanelMenu.Show();
+            picce2.Hide();
             btnMostrar.Hide();
         }
 
@@ -382,6 +383,28 @@ namespace AdminLabrary.formularios.principales
                 btnRoles.Hide();
                 btnLectores.Hide();
             }
+            else
+            {
+                frmPrincipal.Lib.btnEditar.Show();
+                frmPrincipal.Lib.btnEliminar.Show();
+                frmPrincipal.Lib.btnNuevo.Show();
+                frmPrincipal.Sol.btnRecibir.Show();
+                frmPrincipal.Sol.btnRetrazo.Show();
+                btnPrestamos.Show();
+                btnAdmin.Show();
+                btnCategoria.Show();
+                btnAutor.Show();
+                btnEditorial.Show();
+                btnRoles.Show();
+                btnLectores.Show();
+            }
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLogin login = new frmLogin();
+            login.Show();
         }
     }
 

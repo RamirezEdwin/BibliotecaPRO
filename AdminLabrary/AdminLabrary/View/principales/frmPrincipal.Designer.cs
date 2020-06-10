@@ -51,6 +51,8 @@
             this.PanelMenu = new System.Windows.Forms.Panel();
             this.pPrincipal = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picce2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.PanelBarraTitulo.SuspendLayout();
@@ -60,6 +62,8 @@
             this.PanelMenu.SuspendLayout();
             this.pPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picce2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCerrar
@@ -134,6 +138,7 @@
             // PanelBarraTitulo
             // 
             this.PanelBarraTitulo.BackColor = System.Drawing.Color.Teal;
+            this.PanelBarraTitulo.Controls.Add(this.picce2);
             this.PanelBarraTitulo.Controls.Add(this.btnMostrar);
             this.PanelBarraTitulo.Controls.Add(this.lblUsuarioARecibir);
             this.PanelBarraTitulo.Controls.Add(this.lblUsuario);
@@ -396,6 +401,7 @@
             // 
             this.PanelMenu.AutoScroll = true;
             this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PanelMenu.Controls.Add(this.pictureBox1);
             this.PanelMenu.Controls.Add(this.btnSolicitudes);
             this.PanelMenu.Controls.Add(this.btnRoles);
             this.PanelMenu.Controls.Add(this.btnMenu);
@@ -442,6 +448,31 @@
             this.picLogo.TabIndex = 24;
             this.picLogo.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
+            // picce2
+            // 
+            this.picce2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picce2.Image = ((System.Drawing.Image)(resources.GetObject("picce2.Image")));
+            this.picce2.Location = new System.Drawing.Point(41, 0);
+            this.picce2.Name = "picce2";
+            this.picce2.Size = new System.Drawing.Size(30, 35);
+            this.picce2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picce2.TabIndex = 28;
+            this.picce2.TabStop = false;
+            this.picce2.Visible = false;
+            this.picce2.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -466,6 +497,8 @@
             this.PanelMenu.ResumeLayout(false);
             this.pPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picce2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -494,5 +527,7 @@
         internal System.Windows.Forms.Panel PanelMenu;
         private System.Windows.Forms.Panel pPrincipal;
         internal System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picce2;
     }
 }
