@@ -44,28 +44,11 @@ namespace AdminLabrary.View.insertUpdateDelete
             lec.filtro();
             lec.ShowDialog();
         }
-        void enable()
-        {
-            if (indicador == 1)
-            {
-
-                btnRecibir.Enabled = false;
-                btnGuardar.Enabled = true;
-                btnSeleccionarLector.Enabled = true;
-                btnSeleccionarLibro.Enabled = true;
-
-            }
-            else
-            {
-                btnGuardar.Enabled = false;
-                btnRecibir.Enabled = true;
-                btnSeleccionarLector.Enabled = false;
-                btnSeleccionarLibro.Enabled = false;
-            }
-        }
+    
+        
         private void frmAlquileresCRUD_Load(object sender, EventArgs e)
         {
-            enable();
+            
         }
         Alquileres alqu = new Alquileres();
 
