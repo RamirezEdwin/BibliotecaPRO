@@ -57,6 +57,7 @@ namespace AdminLabrary.formularios.principales
             categoria.btnGuardar.Show();
             categoria.btnEditar.Hide();
             categoria.btnEliminar.Hide();
+            categoria.btnGuardar.Enabled = true;
             categoria.limpiar();
             btnEditar.Enabled = false;
             btnEliminar.Enabled = false;
@@ -67,6 +68,7 @@ namespace AdminLabrary.formularios.principales
         private void btnEditar_Click(object sender, EventArgs e)
         {
             seleccionar();
+            categoria.btnEditar.Enabled = true;
             categoria.btnGuardar.Hide();
             categoria.btnEditar.Show();
             categoria.btnEliminar.Hide();
@@ -78,6 +80,7 @@ namespace AdminLabrary.formularios.principales
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             seleccionar();
+            categoria.btnEliminar.Enabled = true;
             categoria.btnGuardar.Hide();
             categoria.btnEditar.Hide();
             categoria.btnEliminar.Show();

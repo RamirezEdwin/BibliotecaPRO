@@ -54,8 +54,7 @@ namespace AdminLabrary.formularios.principales
             autor.btnGuardar.Show();
             autor.btnEditar.Hide();
             autor.btnEliminar.Hide();
-            btnEditar.Enabled = false;
-            btnEliminar.Enabled = false;
+            autor.btnGuardar.Enabled = true;
             autor.limpiar();
             autor.ShowDialog();
 
@@ -85,8 +84,7 @@ namespace AdminLabrary.formularios.principales
             autor.btnGuardar.Hide();
             autor.btnEliminar.Hide();
             autor.btnEditar.Show();
-            btnEliminar.Enabled = false;
-            btnEditar.Enabled = false;
+            autor.btnEditar.Enabled = true;
             autor.ShowDialog();
         }
 
@@ -102,10 +100,11 @@ namespace AdminLabrary.formularios.principales
             autor.btnGuardar.Hide();
             autor.btnEliminar.Show();
             autor.btnEditar.Hide();
+            autor.btnEliminar.Enabled = true;
             autor.dtpFecha.Enabled = false;
             autor.txtNacionalidad.Enabled = false;
             autor.txtNombre.Enabled = false;
-            btnEliminar.Enabled = false;
+            btnEliminar.Enabled =false;
             btnEditar.Enabled = false;
             autor.ShowDialog();
         }

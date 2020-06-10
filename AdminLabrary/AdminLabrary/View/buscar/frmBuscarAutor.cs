@@ -57,7 +57,7 @@ namespace AdminLabrary.View.buscar
             string Nombre = dgvAutor.CurrentRow.Cells[1].Value.ToString();
             frmPrincipal.Lib.Libros.txtAutor.Text = Nombre;
             frmPrincipal.Lib.Libros.ID_Autor = int.Parse(Id);
-           this.Close();
+            this.Close();
             
         }
 
@@ -66,6 +66,9 @@ namespace AdminLabrary.View.buscar
             if (e.KeyCode == Keys.Enter)
             {
                 seleccionar();
+            }else if(e.KeyCode == Keys.Escape)
+            {
+                this.Close();
             }
         }
 

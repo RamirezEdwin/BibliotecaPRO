@@ -151,7 +151,7 @@ namespace AdminLabrary.View.principales
             btnRecibir.Enabled = false;
             alquiler.indicador = 1;
             alquiler.btnGuardar.Show();
-            alquiler.btnRecibir.Show();
+            alquiler.btnRecibir.Hide();
             alquiler.btnSeleccionarLector.Show();
             alquiler.btnSeleccionarLibro.Show();
             alquiler.ShowDialog();
