@@ -54,6 +54,7 @@ namespace AdminLabrary.View.insertUpdateDelete
                         db.SaveChanges();
                         limpiar();
                         frmPrincipal.Sol.CargarDatos();
+
                         this.Close();
 
                     }

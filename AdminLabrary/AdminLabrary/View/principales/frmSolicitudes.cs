@@ -117,8 +117,8 @@ namespace AdminLabrary.View.principales
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             solicitud.btnGuardar.Enabled = true;
-            solicitud.btnActualizar.Enabled = false;
-            solicitud.btnEliminar.Enabled = false;
+            solicitud.btnActualizar.Hide();
+            solicitud.btnEliminar.Hide();
             solicitud.limpiar();
             btnEliminar.Enabled = false;
             btnEditar.Enabled = false;
@@ -132,9 +132,9 @@ namespace AdminLabrary.View.principales
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            solicitud.btnGuardar.Enabled = false;
+            solicitud.btnGuardar.Hide();
             solicitud.btnActualizar.Enabled = true;
-            solicitud.btnEliminar.Enabled = false;
+            solicitud.btnEliminar.Hide();
             btnEliminar.Enabled = false;
             btnEditar.Enabled = false;
             Seleccionar();
@@ -150,8 +150,8 @@ namespace AdminLabrary.View.principales
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            solicitud.btnGuardar.Enabled = false;
-            solicitud.btnActualizar.Enabled = false;
+            solicitud.btnGuardar.Hide();
+            solicitud.btnActualizar.Hide();
             solicitud.btnEliminar.Enabled = true;
             btnEliminar.Enabled = false;
             btnEditar.Enabled = false;

@@ -51,8 +51,8 @@ namespace AdminLabrary.formularios.principales
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             Editorial.btnGuardar.Enabled = true;
-            Editorial.btnEditar.Enabled = false;
-            Editorial.btnEliminar.Enabled = false;
+            Editorial.btnEditar.Hide();
+            Editorial.btnEliminar.Hide();
             Editorial.limpiar();
             btnEditar.Enabled = false;
             btnEliminar.Enabled = false;
@@ -74,9 +74,9 @@ namespace AdminLabrary.formularios.principales
         private void btnEditar_Click(object sender, EventArgs e)
         {
             seleccionar();
-            Editorial.btnGuardar.Enabled = false;
+            Editorial.btnGuardar.Hide();
             Editorial.btnEditar.Enabled = true;
-            Editorial.btnEliminar.Enabled = false;
+            Editorial.btnEliminar.Hide();
             btnEditar.Enabled = false;
             btnEliminar.Enabled = false;
             Editorial.ShowDialog();
@@ -85,8 +85,8 @@ namespace AdminLabrary.formularios.principales
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             seleccionar();
-            Editorial.btnGuardar.Enabled = false;
-            Editorial.btnEditar.Enabled = false;
+            Editorial.btnGuardar.Hide();
+            Editorial.btnEditar.Hide();
             Editorial.btnEliminar.Enabled = true ;
             Editorial.txtDirecion.Enabled = false;
             Editorial.txtEditorial.Enabled = false;

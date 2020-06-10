@@ -64,8 +64,8 @@ namespace AdminLabrary.formularios.principales
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             Libros.btnGuardar.Enabled = true;
-            Libros.btnActualizar.Enabled = false;
-            Libros.btnEliminar.Enabled = false;
+            Libros.btnActualizar.Hide();
+            Libros.btnEliminar.Hide();
             Libros.limpiar();
             Libros.indi = 0;
             btnEliminar.Enabled = false;
@@ -82,9 +82,9 @@ namespace AdminLabrary.formularios.principales
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Libros.btnGuardar.Enabled = false;
+            Libros.btnGuardar.Hide();
             Libros.btnActualizar.Enabled = true;
-            Libros.btnEliminar.Enabled = false;
+            Libros.btnEliminar.Hide();
             btnEliminar.Enabled = false;
             Libros.indi = 0;
             btnEditar.Enabled = false;
@@ -121,7 +121,10 @@ namespace AdminLabrary.formularios.principales
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-          
+            Libros.btnGuardar.Hide();
+            Libros.btnActualizar.Hide();
+            Libros.btnSeleccionarA.Hide();
+            Libros.btnSeleccionarE.Hide();
             btnEliminar.Enabled = false;
             btnEditar.Enabled = false;
             Libros.indi = 1;

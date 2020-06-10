@@ -61,11 +61,6 @@ namespace AdminLabrary.View.buscar
             
         }
 
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-            filtro();
-        }
-
         private void dgvAutor_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -78,6 +73,11 @@ namespace AdminLabrary.View.buscar
         {
             seleccionar();
 
+        }
+
+        private void txtBuscar_TextChanged_1(object sender, EventArgs e)
+        {
+            filtro();
         }
     }
 }

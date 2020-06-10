@@ -27,7 +27,7 @@ namespace AdminLabrary.View.insertUpdateDelete
         public int ID_Editorial;
         public int ID_Autor;
         public int indi = 0;
-        frmBuscarAutor BuscarA = new frmBuscarAutor();
+        
 
        public void limpiar()
         {
@@ -44,7 +44,7 @@ namespace AdminLabrary.View.insertUpdateDelete
 
         private void btnSeleccionarA_Click(object sender, EventArgs e)
         {
-
+            frmBuscarAutor BuscarA = new frmBuscarAutor();
             BuscarA.ShowDialog();
 
         }

@@ -52,8 +52,8 @@ namespace AdminLabrary.formularios.principales
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             autor.btnGuardar.Enabled = true;
-            autor.btnEditar.Enabled = false;
-            autor.btnEliminar.Enabled = false;
+            autor.btnEditar.Hide();
+            autor.btnEliminar.Hide();
             btnEditar.Enabled = false;
             btnEliminar.Enabled = false;
             autor.limpiar();
@@ -82,8 +82,8 @@ namespace AdminLabrary.formularios.principales
         private void btnEditar_Click(object sender, EventArgs e)
         {
             seleccionar();
-            autor.btnGuardar.Enabled = false;
-            autor.btnEliminar.Enabled = false;
+            autor.btnGuardar.Hide();
+            autor.btnEliminar.Hide();
             autor.btnEditar.Enabled = true;
             btnEliminar.Enabled = false;
             btnEditar.Enabled = false;
@@ -99,9 +99,9 @@ namespace AdminLabrary.formularios.principales
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             seleccionar();
-            autor.btnGuardar.Enabled = false;
+            autor.btnGuardar.Hide();
             autor.btnEliminar.Enabled = true;
-            autor.btnEditar.Enabled = false;
+            autor.btnEditar.Hide();
             autor.dtpFecha.Enabled = false;
             autor.txtNacionalidad.Enabled = false;
             autor.txtNombre.Enabled = false;

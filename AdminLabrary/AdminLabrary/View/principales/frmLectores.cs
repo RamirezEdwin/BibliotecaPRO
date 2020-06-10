@@ -45,7 +45,7 @@ namespace AdminLabrary.formularios.principales
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             nuevo.limpiar();
-            nuevo.btnEditar.Enabled = false;
+            nuevo.btnEditar.Hide();
             nuevo.btnGuardar.Enabled = true;
             btnEditar.Enabled = false;
             btnEliminar.Enabled = false;

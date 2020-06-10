@@ -59,9 +59,9 @@ namespace AdminLabrary.formularios.principales
         private void btnEditar_Click(object sender, EventArgs e)
         {
             admin.btnEditar.Enabled = true;
-            admin.btnEliminar.Enabled = false;
+            admin.btnEliminar.Hide();
             admin.btnSeleccionar.Enabled = true;
-            admin.btnGuardar.Enabled = false;
+            admin.btnGuardar.Hide();
             btnEditar.Enabled = false;
             admin.rbtnAdmi.Checked = true;
             Seleccionar();
