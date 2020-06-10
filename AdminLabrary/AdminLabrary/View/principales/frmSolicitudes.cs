@@ -186,9 +186,9 @@ namespace AdminLabrary.View.principales
             frmPrincipal.prestamos.alquiler.txtCantidad.Text = Cantidad;
             frmPrincipal.prestamos.alquiler.solicitud = int.Parse(dgvSolicitudes.CurrentRow.Cells[0].Value.ToString());
             frmPrincipal.prestamos.alquiler.txtCantidad.Enabled = false;
-            frmPrincipal.prestamos.alquiler.btnRecibir.Show();
-            frmPrincipal.prestamos.alquiler.btnRecibir.Enabled = true;
-            frmPrincipal.prestamos.alquiler.btnGuardar.Hide();
+            frmPrincipal.prestamos.alquiler.btnRecibir.Hide();
+            frmPrincipal.prestamos.alquiler.btnGuardar.Enabled = true;
+            frmPrincipal.prestamos.alquiler.btnGuardar.Show();
             frmPrincipal.prestamos.alquiler.btnSeleccionarLector.Hide();
             frmPrincipal.prestamos.alquiler.btnSeleccionarLibro.Hide();
             frmPrincipal.prestamos.alquiler.ShowDialog();
