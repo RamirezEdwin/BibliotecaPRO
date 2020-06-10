@@ -30,14 +30,16 @@ namespace AdminLabrary.View.insertUpdateDelete
         {
             InitializeComponent();
         }
-        frmBuscarLibros li = new frmBuscarLibros();
+        
         private void btnSeleccionarLibro_Click(object sender, EventArgs e)
         {
+            frmBuscarLibros li = new frmBuscarLibros();
             li.ShowDialog();
         }
-        frmBuscarLector lec = new frmBuscarLector();
+       
         private void btnSeleccionarLector_Click(object sender, EventArgs e)
         {
+            frmBuscarLector lec = new frmBuscarLector();
             lec.indicador = 2;
             lec.filtro();
             lec.ShowDialog();
