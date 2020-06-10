@@ -50,7 +50,7 @@ namespace AdminLabrary.formularios.principales
         public static frmEditorialesCRUD Editorial = new frmEditorialesCRUD();
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            Editorial.btnGuardar.Enabled = true;
+            Editorial.btnGuardar.Show();
             Editorial.btnEditar.Hide();
             Editorial.btnEliminar.Hide();
             Editorial.limpiar();
@@ -75,7 +75,7 @@ namespace AdminLabrary.formularios.principales
         {
             seleccionar();
             Editorial.btnGuardar.Hide();
-            Editorial.btnEditar.Enabled = true;
+            Editorial.btnEditar.Show();
             Editorial.btnEliminar.Hide();
             btnEditar.Enabled = false;
             btnEliminar.Enabled = false;
@@ -87,7 +87,7 @@ namespace AdminLabrary.formularios.principales
             seleccionar();
             Editorial.btnGuardar.Hide();
             Editorial.btnEditar.Hide();
-            Editorial.btnEliminar.Enabled = true ;
+            Editorial.btnEliminar.Show();
             Editorial.txtDirecion.Enabled = false;
             Editorial.txtEditorial.Enabled = false;
             Editorial.dtpFecha.Enabled = false;

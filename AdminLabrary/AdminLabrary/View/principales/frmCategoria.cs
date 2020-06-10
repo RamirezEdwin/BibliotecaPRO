@@ -54,7 +54,7 @@ namespace AdminLabrary.formularios.principales
         frmCategoriasCRUD categoria = new frmCategoriasCRUD();
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            categoria.btnGuardar.Enabled = true;
+            categoria.btnGuardar.Show();
             categoria.btnEditar.Hide();
             categoria.btnEliminar.Hide();
             categoria.limpiar();
@@ -68,7 +68,7 @@ namespace AdminLabrary.formularios.principales
         {
             seleccionar();
             categoria.btnGuardar.Hide();
-            categoria.btnEditar.Enabled = true;
+            categoria.btnEditar.Show();
             categoria.btnEliminar.Hide();
             categoria.ShowDialog();
             btnEditar.Enabled = false;
@@ -80,7 +80,7 @@ namespace AdminLabrary.formularios.principales
             seleccionar();
             categoria.btnGuardar.Hide();
             categoria.btnEditar.Hide();
-            categoria.btnEliminar.Enabled = true;
+            categoria.btnEliminar.Show();
             categoria.txtCategoria.Enabled = false;
             categoria.ShowDialog();
             btnEditar.Enabled = false;
