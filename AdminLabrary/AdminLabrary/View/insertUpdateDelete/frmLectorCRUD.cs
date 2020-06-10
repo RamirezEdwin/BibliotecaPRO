@@ -112,5 +112,10 @@ namespace AdminLabrary.View.insertUpdateDelete
         {
 
         }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
     }
 }

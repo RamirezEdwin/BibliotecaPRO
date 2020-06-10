@@ -1,4 +1,6 @@
-﻿using AdminLabrary.Model;
+﻿using AdminLabrary.formularios.principales;
+using AdminLabrary.Model;
+using AdminLabrary.View.buscar;
 using AdminLabrary.View.insertUpdateDelete;
 using System;
 using System.Collections.Generic;
@@ -99,12 +101,14 @@ namespace AdminLabrary.View.principales
             int IdLector = int.Parse(dgvSolicitudes.CurrentRow.Cells[4].Value.ToString());
             string Cantidad = dgvSolicitudes.CurrentRow.Cells[3].Value.ToString();
             string Libro = dgvSolicitudes.CurrentRow.Cells[2].Value.ToString();
+            string Lector = dgvSolicitudes.CurrentRow.Cells[1].Value.ToString();
 
             solicitud.txtCantidad.Text = Cantidad;
             solicitud.txtLibro.Text = Libro;
             solicitud.ID = Id;
             solicitud.idlector = IdLector;
             solicitud.idlibro = IdLibro;
+            
 
         }
         public  frmSolicitudesCRUD solicitud = new frmSolicitudesCRUD();
@@ -141,6 +145,7 @@ namespace AdminLabrary.View.principales
         {
             btnEditar.Enabled = true;
             btnEliminar.Enabled = true;
+            btnRecibir.Enabled = true;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -152,6 +157,34 @@ namespace AdminLabrary.View.principales
             btnEditar.Enabled = false;
             Seleccionar();
             solicitud.ShowDialog();
+        }
+
+       
+
+        private void btnRetrazo_Click(object sender, EventArgs e)
+        {
+            frmHistorial histo = new frmHistorial();
+            histo.ShowDialog();
+        }
+
+        private void btnRecibir_Click(object sender, EventArgs e)
+        {
+            int IdLector = int.Parse(dgvSolicitudes.CurrentRow.Cells[4].Value.ToString());
+            string Lector = dgvSolicitudes.CurrentRow.Cells[1].Value.ToString();
+            int IdLibro = int.Parse(dgvSolicitudes.CurrentRow.Cells[5].Value.ToString());
+            string Libro = dgvSolicitudes.CurrentRow.Cells[2].Value.ToString();
+            string Cantidad = dgvSolicitudes.CurrentRow.Cells[3].Value.ToString();
+            frmPrincipal.prestamos.alquiler.IdLibro = IdLibro;
+            frmPrincipal.prestamos.alquiler.txtLibro.Text = Libro;
+            frmPrincipal.prestamos.alquiler.txtLector.Text = Lector;
+            frmPrincipal.prestamos.alquiler.idLector = IdLector;
+            frmPrincipal.prestamos.alquiler.txtCantidad.Text = Cantidad;
+            frmPrincipal.prestamos.alquiler.solicitud = int.Parse(dgvSolicitudes.CurrentRow.Cells[0].Value.ToString());
+            frmPrincipal.prestamos.alquiler.txtCantidad.Enabled = false;
+            frmPrincipal.prestamos.alquiler.btnRecibir.Hide();
+            frmPrincipal.prestamos.alquiler.btnSeleccionarLector.Hide();
+            frmPrincipal.prestamos.alquiler.btnSeleccionarLibro.Hide();
+            frmPrincipal.prestamos.alquiler.ShowDialog();
         }
     }
 }

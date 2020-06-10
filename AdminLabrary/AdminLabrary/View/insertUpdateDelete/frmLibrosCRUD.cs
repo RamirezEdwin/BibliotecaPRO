@@ -93,6 +93,10 @@ namespace AdminLabrary.View.insertUpdateDelete
                     this.Close();
                 }
             }
+            else
+            {
+                MessageBox.Show("Todos los campos son obligatorios");
+            }
 
 
         }
@@ -195,7 +199,34 @@ namespace AdminLabrary.View.insertUpdateDelete
                     this.Close();
                 }
             }
-        }  
-        
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+            string cadena = txtCantidad.Text;
+            try
+            {
+
+                if (int.Parse(txtCantidad.Text) < 0)
+                {
+                    txtCantidad.Text = "";
+                }
+            }
+            catch
+            {
+                int c = cadena.Length;
+                if (c == 0)
+                {
+                    txtCantidad.Text = "";
+                }
+                else
+                {
+                    txtCantidad.Text = cadena.Remove(c - 1);
+                    txtCantidad.SelectionStart = c - 1;
+                }
+
+            }
+        }
     }
+    
 }

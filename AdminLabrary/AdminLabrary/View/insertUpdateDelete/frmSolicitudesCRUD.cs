@@ -40,11 +40,11 @@ namespace AdminLabrary.View.insertUpdateDelete
         {
             using(BibliotecaprogramEntities db = new BibliotecaprogramEntities())
             {
-                if (int.Parse(txtCantidad.Text) > 0 && int.Parse(txtCantidad.Text) <= 3)
+                if (txtCantidad.Text != "" && txtLibro.Text != "")    
                 {
 
-                    if (txtCantidad.Text != "" && txtLibro.Text != "" )
-                    {
+                   if (int.Parse(txtCantidad.Text) > 0 && int.Parse(txtCantidad.Text) <= 3)
+                   {
 
                         soli.Cantidad = int.Parse(txtCantidad.Text);
                         soli.libros = idlibro;
@@ -57,14 +57,19 @@ namespace AdminLabrary.View.insertUpdateDelete
                         this.Close();
 
                     }
+                    else
+                    {
+                        MessageBox.Show("La cantidad de libros en existencia es: " + cantidad.ToString());
+                    }
 
 
-                
-                } 
+
+                }
                 else
                 {
-                    MessageBox.Show("La cantidad de libros en existencia es: " + cantidad.ToString());
+                    MessageBox.Show("Todos los campos son obligatorios");
                 }
+
 
             }
         }
@@ -84,6 +89,7 @@ namespace AdminLabrary.View.insertUpdateDelete
                     soli = db.solicitudes.Where(buscarID => buscarID.id_soli == ID).First();
                     soli.Cantidad = int.Parse(txtCantidad.Text);
                     soli.libros = idlibro;
+                    soli.id_lector = idlector;
                     soli.estado = 0;
                     db.Entry(soli).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
@@ -108,6 +114,7 @@ namespace AdminLabrary.View.insertUpdateDelete
                     soli = db.solicitudes.Where(buscarID => buscarID.id_soli == ID).First();
                     soli.Cantidad = int.Parse(txtCantidad.Text);
                     soli.libros = idlibro;
+                    soli.id_lector = idlector;
                     soli.estado = 1;
                     db.Entry(soli).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
@@ -116,6 +123,33 @@ namespace AdminLabrary.View.insertUpdateDelete
                     this.Close();
                 }
 
+            }
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+            string cadena = txtCantidad.Text;
+            try
+            {
+
+                if (int.Parse(txtCantidad.Text) < 0)
+                {
+                    txtCantidad.Text = "";
+                }
+            }
+            catch 
+            {
+                int c = cadena.Length;
+                if(c == 0)
+                {
+                    txtCantidad.Text = "";
+                }
+                else
+                {
+                    txtCantidad.Text = cadena.Remove(c - 1);
+                    txtCantidad.SelectionStart = c - 1;
+                }
+                
             }
         }
     }

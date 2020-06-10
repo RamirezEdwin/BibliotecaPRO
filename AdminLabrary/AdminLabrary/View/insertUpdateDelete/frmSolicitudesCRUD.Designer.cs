@@ -55,6 +55,7 @@
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(235, 20);
             this.txtCantidad.TabIndex = 28;
+            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             // 
             // lblLibro
             // 
@@ -162,6 +163,7 @@
             this.Controls.Add(this.lblLibro);
             this.Controls.Add(this.txtLibro);
             this.Name = "frmSolicitudesCRUD";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSolicitudesCRUD";
             this.ResumeLayout(false);
             this.PerformLayout();
