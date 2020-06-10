@@ -31,7 +31,7 @@ namespace AdminLabrary.View.insertUpdateDelete
 
         }
         public int idlector;
-        public int cantidad;
+      
         public int idlibro;
         public int ID;
         solicitudes soli = new solicitudes();
@@ -43,7 +43,7 @@ namespace AdminLabrary.View.insertUpdateDelete
                 if (txtCantidad.Text != "" && txtLibro.Text != "")    
                 {
 
-                   if (int.Parse(txtCantidad.Text) > 0 && int.Parse(txtCantidad.Text) <= 3)
+                   if (int.Parse(txtCantidad.Text) > 0 )
                    {
 
                         soli.Cantidad = int.Parse(txtCantidad.Text);
@@ -57,13 +57,7 @@ namespace AdminLabrary.View.insertUpdateDelete
                         this.Close();
 
                     }
-                    else
-                    {
-                        MessageBox.Show("La cantidad de libros en existencia es: " + cantidad.ToString());
-                    }
-
-
-
+      
                 }
                 else
                 {
@@ -99,10 +93,7 @@ namespace AdminLabrary.View.insertUpdateDelete
                 }
 
             }
-            else
-            {
-                MessageBox.Show("La cantidad de libros en existencia es: " + cantidad.ToString());
-            }
+           
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

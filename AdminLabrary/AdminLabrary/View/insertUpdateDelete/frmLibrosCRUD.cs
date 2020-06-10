@@ -227,6 +227,34 @@ namespace AdminLabrary.View.insertUpdateDelete
 
             }
         }
+
+        private void txtNumero_de_Edicion_TextChanged(object sender, EventArgs e)
+        {
+            string cadena = txtNumero_de_Edicion.Text;
+            try
+            {
+
+                if (int.Parse(txtNumero_de_Edicion.Text) < 0)
+                {
+                    txtNumero_de_Edicion.Text = "";
+                }
+            }
+            catch
+            {
+                int c = cadena.Length;
+                if (c == 0)
+                {
+                    txtNumero_de_Edicion.Text = "";
+                }
+                else
+                {
+                    txtNumero_de_Edicion.Text = cadena.Remove(c - 1);
+                    txtNumero_de_Edicion.SelectionStart = c - 1;
+                }
+
+            }
+        }
     }
+    
     
 }

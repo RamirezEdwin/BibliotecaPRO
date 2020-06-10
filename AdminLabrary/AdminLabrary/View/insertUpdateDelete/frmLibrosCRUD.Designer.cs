@@ -191,6 +191,7 @@
             this.txtNumero_de_Edicion.Name = "txtNumero_de_Edicion";
             this.txtNumero_de_Edicion.Size = new System.Drawing.Size(207, 23);
             this.txtNumero_de_Edicion.TabIndex = 28;
+            this.txtNumero_de_Edicion.TextChanged += new System.EventHandler(this.txtNumero_de_Edicion_TextChanged);
             // 
             // label4
             // 
