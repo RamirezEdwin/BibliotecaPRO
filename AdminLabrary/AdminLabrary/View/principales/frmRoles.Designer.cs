@@ -217,6 +217,7 @@
             this.RolNumero.HeaderText = "RolNumero";
             this.RolNumero.Name = "RolNumero";
             this.RolNumero.ReadOnly = true;
+            this.RolNumero.Visible = false;
             // 
             // frmRoles
             // 

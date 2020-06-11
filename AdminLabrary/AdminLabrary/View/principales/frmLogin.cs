@@ -57,6 +57,7 @@ namespace AdminLabrary.View.principales
                     {
                         if(i.rol == 0)
                         {
+                           frmLogin.f.inicio();
                             frmPrincipal.Sol.solicitud.idlector = i.idLector;
                             frmPrincipal.Sol.ID = i.idLector;
                             frmPrincipal.Sol.Loging = 0;
@@ -67,6 +68,7 @@ namespace AdminLabrary.View.principales
                         }
                         else
                         {
+                            frmLogin.f.inicio();
                             frmPrincipal.prestamos.alquiler.idAdmin = i.ID;
                             frmPrincipal.Sol.solicitud.idlector = i.idLector;
                             frmPrincipal.Sol.ID = i.idLector;

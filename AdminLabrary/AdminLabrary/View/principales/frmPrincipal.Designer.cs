@@ -35,8 +35,9 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblUsuarioARecibir = new System.Windows.Forms.Label();
             this.PanelBarraTitulo = new System.Windows.Forms.Panel();
+            this.picce2 = new System.Windows.Forms.PictureBox();
             this.btnMostrar = new System.Windows.Forms.PictureBox();
-            this.PictureBox5 = new System.Windows.Forms.PictureBox();
+            this.picLogomenu = new System.Windows.Forms.PictureBox();
             this.Panel10 = new System.Windows.Forms.Panel();
             this.btnEditorial = new System.Windows.Forms.Button();
             this.btnCategoria = new System.Windows.Forms.Button();
@@ -49,21 +50,20 @@
             this.btnRoles = new System.Windows.Forms.Button();
             this.btnSolicitudes = new System.Windows.Forms.Button();
             this.PanelMenu = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pPrincipal = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picce2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.PanelBarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picce2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMostrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogomenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             this.PanelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picce2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCerrar
@@ -153,6 +153,19 @@
             this.PanelBarraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelBarraTitulo_Paint);
             this.PanelBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelBarraTitulo_MouseDown);
             // 
+            // picce2
+            // 
+            this.picce2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picce2.Image = ((System.Drawing.Image)(resources.GetObject("picce2.Image")));
+            this.picce2.Location = new System.Drawing.Point(41, 0);
+            this.picce2.Name = "picce2";
+            this.picce2.Size = new System.Drawing.Size(30, 35);
+            this.picce2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picce2.TabIndex = 28;
+            this.picce2.TabStop = false;
+            this.picce2.Visible = false;
+            this.picce2.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
             // btnMostrar
             // 
             this.btnMostrar.BackColor = System.Drawing.Color.Transparent;
@@ -167,16 +180,16 @@
             this.btnMostrar.Visible = false;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
-            // PictureBox5
+            // picLogomenu
             // 
-            this.PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox5.Image")));
-            this.PictureBox5.Location = new System.Drawing.Point(9, 0);
-            this.PictureBox5.Name = "PictureBox5";
-            this.PictureBox5.Size = new System.Drawing.Size(196, 164);
-            this.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox5.TabIndex = 18;
-            this.PictureBox5.TabStop = false;
-            this.PictureBox5.Click += new System.EventHandler(this.PictureBox5_Click);
+            this.picLogomenu.Image = ((System.Drawing.Image)(resources.GetObject("picLogomenu.Image")));
+            this.picLogomenu.Location = new System.Drawing.Point(9, 0);
+            this.picLogomenu.Name = "picLogomenu";
+            this.picLogomenu.Size = new System.Drawing.Size(196, 164);
+            this.picLogomenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogomenu.TabIndex = 18;
+            this.picLogomenu.TabStop = false;
+            this.picLogomenu.Click += new System.EventHandler(this.PictureBox5_Click);
             // 
             // Panel10
             // 
@@ -413,7 +426,7 @@
             this.PanelMenu.Controls.Add(this.btnCategoria);
             this.PanelMenu.Controls.Add(this.btnEditorial);
             this.PanelMenu.Controls.Add(this.Panel10);
-            this.PanelMenu.Controls.Add(this.PictureBox5);
+            this.PanelMenu.Controls.Add(this.picLogomenu);
             this.PanelMenu.Cursor = System.Windows.Forms.Cursors.Default;
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenu.Location = new System.Drawing.Point(0, 32);
@@ -421,6 +434,18 @@
             this.PanelMenu.Size = new System.Drawing.Size(236, 629);
             this.PanelMenu.TabIndex = 4;
             this.PanelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMenu_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // pPrincipal
             // 
@@ -448,31 +473,6 @@
             this.picLogo.TabIndex = 24;
             this.picLogo.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            // 
-            // picce2
-            // 
-            this.picce2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picce2.Image = ((System.Drawing.Image)(resources.GetObject("picce2.Image")));
-            this.picce2.Location = new System.Drawing.Point(41, 0);
-            this.picce2.Name = "picce2";
-            this.picce2.Size = new System.Drawing.Size(30, 35);
-            this.picce2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picce2.TabIndex = 28;
-            this.picce2.TabStop = false;
-            this.picce2.Visible = false;
-            this.picce2.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -491,14 +491,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.PanelBarraTitulo.ResumeLayout(false);
             this.PanelBarraTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picce2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMostrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogomenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             this.PanelMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picce2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -512,7 +512,6 @@
         public System.Windows.Forms.Label lblUsuarioARecibir;
         internal System.Windows.Forms.Panel PanelBarraTitulo;
         internal System.Windows.Forms.PictureBox btnMostrar;
-        internal System.Windows.Forms.PictureBox PictureBox5;
         internal System.Windows.Forms.Panel Panel10;
         internal System.Windows.Forms.Button btnEditorial;
         internal System.Windows.Forms.Button btnCategoria;
@@ -529,5 +528,6 @@
         internal System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox picce2;
+        public System.Windows.Forms.PictureBox picLogomenu;
     }
 }

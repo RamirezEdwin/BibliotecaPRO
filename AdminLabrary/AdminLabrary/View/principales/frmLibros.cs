@@ -83,16 +83,18 @@ namespace AdminLabrary.formularios.principales
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Libros.btnGuardar.Hide();
-            Libros.btnActualizar.Show();
-            Libros.btnActualizar.Enabled = true;
-            Libros.btnEliminar.Hide();
-            btnEliminar.Enabled = false;
-            Libros.indi = 0;
-            btnEditar.Enabled = false;
-            seleccionar();
-
-            Libros.ShowDialog();
+            if (dgvLibros.RowCount > 0)
+            {
+                Libros.btnGuardar.Hide();
+                Libros.btnActualizar.Show();
+                Libros.btnActualizar.Enabled = true;
+                Libros.btnEliminar.Hide();
+                btnEliminar.Enabled = false;
+                Libros.indi = 0;
+                btnEditar.Enabled = false;
+                seleccionar();
+                Libros.ShowDialog();
+            }
         }
         void seleccionar()
         {
@@ -123,17 +125,21 @@ namespace AdminLabrary.formularios.principales
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            Libros.btnGuardar.Hide();
-            Libros.btnActualizar.Hide();
-            Libros.btnSeleccionarA.Hide();
-            Libros.btnSeleccionarE.Hide();
-            Libros.btnEliminar.Show();
-            Libros.btnEliminar.Enabled = true;
-            btnEliminar.Enabled = false;
-            btnEditar.Enabled = false;
-            Libros.indi = 1;
-            seleccionar();
-            Libros.ShowDialog();
+            if (dgvLibros.RowCount > 0)
+            {
+                Libros.btnGuardar.Hide();
+                Libros.btnActualizar.Hide();
+                Libros.btnSeleccionarA.Hide();
+                Libros.btnSeleccionarE.Hide();
+                Libros.btnEliminar.Show();
+                Libros.btnEliminar.Enabled = true;
+                btnEliminar.Enabled = false;
+                btnEditar.Enabled = false;
+                Libros.indi = 1;
+                seleccionar();
+                Libros.ShowDialog();
+            }
+                
         }
     }
 }

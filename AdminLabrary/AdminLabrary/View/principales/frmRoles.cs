@@ -77,34 +77,40 @@ namespace AdminLabrary.View.principales
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
-            admin.btnGuardar.Hide();
-            admin.btnEliminar.Show();
-            admin.btnEditar.Hide();
-            admin.btnEliminar.Enabled = true;
-            admin.btnSeleccionar.Hide();
-            admin.txtContraseña.Enabled = false;
-            admin.txtUsuario.Enabled = false;
-            btnEditar.Enabled = false;
-            btnEliminar.Enabled = false;
-            admin.rbtnAdmi.Checked = true;
-            Seleccionar();
-            admin.ShowDialog();
+            if (dgvAdmi.RowCount > 0)
+            {
+                admin.btnGuardar.Hide();
+                admin.btnEliminar.Show();
+                admin.btnEditar.Hide();
+                admin.btnEliminar.Enabled = true;
+                admin.btnSeleccionar.Hide();
+                admin.txtContraseña.Enabled = false;
+                admin.txtUsuario.Enabled = false;
+                btnEditar.Enabled = false;
+                btnEliminar.Enabled = false;
+                admin.rbtnAdmi.Checked = true;
+                Seleccionar();
+                admin.ShowDialog();
+            }
+           
 
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            admin.btnGuardar.Hide();
-            admin.btnEditar.Show();
-            admin.btnEliminar.Hide();
-            admin.btnEditar.Enabled = true;
-            admin.btnSeleccionar.Enabled = true;
-            btnEditar.Enabled = false;
-            btnEliminar.Enabled = false;
-            admin.rbtnAdmi.Checked = true;
-            Seleccionar();
-            admin.ShowDialog();
+            if (dgvAdmi.RowCount > 0)
+            {
+                admin.btnGuardar.Hide();
+                admin.btnEditar.Show();
+                admin.btnEliminar.Hide();
+                admin.btnEditar.Enabled = true;
+                admin.btnSeleccionar.Enabled = true;
+                btnEditar.Enabled = false;
+                btnEliminar.Enabled = false;
+                admin.rbtnAdmi.Checked = true;
+                Seleccionar();
+                admin.ShowDialog();
+            }
 
         }
 

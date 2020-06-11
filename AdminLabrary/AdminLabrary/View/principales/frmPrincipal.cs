@@ -326,10 +326,10 @@ namespace AdminLabrary.formularios.principales
             btnMostrar.Show();
         }
 
-        private void btnMostrar_Click(object sender, EventArgs e)
+        public void btnMostrar_Click(object sender, EventArgs e)
         {
             PanelMenu.Show();
-            picce2.Hide();
+            picce2.Hide();  
             btnMostrar.Hide();
         }
 
@@ -359,7 +359,13 @@ namespace AdminLabrary.formularios.principales
             MostrarPanel(Sol);
         }
 
-        private void PictureBox5_Click(object sender, EventArgs e)
+        public void PictureBox5_Click(object sender, EventArgs e)
+        {
+            picLogo.BringToFront();
+            color = 9;
+            cambiarcolor();
+        }
+        public void inicio()
         {
             picLogo.BringToFront();
             color = 9;

@@ -22,6 +22,7 @@
         <AssociationConnector Association="BibliotecaprogramModel.FK__Alquilere__Id_Le__4BAC3F29" />
         <AssociationConnector Association="BibliotecaprogramModel.FK__Alquilere__Id_li__4CA06362" />
         <AssociationConnector Association="BibliotecaprogramModel.FK__Alquilere__Recib__440B1D61" />
+        <AssociationConnector Association="BibliotecaprogramModel.FK__Roles__Id_Lector__412EB0B6" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

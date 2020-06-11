@@ -32,5 +32,6 @@ namespace AdminLabrary.Model
         public virtual ICollection<Alquileres> Alquileres { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Alquileres> Alquileres1 { get; set; }
+        public virtual Lectores Lectores { get; set; }
     }
 }

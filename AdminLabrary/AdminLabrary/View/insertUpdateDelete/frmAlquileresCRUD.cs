@@ -172,7 +172,7 @@ namespace AdminLabrary.View.insertUpdateDelete
         {
             using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
             {
-                if (int.Parse(txtCantidad.Text) > cantidad || int.Parse(txtCantidad.Text) < 0)
+                if (int.Parse(txtCantidad.Text) > cantidad || int.Parse(txtCantidad.Text) <= 0)
                 {
                     MessageBox.Show("Cantidad incorrecta");
                 }
@@ -181,7 +181,7 @@ namespace AdminLabrary.View.insertUpdateDelete
                     alqu = db.Alquileres.Where(buscarID => buscarID.Id_alquiler == idAlquiler).First();
                     alqu.Id_Lector = idLector;
                     alqu.Id_libro = IdLibro;
-                    alqu.cantidad = int.Parse(txtCantidad.Text);
+                    alqu.cantidad = cantidad;
                     alqu.Entregado = IdEntregado;
                     alqu.fecha_salida = fecha_salida;
                     alqu.fecha_prevista_de_entrega = fecha_pre;

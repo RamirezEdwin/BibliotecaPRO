@@ -77,6 +77,7 @@
             this.dgvAdmi.Size = new System.Drawing.Size(953, 328);
             this.dgvAdmi.TabIndex = 2;
             this.dgvAdmi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdmi_CellClick);
+            this.dgvAdmi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdmi_CellContentClick);
             // 
             // ID
             // 

@@ -67,27 +67,36 @@ namespace AdminLabrary.formularios.principales
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            seleccionar();
-            categoria.btnEditar.Enabled = true;
-            categoria.btnGuardar.Hide();
-            categoria.btnEditar.Show();
-            categoria.btnEliminar.Hide();
-            categoria.ShowDialog();
-            btnEditar.Enabled = false;
-            btnEliminar.Enabled = false;
+            if (dgvCat.RowCount>0)
+            {
+
+                seleccionar();
+                categoria.btnEditar.Enabled = true;
+                categoria.btnGuardar.Hide();
+                categoria.btnEditar.Show();
+                categoria.btnEliminar.Hide();
+                categoria.ShowDialog();
+                btnEditar.Enabled = false;
+                btnEliminar.Enabled = false;
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            seleccionar();
-            categoria.btnEliminar.Enabled = true;
-            categoria.btnGuardar.Hide();
-            categoria.btnEditar.Hide();
-            categoria.btnEliminar.Show();
-            categoria.txtCategoria.Enabled = false;
-            categoria.ShowDialog();
-            btnEditar.Enabled = false;
-            btnEliminar.Enabled = false;
+            if (dgvCat.RowCount > 0)
+            {
+
+                seleccionar();
+                categoria.btnEliminar.Enabled = true;
+                categoria.btnGuardar.Hide();
+                categoria.btnEditar.Hide();
+                categoria.btnEliminar.Show();
+                categoria.txtCategoria.Enabled = false;
+                categoria.ShowDialog();
+                btnEditar.Enabled = false;
+                btnEliminar.Enabled = false;
+            }
+        
         }
     }
 }

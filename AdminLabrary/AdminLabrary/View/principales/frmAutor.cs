@@ -80,12 +80,16 @@ namespace AdminLabrary.formularios.principales
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            seleccionar();
-            autor.btnGuardar.Hide();
-            autor.btnEliminar.Hide();
-            autor.btnEditar.Show();
-            autor.btnEditar.Enabled = true;
-            autor.ShowDialog();
+            if (dgvAutores.RowCount > 0)
+            {
+                seleccionar();
+                autor.btnGuardar.Hide();
+                autor.btnEliminar.Hide();
+                autor.btnEditar.Show();
+                autor.btnEditar.Enabled = true;
+                autor.ShowDialog();
+            }
+            
         }
 
         private void dgvAutores_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -96,17 +100,20 @@ namespace AdminLabrary.formularios.principales
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            seleccionar();
-            autor.btnGuardar.Hide();
-            autor.btnEliminar.Show();
-            autor.btnEditar.Hide();
-            autor.btnEliminar.Enabled = true;
-            autor.dtpFecha.Enabled = false;
-            autor.txtNacionalidad.Enabled = false;
-            autor.txtNombre.Enabled = false;
-            btnEliminar.Enabled =false;
-            btnEditar.Enabled = false;
-            autor.ShowDialog();
+            if (dgvAutores.RowCount > 0)
+            {
+                seleccionar();
+                autor.btnGuardar.Hide();
+                autor.btnEliminar.Show();
+                autor.btnEditar.Hide();
+                autor.btnEliminar.Enabled = true;
+                autor.dtpFecha.Enabled = false;
+                autor.txtNacionalidad.Enabled = false;
+                autor.txtNombre.Enabled = false;
+                btnEliminar.Enabled = false;
+                btnEditar.Enabled = false;
+                autor.ShowDialog();
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

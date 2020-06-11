@@ -74,29 +74,37 @@ namespace AdminLabrary.formularios.principales
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            seleccionar();
-            Editorial.btnEditar.Enabled = true;
-            Editorial.btnGuardar.Hide();
-            Editorial.btnEditar.Show();
-            Editorial.btnEliminar.Hide();
-            btnEditar.Enabled = true;
-            btnEliminar.Enabled = false;
-            Editorial.ShowDialog();
+            if (dgvEditorial.RowCount > 0)
+            {
+                seleccionar();
+                Editorial.btnEditar.Enabled = true;
+                Editorial.btnGuardar.Hide();
+                Editorial.btnEditar.Show();
+                Editorial.btnEliminar.Hide();
+                btnEditar.Enabled = true;
+                btnEliminar.Enabled = false;
+                Editorial.ShowDialog();
+            }
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            seleccionar();
-            Editorial.btnEliminar.Enabled = true;
-            Editorial.btnGuardar.Hide();
-            Editorial.btnEditar.Hide();
-            Editorial.btnEliminar.Show();
-            Editorial.txtDirecion.Enabled = false;
-            Editorial.txtEditorial.Enabled = false;
-            Editorial.dtpFecha.Enabled = false;
-            btnEditar.Enabled = false;
-            btnEliminar.Enabled = false;
-            Editorial.ShowDialog();
+            if (dgvEditorial.RowCount > 0)
+            {
+                seleccionar();
+                Editorial.btnEliminar.Enabled = true;
+                Editorial.btnGuardar.Hide();
+                Editorial.btnEditar.Hide();
+                Editorial.btnEliminar.Show();
+                Editorial.txtDirecion.Enabled = false;
+                Editorial.txtEditorial.Enabled = false;
+                Editorial.dtpFecha.Enabled = false;
+                btnEditar.Enabled = false;
+                btnEliminar.Enabled = false;
+                Editorial.ShowDialog();
+            }
+            
         }
     }
 }

@@ -19,6 +19,7 @@ namespace AdminLabrary.Model
         {
             this.solicitudes = new HashSet<solicitudes>();
             this.Alquileres = new HashSet<Alquileres>();
+            this.Roles = new HashSet<Roles>();
         }
     
         public int Id_Lector { get; set; }
@@ -30,5 +31,7 @@ namespace AdminLabrary.Model
         public virtual ICollection<solicitudes> solicitudes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Alquileres> Alquileres { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Roles> Roles { get; set; }
     }
 }
