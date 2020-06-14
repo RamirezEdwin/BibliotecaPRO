@@ -19,40 +19,88 @@ namespace AdminLabrary.formularios.principales
         public frmLibros()
         {
             InitializeComponent();
-            CargaDratos();
+            
         }
 
        
 
         private void frmLibros_Load(object sender, EventArgs e)
         {
-
+            rbtnLibro.Checked = true;
+            CargaDratos();
         }
+
         public void CargaDratos()
         {
             using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
             {
+                string buscar = txtBuscar.Text;
                 dgvLibros.Rows.Clear();
-                var lista = from li in db.Libros
-                            from au in db.Autores
-                            from ca in db.Categorias
-                            from ed in db.Editoriales
-                            where li.Id_categoria == ca.Id_categoria
-                            && li.Id_autor == au.Id_autor
-                            && li.Id_Editorial == ed.Id_Editorial
-                            && li.estado == 0
-                            && au.estado == 0
-                            && ca.estado == 0
-                            && ed.estado == 0
-                            select new 
-                            { ID = li.Id_libro, Nombre = li.Nombre,
-                                Cantidad =li.cantidad,Año=li.Año,Numero_edicion =li.Numero_edicion,
-                                Autor = au.Nombre,Editorial = ed.Editorial,Categoria = ca.Categoria,
-                                idAutor = li.Id_autor,idEditorial = li.Id_Editorial, idCategoria = ca.Id_categoria
-                            };
-                foreach (var i in lista)
+                if(rbtnLibro.Checked == true)
                 {
-                    dgvLibros.Rows.Add(i.ID,i.Nombre,i.Cantidad,i.Año,i.Numero_edicion,i.Autor, i.Editorial, i.Categoria,i.idAutor,i.idEditorial,i.idCategoria);
+                    var lista = from li in db.Libros
+                                from au in db.Autores
+                                from ca in db.Categorias
+                                from ed in db.Editoriales
+                                where li.Id_categoria == ca.Id_categoria
+                                && li.Id_autor == au.Id_autor
+                                && li.Id_Editorial == ed.Id_Editorial
+                                && li.estado == 0
+                                && au.estado == 0
+                                && ca.estado == 0
+                                && ed.estado == 0
+                                && li.Nombre.Contains(buscar)
+                                select new
+                                {
+                                    ID = li.Id_libro,
+                                    Nombre = li.Nombre,
+                                    Cantidad = li.cantidad,
+                                    Año = li.Año,
+                                    Numero_edicion = li.Numero_edicion,
+                                    Autor = au.Nombre,
+                                    Editorial = ed.Editorial,
+                                    Categoria = ca.Categoria,
+                                    idAutor = li.Id_autor,
+                                    idEditorial = li.Id_Editorial,
+                                    idCategoria = ca.Id_categoria
+                                };
+                    foreach (var i in lista)
+                    {
+                        dgvLibros.Rows.Add(i.ID, i.Nombre, i.Cantidad, i.Año, i.Numero_edicion, i.Autor, i.Editorial, i.Categoria, i.idAutor, i.idEditorial, i.idCategoria);
+                    }
+                }
+                else
+                {
+                    var lista = from li in db.Libros
+                                from au in db.Autores
+                                from ca in db.Categorias
+                                from ed in db.Editoriales
+                                where li.Id_categoria == ca.Id_categoria
+                                && li.Id_autor == au.Id_autor
+                                && li.Id_Editorial == ed.Id_Editorial
+                                && li.estado == 0
+                                && au.estado == 0
+                                && ca.estado == 0
+                                && ed.estado == 0
+                                && au.Nombre.Contains(buscar)
+                                select new
+                                {
+                                    ID = li.Id_libro,
+                                    Nombre = li.Nombre,
+                                    Cantidad = li.cantidad,
+                                    Año = li.Año,
+                                    Numero_edicion = li.Numero_edicion,
+                                    Autor = au.Nombre,
+                                    Editorial = ed.Editorial,
+                                    Categoria = ca.Categoria,
+                                    idAutor = li.Id_autor,
+                                    idEditorial = li.Id_Editorial,
+                                    idCategoria = ca.Id_categoria
+                                };
+                    foreach (var i in lista)
+                    {
+                        dgvLibros.Rows.Add(i.ID, i.Nombre, i.Cantidad, i.Año, i.Numero_edicion, i.Autor, i.Editorial, i.Categoria, i.idAutor, i.idEditorial, i.idCategoria);
+                    }
                 }
 
               
@@ -60,6 +108,7 @@ namespace AdminLabrary.formularios.principales
             }
 
         }
+
         public frmLibrosCRUD Libros = new frmLibrosCRUD();
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -140,6 +189,11 @@ namespace AdminLabrary.formularios.principales
                 Libros.ShowDialog();
             }
                 
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            CargaDratos();
         }
     }
 }

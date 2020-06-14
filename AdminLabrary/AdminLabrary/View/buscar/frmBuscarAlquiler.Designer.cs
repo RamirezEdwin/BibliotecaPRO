@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarAlquiler));
             this.dgvAlquiler = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +43,9 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.rbtnAdministrador = new System.Windows.Forms.RadioButton();
+            this.rbtnLibro = new System.Windows.Forms.RadioButton();
+            this.rbtnLector = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlquiler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -53,9 +56,9 @@
             // 
             this.dgvAlquiler.AllowUserToAddRows = false;
             this.dgvAlquiler.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvAlquiler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dgvAlquiler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAlquiler.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -69,14 +72,14 @@
             this.Entregado,
             this.Fecha_Entrega,
             this.Recibido});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAlquiler.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAlquiler.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAlquiler.Location = new System.Drawing.Point(0, 223);
             this.dgvAlquiler.Margin = new System.Windows.Forms.Padding(4);
             this.dgvAlquiler.Name = "dgvAlquiler";
@@ -181,11 +184,57 @@
             this.pictureBox3.TabIndex = 28;
             this.pictureBox3.TabStop = false;
             // 
+            // rbtnAdministrador
+            // 
+            this.rbtnAdministrador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbtnAdministrador.AutoSize = true;
+            this.rbtnAdministrador.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.rbtnAdministrador.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
+            this.rbtnAdministrador.Location = new System.Drawing.Point(812, 173);
+            this.rbtnAdministrador.Name = "rbtnAdministrador";
+            this.rbtnAdministrador.Size = new System.Drawing.Size(113, 21);
+            this.rbtnAdministrador.TabIndex = 31;
+            this.rbtnAdministrador.TabStop = true;
+            this.rbtnAdministrador.Text = "Administrador";
+            this.rbtnAdministrador.UseVisualStyleBackColor = true;
+            // 
+            // rbtnLibro
+            // 
+            this.rbtnLibro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbtnLibro.AutoSize = true;
+            this.rbtnLibro.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.rbtnLibro.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
+            this.rbtnLibro.Location = new System.Drawing.Point(748, 173);
+            this.rbtnLibro.Name = "rbtnLibro";
+            this.rbtnLibro.Size = new System.Drawing.Size(58, 21);
+            this.rbtnLibro.TabIndex = 30;
+            this.rbtnLibro.TabStop = true;
+            this.rbtnLibro.Text = "Libro";
+            this.rbtnLibro.UseVisualStyleBackColor = true;
+            // 
+            // rbtnLector
+            // 
+            this.rbtnLector.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbtnLector.AutoSize = true;
+            this.rbtnLector.BackColor = System.Drawing.Color.Transparent;
+            this.rbtnLector.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.rbtnLector.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
+            this.rbtnLector.Location = new System.Drawing.Point(676, 173);
+            this.rbtnLector.Name = "rbtnLector";
+            this.rbtnLector.Size = new System.Drawing.Size(66, 21);
+            this.rbtnLector.TabIndex = 29;
+            this.rbtnLector.TabStop = true;
+            this.rbtnLector.Text = "Lector";
+            this.rbtnLector.UseVisualStyleBackColor = false;
+            // 
             // frmBuscarAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 551);
+            this.Controls.Add(this.rbtnAdministrador);
+            this.Controls.Add(this.rbtnLibro);
+            this.Controls.Add(this.rbtnLector);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtBuscar);
@@ -221,5 +270,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Recibido;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.RadioButton rbtnAdministrador;
+        private System.Windows.Forms.RadioButton rbtnLibro;
+        private System.Windows.Forms.RadioButton rbtnLector;
     }
 }
