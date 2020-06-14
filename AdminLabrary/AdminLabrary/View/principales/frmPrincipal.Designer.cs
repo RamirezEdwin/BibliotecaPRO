@@ -215,7 +215,7 @@
             this.btnEditorial.Name = "btnEditorial";
             this.btnEditorial.Size = new System.Drawing.Size(187, 56);
             this.btnEditorial.TabIndex = 2;
-            this.btnEditorial.Text = "  Editorial";
+            this.btnEditorial.Text = "  Editoriales";
             this.btnEditorial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditorial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditorial.UseVisualStyleBackColor = false;
@@ -237,7 +237,7 @@
             this.btnCategoria.Name = "btnCategoria";
             this.btnCategoria.Size = new System.Drawing.Size(188, 62);
             this.btnCategoria.TabIndex = 4;
-            this.btnCategoria.Text = "  Categoria";
+            this.btnCategoria.Text = "  Categorias";
             this.btnCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCategoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCategoria.UseVisualStyleBackColor = false;
@@ -325,7 +325,7 @@
             this.btnAutor.Name = "btnAutor";
             this.btnAutor.Size = new System.Drawing.Size(187, 52);
             this.btnAutor.TabIndex = 17;
-            this.btnAutor.Text = "  Autor";
+            this.btnAutor.Text = "  Autores";
             this.btnAutor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAutor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAutor.UseVisualStyleBackColor = false;
