@@ -524,10 +524,10 @@
         internal System.Windows.Forms.Button btnRoles;
         internal System.Windows.Forms.Button btnSolicitudes;
         internal System.Windows.Forms.Panel PanelMenu;
-        private System.Windows.Forms.Panel pPrincipal;
-        internal System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox picce2;
         public System.Windows.Forms.PictureBox picLogomenu;
+        private System.Windows.Forms.Panel pPrincipal;
+        internal System.Windows.Forms.PictureBox picLogo;
     }
 }
