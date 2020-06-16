@@ -136,13 +136,23 @@ namespace AdminLabrary.View.principales
                             dgvPrestamos.Rows.Add(i.ID, i.Lector, i.Libro, i.Cantidad, i.Entregado, i.Fecha_salida, i.Fecha_prevista_Entrega, i.IDLector, i.IDLibro, i.IDEntregado);
 
                         }
+                        
                     }
 
                 }
             }
 
         }
-
+        public void ultimafila()
+        {
+            dgvPrestamos.ClearSelection();
+            if (dgvPrestamos.Rows.Count > 0)
+            {
+                int ultimafila = dgvPrestamos.Rows.Count - 1;
+                dgvPrestamos.FirstDisplayedScrollingRowIndex = ultimafila;
+                dgvPrestamos.Rows[ultimafila].Selected = true;
+            }
+        }
         public frmAlquileresCRUD alquiler = new frmAlquileresCRUD();
         private void btnNuevo_Click(object sender, EventArgs e)
         {

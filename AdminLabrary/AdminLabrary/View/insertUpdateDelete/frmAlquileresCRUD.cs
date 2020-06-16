@@ -166,6 +166,7 @@ namespace AdminLabrary.View.insertUpdateDelete
 
                 }
             }
+            frmPrincipal.prestamos.ultimafila();
         }
 
         private void btnRecibir_Click(object sender, EventArgs e)
@@ -220,6 +221,7 @@ namespace AdminLabrary.View.insertUpdateDelete
             limpiar();
             frmPrincipal.prestamos.CargarDatos();
             this.Close();
+            frmPrincipal.prestamos.ultimafila();
         }
         public void limpiar()
         {
