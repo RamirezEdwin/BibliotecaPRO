@@ -53,7 +53,7 @@ namespace AdminLabrary.View.buscar
 
                 }
             }
-            else
+            else if(indicador == 2)
             {
                 using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
                 {
@@ -91,6 +91,30 @@ namespace AdminLabrary.View.buscar
                 }
 
             }
+            else
+            {
+                using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
+                {
+
+                    dgvLecto.Rows.Clear();
+                    string buscar = txtBuscar.Text;
+                    var listaL = from LEC in db.Lectores
+                                 where LEC.Nombres.Contains(buscar)
+                                 && LEC.estado == 0
+                                 select new
+                                 {
+                                     ID = LEC.Id_Lector,
+                                     Nombres = LEC.Nombres,
+                                     Apellidos = LEC.Apellidos
+                                 };
+                    foreach (var i in listaL)
+                    {
+
+                        dgvLecto.Rows.Add(i.ID, i.Nombres, i.Apellidos);
+                    }
+
+                }
+            }
         }
 
         private void dgvLectores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -112,7 +136,7 @@ namespace AdminLabrary.View.buscar
                 frmPrincipal.r.admin.IDLector = int.Parse(id);
                 this.Close();
             }
-            else
+            else if (indicador == 2)
             {
                 string idl = dgvLecto.CurrentRow.Cells[0].Value.ToString();
                 string Nombrel = dgvLecto.CurrentRow.Cells[1].Value.ToString();
@@ -120,6 +144,14 @@ namespace AdminLabrary.View.buscar
                 frmPrincipal.prestamos.alquiler.txtCantidad.Text = (3 - int.Parse(dgvLecto.CurrentRow.Cells[3].Value.ToString())).ToString();
                 frmPrincipal.prestamos.alquiler.txtLector.Text = Nombrel;
                 frmPrincipal.prestamos.alquiler.idLector = int.Parse(idl);
+                this.Close();
+            }
+            else
+            {
+                string idl = dgvLecto.CurrentRow.Cells[0].Value.ToString();
+                string Nombrel = dgvLecto.CurrentRow.Cells[1].Value.ToString();
+                frmPrincipal.Sol.solicitud.txtLector.Text = Nombrel;
+                frmPrincipal.Sol.solicitud.idlector = int.Parse(idl);
                 this.Close();
             }
         }
