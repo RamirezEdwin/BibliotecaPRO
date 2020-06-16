@@ -33,8 +33,11 @@ namespace AdminLabrary.View.principales
             using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
             {
                 var lista = from admin in db.Roles
+                            from lec in db.Lectores
                             where admin.Usuario == txtUsuario.Text
                             && admin.Contraseña == txtContraseña.Text
+                            && admin.Id_Lector == lec.Id_Lector
+                            && lec.estado ==0
                             && admin.estado == 0
                            
 

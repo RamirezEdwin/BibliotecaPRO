@@ -346,6 +346,7 @@ namespace AdminLabrary.formularios.principales
         private void btnRoles_Click(object sender, EventArgs e)
         {
             color = 7;
+            r.CargarDatos();
             cambiarcolor();
             MostrarPanel(r);
         }

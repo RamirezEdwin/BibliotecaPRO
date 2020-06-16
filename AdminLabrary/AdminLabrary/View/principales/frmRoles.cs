@@ -31,6 +31,7 @@ namespace AdminLabrary.View.principales
                     var lista = from ad in db.Roles
                                 from lec in db.Lectores
                                 where ad.Id_Lector == lec.Id_Lector
+                                && lec.estado ==0
                                 && ad.estado == 0
                                
                                 select new
@@ -140,6 +141,11 @@ namespace AdminLabrary.View.principales
             admin.IDLector = int.Parse(idU);
             admin.txtUsuario.Text = usuario;
             admin.IDAdmin = int.Parse(Id);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
     
