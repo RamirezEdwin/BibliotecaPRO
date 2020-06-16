@@ -35,7 +35,7 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnSeleccionarLector = new System.Windows.Forms.Button();
+            this.btnSeleccionarLibro = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -130,23 +130,23 @@
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // btnSeleccionarLector
+            // btnSeleccionarLibro
             // 
-            this.btnSeleccionarLector.BackColor = System.Drawing.Color.Lime;
-            this.btnSeleccionarLector.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSeleccionarLector.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnSeleccionarLector.FlatAppearance.BorderSize = 2;
-            this.btnSeleccionarLector.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnSeleccionarLector.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnSeleccionarLector.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeleccionarLector.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.btnSeleccionarLector.Location = new System.Drawing.Point(365, 48);
-            this.btnSeleccionarLector.Name = "btnSeleccionarLector";
-            this.btnSeleccionarLector.Size = new System.Drawing.Size(111, 29);
-            this.btnSeleccionarLector.TabIndex = 33;
-            this.btnSeleccionarLector.Text = "SELECCIONAR";
-            this.btnSeleccionarLector.UseVisualStyleBackColor = false;
-            this.btnSeleccionarLector.Click += new System.EventHandler(this.btnSeleccionarLector_Click);
+            this.btnSeleccionarLibro.BackColor = System.Drawing.Color.Lime;
+            this.btnSeleccionarLibro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSeleccionarLibro.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnSeleccionarLibro.FlatAppearance.BorderSize = 2;
+            this.btnSeleccionarLibro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnSeleccionarLibro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnSeleccionarLibro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionarLibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.btnSeleccionarLibro.Location = new System.Drawing.Point(365, 48);
+            this.btnSeleccionarLibro.Name = "btnSeleccionarLibro";
+            this.btnSeleccionarLibro.Size = new System.Drawing.Size(111, 29);
+            this.btnSeleccionarLibro.TabIndex = 33;
+            this.btnSeleccionarLibro.Text = "SELECCIONAR";
+            this.btnSeleccionarLibro.UseVisualStyleBackColor = false;
+            this.btnSeleccionarLibro.Click += new System.EventHandler(this.btnSeleccionarLector_Click);
             // 
             // frmSolicitudesCRUD
             // 
@@ -154,7 +154,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(486, 246);
-            this.Controls.Add(this.btnSeleccionarLector);
+            this.Controls.Add(this.btnSeleccionarLibro);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnGuardar);
@@ -179,6 +179,6 @@
         public System.Windows.Forms.Button btnActualizar;
         public System.Windows.Forms.Button btnGuardar;
         public System.Windows.Forms.Button btnEliminar;
-        public System.Windows.Forms.Button btnSeleccionarLector;
+        public System.Windows.Forms.Button btnSeleccionarLibro;
     }
 }

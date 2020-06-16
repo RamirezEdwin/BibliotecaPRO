@@ -120,6 +120,8 @@ namespace AdminLabrary.View.principales
             solicitud.btnGuardar.Enabled = true;
             solicitud.btnActualizar.Hide();
             solicitud.btnEliminar.Hide();
+            solicitud.btnSeleccionarLibro.Show();
+            solicitud.btnSeleccionarLibro.Enabled = true;
             solicitud.limpiar();
             btnEliminar.Enabled = false;
             btnEditar.Enabled = false;
@@ -140,7 +142,7 @@ namespace AdminLabrary.View.principales
                 {
                     solicitud.btnGuardar.Hide();
                     solicitud.btnActualizar.Show();
-                    solicitud.btnGuardar.Enabled = true;
+                    solicitud.btnActualizar.Enabled = true;
                     solicitud.btnEliminar.Hide();
                     btnEliminar.Enabled = false;
                     btnEditar.Enabled = false;
@@ -170,7 +172,7 @@ namespace AdminLabrary.View.principales
                 solicitud.btnActualizar.Hide();
                 solicitud.btnEliminar.Show();
                 solicitud.btnEliminar.Enabled = true;
-                solicitud.btnSeleccionarLector.Hide();
+                solicitud.btnSeleccionarLibro.Hide();
                 solicitud.txtCantidad.Enabled = false;
                 btnEliminar.Enabled = false;
                 btnEditar.Enabled = false;
