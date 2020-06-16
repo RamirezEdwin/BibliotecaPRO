@@ -39,7 +39,7 @@
             this.crpCategorias.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crpCategorias.Location = new System.Drawing.Point(0, 0);
             this.crpCategorias.Name = "crpCategorias";
-            this.crpCategorias.ReportSource = "C:\\Users\\Rafa\\Documents\\GitHub\\BibliotecaPRO\\AdminLabrary\\AdminLabrary\\Reporte\\rp" +
+            this.crpCategorias.ReportSource = "C:\\Users\\14-ck0013lab\\Documents\\GitHub\\BibliotecaPRO\\AdminLabrary\\AdminLabrary\\Reporte\\rp" +
     "tCategoria.rpt";
             this.crpCategorias.Size = new System.Drawing.Size(800, 450);
             this.crpCategorias.TabIndex = 0;
