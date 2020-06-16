@@ -64,6 +64,8 @@ namespace AdminLabrary.formularios.principales
                 admin.btnEliminar.Hide();
                 admin.btnSeleccionar.Show();
                 admin.btnGuardar.Hide();
+                admin.btnEditar.Show();
+                admin.btnEditar.Enabled = true;
                 btnEditar.Enabled = false;
                 admin.rbtnAdmi.Checked = true;
                 Seleccionar();
