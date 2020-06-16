@@ -32,14 +32,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdministradores));
             this.dgvAdmi = new System.Windows.Forms.DataGridView();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.USUARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CONTRASEÑA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LECTOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDLE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -78,37 +78,6 @@
             this.dgvAdmi.TabIndex = 2;
             this.dgvAdmi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdmi_CellClick);
             this.dgvAdmi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdmi_CellContentClick);
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID ";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // USUARIO
-            // 
-            this.USUARIO.HeaderText = "USUARIO";
-            this.USUARIO.Name = "USUARIO";
-            this.USUARIO.ReadOnly = true;
-            // 
-            // CONTRASEÑA
-            // 
-            this.CONTRASEÑA.HeaderText = "CONTRASEÑA";
-            this.CONTRASEÑA.Name = "CONTRASEÑA";
-            this.CONTRASEÑA.ReadOnly = true;
-            // 
-            // LECTOR
-            // 
-            this.LECTOR.HeaderText = "LECTOR";
-            this.LECTOR.Name = "LECTOR";
-            this.LECTOR.ReadOnly = true;
-            // 
-            // IDLE
-            // 
-            this.IDLE.HeaderText = "IDLEC";
-            this.IDLE.Name = "IDLE";
-            this.IDLE.ReadOnly = true;
-            this.IDLE.Visible = false;
             // 
             // btnEditar
             // 
@@ -156,6 +125,38 @@
             this.pictureBox3.TabIndex = 14;
             this.pictureBox3.TabStop = false;
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID ";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // USUARIO
+            // 
+            this.USUARIO.HeaderText = "USUARIO";
+            this.USUARIO.Name = "USUARIO";
+            this.USUARIO.ReadOnly = true;
+            // 
+            // CONTRASEÑA
+            // 
+            this.CONTRASEÑA.HeaderText = "CONTRASEÑA";
+            this.CONTRASEÑA.Name = "CONTRASEÑA";
+            this.CONTRASEÑA.ReadOnly = true;
+            this.CONTRASEÑA.Visible = false;
+            // 
+            // LECTOR
+            // 
+            this.LECTOR.HeaderText = "LECTOR";
+            this.LECTOR.Name = "LECTOR";
+            this.LECTOR.ReadOnly = true;
+            // 
+            // IDLE
+            // 
+            this.IDLE.HeaderText = "IDLEC";
+            this.IDLE.Name = "IDLE";
+            this.IDLE.ReadOnly = true;
+            this.IDLE.Visible = false;
+            // 
             // frmAdministradores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,12 +181,12 @@
        
         private System.Windows.Forms.DataGridView dgvAdmi;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn USUARIO;
         private System.Windows.Forms.DataGridViewTextBoxColumn CONTRASEÑA;
         private System.Windows.Forms.DataGridViewTextBoxColumn LECTOR;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDLE;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
