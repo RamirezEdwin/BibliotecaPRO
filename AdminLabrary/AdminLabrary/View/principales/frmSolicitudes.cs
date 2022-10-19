@@ -122,6 +122,7 @@ namespace AdminLabrary.View.principales
             solicitud.btnEliminar.Hide();
             solicitud.btnSeleccionarLibro.Show();
             solicitud.btnSeleccionarLibro.Enabled = true;
+            solicitud.txtCantidad.Enabled = true;
             solicitud.limpiar();
             btnEliminar.Enabled = false;
             btnEditar.Enabled = false;
