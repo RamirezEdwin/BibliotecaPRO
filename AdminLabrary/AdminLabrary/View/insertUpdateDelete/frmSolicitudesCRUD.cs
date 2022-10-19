@@ -72,8 +72,10 @@ namespace AdminLabrary.View.insertUpdateDelete
         private void btnSeleccionarLector_Click(object sender, EventArgs e)
         {
             frmBuscarLibros BuscarL = new frmBuscarLibros();
+
             BuscarL.indicador = 1;
             BuscarL.ShowDialog();
+
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -144,6 +146,11 @@ namespace AdminLabrary.View.insertUpdateDelete
                 }
                 
             }
+        }
+
+        private void btnSeleccionarLector_Click_1(object sender, EventArgs e)
+        {
+            Console.WriteLine("hola");
         }
     }
 }

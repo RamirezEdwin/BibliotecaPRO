@@ -186,6 +186,7 @@
             this.btnSeleccionarLector.TabIndex = 36;
             this.btnSeleccionarLector.Text = "SELECCIONAR";
             this.btnSeleccionarLector.UseVisualStyleBackColor = false;
+            this.btnSeleccionarLector.Click += new System.EventHandler(this.btnSeleccionarLector_Click_1);
             // 
             // frmSolicitudesCRUD
             // 
