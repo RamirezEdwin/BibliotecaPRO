@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AdminLabrary.Model;
 using AdminLabrary.View.insertUpdateDelete;
-using AdminLabrary.Consulta;
+
 
 namespace AdminLabrary.formularios.principales
 {
@@ -100,10 +100,6 @@ namespace AdminLabrary.formularios.principales
         
         }
 
-        private void btnReporte_Click(object sender, EventArgs e)
-        {
-            frmConsulta r = new frmConsulta();
-            r.Show();
-        }
+       
     }
 }

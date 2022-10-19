@@ -217,14 +217,14 @@
 
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.Label lblLibro;
         public System.Windows.Forms.TextBox txtLibro;
         public System.Windows.Forms.Button btnActualizar;
         public System.Windows.Forms.Button btnGuardar;
         public System.Windows.Forms.Button btnEliminar;
         public System.Windows.Forms.Button btnSeleccionarLibro;
         public System.Windows.Forms.TextBox txtLector;
-        private System.Windows.Forms.Label lblLector;
         public System.Windows.Forms.Button btnSeleccionarLector;
+        public System.Windows.Forms.Label lblLibro;
+        public System.Windows.Forms.Label lblLector;
     }
 }

@@ -116,12 +116,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Consulta\frmConsulta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Consulta\frmConsulta.Designer.cs">
-      <DependentUpon>frmConsulta.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model\Alquileres.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -160,12 +154,6 @@
     </Compile>
     <Compile Include="Model\solicitudes.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Reporte\rptCategoria.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>rptCategoria.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="View\buscar\frmBuscarAdministrador.cs">
       <SubType>Form</SubType>
@@ -325,13 +313,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Consulta\frmConsulta.resx">
-      <DependentUpon>frmConsulta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reporte\rptCategoria.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rptCategoria.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\buscar\frmBuscarAdministrador.resx">
       <DependentUpon>frmBuscarAdministrador.cs</DependentUpon>
     </EmbeddedResource>

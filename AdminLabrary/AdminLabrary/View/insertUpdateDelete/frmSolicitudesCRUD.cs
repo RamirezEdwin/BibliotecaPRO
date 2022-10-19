@@ -150,7 +150,10 @@ namespace AdminLabrary.View.insertUpdateDelete
 
         private void btnSeleccionarLector_Click_1(object sender, EventArgs e)
         {
-            Console.WriteLine("hola");
+            frmBuscarLector lec = new frmBuscarLector();
+            lec.indicador = 3;
+            lec.filtro();
+            lec.ShowDialog();
         }
     }
 }

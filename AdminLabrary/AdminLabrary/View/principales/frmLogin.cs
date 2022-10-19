@@ -64,6 +64,9 @@ namespace AdminLabrary.View.principales
                             frmPrincipal.Sol.solicitud.idlector = i.idLector;
                             frmPrincipal.Sol.ID = i.idLector;
                             frmPrincipal.Sol.Loging = 0;
+                            frmPrincipal.Sol.solicitud.btnSeleccionarLector.Visible = false;
+                            frmPrincipal.Sol.solicitud.txtLector.Visible = false;
+                            frmPrincipal.Sol.solicitud.lblLector.Visible = false;
                             frmLogin.f.rol = 0;
                             frmLogin.f.roles();
                             
@@ -76,6 +79,9 @@ namespace AdminLabrary.View.principales
                             frmPrincipal.Sol.solicitud.idlector = i.idLector;
                             frmPrincipal.Sol.ID = i.idLector;
                             frmPrincipal.Sol.Loging = 1;
+                            frmPrincipal.Sol.solicitud.btnSeleccionarLector.Visible = true;
+                            frmPrincipal.Sol.solicitud.txtLector.Visible = true;
+                            frmPrincipal.Sol.solicitud.lblLector.Visible = true;
                             frmLogin.f.rol = 1;
                             frmLogin.f.roles();
                            
