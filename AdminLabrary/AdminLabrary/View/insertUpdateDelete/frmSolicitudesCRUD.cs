@@ -27,6 +27,7 @@ namespace AdminLabrary.View.insertUpdateDelete
         {
             txtLibro.Text = "";
             txtCantidad.Text = "";
+            txtLector.Text = "";
             
 
         }
