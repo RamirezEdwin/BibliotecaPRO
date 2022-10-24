@@ -89,7 +89,7 @@ namespace AdminLabrary.View.insertUpdateDelete
                     db.Libros.Add(Lib);
                     db.SaveChanges();
                     limpiar();
-                    frmPrincipal.Lib.CargaDratos();
+                    frmPrincipal.Lib.CargaDatos();
                     this.Close();
                 }
             }
@@ -168,7 +168,7 @@ namespace AdminLabrary.View.insertUpdateDelete
                     db.Entry(Lib).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                     limpiar();
-                    frmPrincipal.Lib.CargaDratos();
+                    frmPrincipal.Lib.CargaDatos();
                     this.Close();
                 }
             }
@@ -195,7 +195,7 @@ namespace AdminLabrary.View.insertUpdateDelete
                     db.Entry(Lib).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                     limpiar();
-                    frmPrincipal.Lib.CargaDratos();
+                    frmPrincipal.Lib.CargaDatos();
                     this.Close();
                 }
             }

@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLibros));
             this.dgvLibros = new System.Windows.Forms.DataGridView();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.rbtnLibro = new System.Windows.Forms.RadioButton();
+            this.rbtnAutor = new System.Windows.Forms.RadioButton();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Libro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,15 +49,11 @@
             this.Id_Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id_Editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id_Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.rbtnLibro = new System.Windows.Forms.RadioButton();
-            this.rbtnAutor = new System.Windows.Forms.RadioButton();
+            this.NUEVO = new System.Windows.Forms.DataGridViewImageColumn();
+            this.EDITAR = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ELIMINAR = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,10 +64,10 @@
             // 
             this.dgvLibros.AllowUserToAddRows = false;
             this.dgvLibros.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvLibros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLibros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -83,160 +85,23 @@
             this.Categoria,
             this.Id_Autor,
             this.Id_Editorial,
-            this.Id_Categoria});
+            this.Id_Categoria,
+            this.NUEVO,
+            this.EDITAR,
+            this.ELIMINAR});
             this.dgvLibros.GridColor = System.Drawing.Color.Lime;
             this.dgvLibros.Location = new System.Drawing.Point(-2, 223);
             this.dgvLibros.Name = "dgvLibros";
             this.dgvLibros.ReadOnly = true;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvLibros.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvLibros.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvLibros.Size = new System.Drawing.Size(942, 303);
             this.dgvLibros.TabIndex = 1;
             this.dgvLibros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibros_CellClick);
-            // 
-            // ID
-            // 
-            this.ID.FillWeight = 40F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // Libro
-            // 
-            this.Libro.HeaderText = "Libro";
-            this.Libro.Name = "Libro";
-            this.Libro.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.FillWeight = 40F;
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // Año
-            // 
-            this.Año.FillWeight = 60F;
-            this.Año.HeaderText = "Año";
-            this.Año.Name = "Año";
-            this.Año.ReadOnly = true;
-            // 
-            // Numero_Edicion
-            // 
-            this.Numero_Edicion.FillWeight = 50F;
-            this.Numero_Edicion.HeaderText = "Numero Edicion";
-            this.Numero_Edicion.Name = "Numero_Edicion";
-            this.Numero_Edicion.ReadOnly = true;
-            // 
-            // Autor
-            // 
-            this.Autor.HeaderText = "Autor";
-            this.Autor.Name = "Autor";
-            this.Autor.ReadOnly = true;
-            // 
-            // Editorial
-            // 
-            this.Editorial.HeaderText = "Editorial";
-            this.Editorial.Name = "Editorial";
-            this.Editorial.ReadOnly = true;
-            // 
-            // Categoria
-            // 
-            this.Categoria.FillWeight = 80F;
-            this.Categoria.HeaderText = "Categoria";
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
-            // 
-            // Id_Autor
-            // 
-            this.Id_Autor.HeaderText = "Id_Autor";
-            this.Id_Autor.Name = "Id_Autor";
-            this.Id_Autor.ReadOnly = true;
-            this.Id_Autor.Visible = false;
-            // 
-            // Id_Editorial
-            // 
-            this.Id_Editorial.HeaderText = "Id_Editorial";
-            this.Id_Editorial.Name = "Id_Editorial";
-            this.Id_Editorial.ReadOnly = true;
-            this.Id_Editorial.Visible = false;
-            // 
-            // Id_Categoria
-            // 
-            this.Id_Categoria.HeaderText = "Id_Categoria";
-            this.Id_Categoria.Name = "Id_Categoria";
-            this.Id_Categoria.ReadOnly = true;
-            this.Id_Categoria.Visible = false;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnEliminar.BackColor = System.Drawing.Color.Chartreuse;
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.Enabled = false;
-            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnEliminar.FlatAppearance.BorderSize = 2;
-            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.Red;
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(493, 166);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(142, 42);
-            this.btnEliminar.TabIndex = 15;
-            this.btnEliminar.Text = "ELIMINAR";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnEditar.BackColor = System.Drawing.Color.Chartreuse;
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.Enabled = false;
-            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnEditar.FlatAppearance.BorderSize = 2;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(265, 166);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(142, 42);
-            this.btnEditar.TabIndex = 14;
-            this.btnEditar.Text = "EDITAR";
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnNuevo.BackColor = System.Drawing.Color.Chartreuse;
-            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnNuevo.FlatAppearance.BorderSize = 2;
-            this.btnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(12, 166);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(142, 42);
-            this.btnNuevo.TabIndex = 13;
-            this.btnNuevo.Text = "NUEVO";
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            this.dgvLibros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibros_CellContentClick);
             // 
             // pictureBox2
             // 
@@ -265,7 +130,7 @@
             // 
             this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtBuscar.Location = new System.Drawing.Point(713, 133);
+            this.txtBuscar.Location = new System.Drawing.Point(713, 101);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(211, 26);
             this.txtBuscar.TabIndex = 27;
@@ -275,7 +140,7 @@
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(894, 133);
+            this.pictureBox3.Location = new System.Drawing.Point(894, 101);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 26);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -304,17 +169,138 @@
             this.rbtnAutor.Text = "Autor";
             this.rbtnAutor.UseVisualStyleBackColor = true;
             // 
+            // ID
+            // 
+            this.ID.FillWeight = 40F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // Libro
+            // 
+            this.Libro.FillWeight = 125.7808F;
+            this.Libro.HeaderText = "LIBRO";
+            this.Libro.Name = "Libro";
+            this.Libro.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.FillWeight = 50.31232F;
+            this.Cantidad.HeaderText = "CANTIDAD";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // Año
+            // 
+            this.Año.FillWeight = 75.46847F;
+            this.Año.HeaderText = "AÑO";
+            this.Año.Name = "Año";
+            this.Año.ReadOnly = true;
+            // 
+            // Numero_Edicion
+            // 
+            this.Numero_Edicion.FillWeight = 62.8904F;
+            this.Numero_Edicion.HeaderText = "NUMERO DE EDICION";
+            this.Numero_Edicion.Name = "Numero_Edicion";
+            this.Numero_Edicion.ReadOnly = true;
+            // 
+            // Autor
+            // 
+            this.Autor.FillWeight = 125.7808F;
+            this.Autor.HeaderText = "AUTOR";
+            this.Autor.Name = "Autor";
+            this.Autor.ReadOnly = true;
+            // 
+            // Editorial
+            // 
+            this.Editorial.FillWeight = 125.7808F;
+            this.Editorial.HeaderText = "EDITORIAL";
+            this.Editorial.Name = "Editorial";
+            this.Editorial.ReadOnly = true;
+            // 
+            // Categoria
+            // 
+            this.Categoria.FillWeight = 100.6246F;
+            this.Categoria.HeaderText = "CATEGORIA";
+            this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
+            // 
+            // Id_Autor
+            // 
+            this.Id_Autor.HeaderText = "Id_Autor";
+            this.Id_Autor.Name = "Id_Autor";
+            this.Id_Autor.ReadOnly = true;
+            this.Id_Autor.Visible = false;
+            // 
+            // Id_Editorial
+            // 
+            this.Id_Editorial.HeaderText = "Id_Editorial";
+            this.Id_Editorial.Name = "Id_Editorial";
+            this.Id_Editorial.ReadOnly = true;
+            this.Id_Editorial.Visible = false;
+            // 
+            // Id_Categoria
+            // 
+            this.Id_Categoria.HeaderText = "Id_Categoria";
+            this.Id_Categoria.Name = "Id_Categoria";
+            this.Id_Categoria.ReadOnly = true;
+            this.Id_Categoria.Visible = false;
+            // 
+            // NUEVO
+            // 
+            this.NUEVO.FillWeight = 54.30214F;
+            this.NUEVO.HeaderText = "NUEVO";
+            this.NUEVO.Image = ((System.Drawing.Image)(resources.GetObject("NUEVO.Image")));
+            this.NUEVO.Name = "NUEVO";
+            this.NUEVO.ReadOnly = true;
+            // 
+            // EDITAR
+            // 
+            this.EDITAR.FillWeight = 50.07491F;
+            this.EDITAR.HeaderText = "EDITAR";
+            this.EDITAR.Image = ((System.Drawing.Image)(resources.GetObject("EDITAR.Image")));
+            this.EDITAR.Name = "EDITAR";
+            this.EDITAR.ReadOnly = true;
+            // 
+            // ELIMINAR
+            // 
+            this.ELIMINAR.FillWeight = 58.98477F;
+            this.ELIMINAR.HeaderText = "ELIMINAR";
+            this.ELIMINAR.Image = ((System.Drawing.Image)(resources.GetObject("ELIMINAR.Image")));
+            this.ELIMINAR.Name = "ELIMINAR";
+            this.ELIMINAR.ReadOnly = true;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(791, 143);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "FILTRO";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(791, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "BUSCAR";
+            // 
             // frmLibros
             // 
             this.ClientSize = new System.Drawing.Size(952, 551);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.rbtnAutor);
             this.Controls.Add(this.rbtnLibro);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dgvLibros);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmLibros";
@@ -330,8 +316,13 @@
 
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvLibros;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.RadioButton rbtnLibro;
+        private System.Windows.Forms.RadioButton rbtnAutor;
+        public System.Windows.Forms.DataGridView dgvLibros;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Libro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
@@ -343,14 +334,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Autor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Editorial;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Categoria;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.Button btnEliminar;
-        public System.Windows.Forms.Button btnEditar;
-        public System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.RadioButton rbtnLibro;
-        private System.Windows.Forms.RadioButton rbtnAutor;
+        private System.Windows.Forms.DataGridViewImageColumn NUEVO;
+        private System.Windows.Forms.DataGridViewImageColumn EDITAR;
+        private System.Windows.Forms.DataGridViewImageColumn ELIMINAR;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -169,6 +169,7 @@ namespace AdminLabrary.View.insertUpdateDelete
             frmBuscarLector lec = new frmBuscarLector();
             lec.indicador = 1;
             lec.ShowDialog();
+            Console.WriteLine("jpla");
         }
 
         int mostrar = 0;
@@ -187,7 +188,7 @@ namespace AdminLabrary.View.insertUpdateDelete
                 picVer.Show();
                 picOcultar.Hide();
                 txtContraseña.UseSystemPasswordChar = true;
-                mostrar =0;
+                mostrar=0;
             }
             
         }

@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdministradores));
             this.dgvAdmi = new System.Windows.Forms.DataGridView();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,6 +39,7 @@
             this.CONTRASEÑA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LECTOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDLE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EDITAR = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -49,10 +49,10 @@
             // 
             this.dgvAdmi.AllowUserToAddRows = false;
             this.dgvAdmi.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvAdmi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvAdmi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAdmi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -64,42 +64,21 @@
             this.USUARIO,
             this.CONTRASEÑA,
             this.LECTOR,
-            this.IDLE});
+            this.IDLE,
+            this.EDITAR});
             this.dgvAdmi.GridColor = System.Drawing.Color.Lime;
             this.dgvAdmi.Location = new System.Drawing.Point(0, 222);
             this.dgvAdmi.Name = "dgvAdmi";
             this.dgvAdmi.ReadOnly = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvAdmi.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvAdmi.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAdmi.Size = new System.Drawing.Size(953, 328);
             this.dgvAdmi.TabIndex = 2;
             this.dgvAdmi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdmi_CellClick);
             this.dgvAdmi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdmi_CellContentClick);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.Chartreuse;
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.Enabled = false;
-            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnEditar.FlatAppearance.BorderSize = 2;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(12, 156);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(142, 42);
-            this.btnEditar.TabIndex = 11;
-            this.btnEditar.Text = "EDITAR";
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // pictureBox1
             // 
@@ -130,9 +109,11 @@
             this.ID.HeaderText = "ID ";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
+            this.ID.Visible = false;
             // 
             // USUARIO
             // 
+            this.USUARIO.FillWeight = 141.6244F;
             this.USUARIO.HeaderText = "USUARIO";
             this.USUARIO.Name = "USUARIO";
             this.USUARIO.ReadOnly = true;
@@ -146,6 +127,7 @@
             // 
             // LECTOR
             // 
+            this.LECTOR.FillWeight = 141.6244F;
             this.LECTOR.HeaderText = "LECTOR";
             this.LECTOR.Name = "LECTOR";
             this.LECTOR.ReadOnly = true;
@@ -157,6 +139,14 @@
             this.IDLE.ReadOnly = true;
             this.IDLE.Visible = false;
             // 
+            // EDITAR
+            // 
+            this.EDITAR.FillWeight = 16.75127F;
+            this.EDITAR.HeaderText = "EDITAR";
+            this.EDITAR.Image = ((System.Drawing.Image)(resources.GetObject("EDITAR.Image")));
+            this.EDITAR.Name = "EDITAR";
+            this.EDITAR.ReadOnly = true;
+            // 
             // frmAdministradores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,7 +154,6 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(952, 551);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.dgvAdmi);
             this.Controls.Add(this.pictureBox3);
             this.Name = "frmAdministradores";
@@ -180,7 +169,6 @@
         #endregion
        
         private System.Windows.Forms.DataGridView dgvAdmi;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
@@ -188,5 +176,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CONTRASEÑA;
         private System.Windows.Forms.DataGridViewTextBoxColumn LECTOR;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDLE;
+        private System.Windows.Forms.DataGridViewImageColumn EDITAR;
     }
 }

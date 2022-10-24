@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHistorial));
             this.dgvAlquiler = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lector = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Libro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Entregado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ratraso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlquiler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -54,9 +55,9 @@
             // 
             this.dgvAlquiler.AllowUserToAddRows = false;
             this.dgvAlquiler.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvAlquiler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.dgvAlquiler.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAlquiler.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -70,14 +71,14 @@
             this.Entregado,
             this.Estado,
             this.Ratraso});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAlquiler.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAlquiler.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvAlquiler.Location = new System.Drawing.Point(-2, 219);
             this.dgvAlquiler.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvAlquiler.Name = "dgvAlquiler";
@@ -85,48 +86,6 @@
             this.dgvAlquiler.Size = new System.Drawing.Size(942, 306);
             this.dgvAlquiler.TabIndex = 14;
             this.dgvAlquiler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlquiler_CellContentClick);
-            // 
-            // Id
-            // 
-            this.Id.FillWeight = 30F;
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // Lector
-            // 
-            this.Lector.FillWeight = 120F;
-            this.Lector.HeaderText = "Lector";
-            this.Lector.Name = "Lector";
-            this.Lector.ReadOnly = true;
-            // 
-            // Libro
-            // 
-            this.Libro.FillWeight = 120F;
-            this.Libro.HeaderText = "Libro";
-            this.Libro.Name = "Libro";
-            this.Libro.ReadOnly = true;
-            // 
-            // Entregado
-            // 
-            this.Entregado.FillWeight = 50F;
-            this.Entregado.HeaderText = "Admin";
-            this.Entregado.Name = "Entregado";
-            this.Entregado.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.FillWeight = 80F;
-            this.Estado.HeaderText = "Estado del prestamo";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            // 
-            // Ratraso
-            // 
-            this.Ratraso.FillWeight = 40F;
-            this.Ratraso.HeaderText = "Retraso en dias";
-            this.Ratraso.Name = "Ratraso";
-            this.Ratraso.ReadOnly = true;
             // 
             // pictureBox1
             // 
@@ -184,12 +143,66 @@
             this.pictureBox4.TabIndex = 31;
             this.pictureBox4.TabStop = false;
             // 
+            // Id
+            // 
+            this.Id.FillWeight = 30F;
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // Lector
+            // 
+            this.Lector.FillWeight = 120F;
+            this.Lector.HeaderText = "Lector";
+            this.Lector.Name = "Lector";
+            this.Lector.ReadOnly = true;
+            // 
+            // Libro
+            // 
+            this.Libro.FillWeight = 120F;
+            this.Libro.HeaderText = "Libro";
+            this.Libro.Name = "Libro";
+            this.Libro.ReadOnly = true;
+            // 
+            // Entregado
+            // 
+            this.Entregado.FillWeight = 50F;
+            this.Entregado.HeaderText = "Admin";
+            this.Entregado.Name = "Entregado";
+            this.Entregado.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.FillWeight = 80F;
+            this.Estado.HeaderText = "Estado del prestamo";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
+            // Ratraso
+            // 
+            this.Ratraso.FillWeight = 40F;
+            this.Ratraso.HeaderText = "Retraso en dias";
+            this.Ratraso.Name = "Ratraso";
+            this.Ratraso.ReadOnly = true;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(712, 118);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 15);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "BUSCAR";
+            // 
             // frmHistorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(952, 551);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
@@ -218,14 +231,15 @@
         private System.Windows.Forms.DataGridView dgvAlquiler;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lector;
         private System.Windows.Forms.DataGridViewTextBoxColumn Libro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Entregado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ratraso;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label2;
     }
 }

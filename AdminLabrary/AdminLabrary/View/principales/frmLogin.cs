@@ -67,6 +67,8 @@ namespace AdminLabrary.View.principales
                             frmPrincipal.Sol.solicitud.btnSeleccionarLector.Visible = false;
                             frmPrincipal.Sol.solicitud.txtLector.Visible = false;
                             frmPrincipal.Sol.solicitud.lblLector.Visible = false;
+                            frmPrincipal.Sol.dgvSolicitudes.Columns["RECIBIR"].Visible = false;
+
                             frmLogin.f.rol = 0;
                             frmLogin.f.roles();
                             
@@ -82,6 +84,7 @@ namespace AdminLabrary.View.principales
                             frmPrincipal.Sol.solicitud.btnSeleccionarLector.Visible = true;
                             frmPrincipal.Sol.solicitud.txtLector.Visible = true;
                             frmPrincipal.Sol.solicitud.lblLector.Visible = true;
+                            frmPrincipal.Sol.dgvSolicitudes.Columns["RECIBIR"].Visible = true;
                             frmLogin.f.rol = 1;
                             frmLogin.f.roles();
                            
@@ -122,6 +125,24 @@ namespace AdminLabrary.View.principales
             Application.Exit();
         }
 
-       
+        int mostrar = 1;
+
+        private void picVer_Click(object sender, EventArgs e)
+        {
+            if (mostrar == 0)
+            {
+                picVer.Hide();
+                picOcultar.Show();
+                txtContraseña.UseSystemPasswordChar = false;
+                mostrar = 1;
+            }
+            else
+            {
+                picVer.Show();
+                picOcultar.Hide();
+                txtContraseña.UseSystemPasswordChar = true;
+                mostrar = 0;
+            }
+        }
     }
 }

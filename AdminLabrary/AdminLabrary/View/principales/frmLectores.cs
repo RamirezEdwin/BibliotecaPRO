@@ -29,6 +29,7 @@ namespace AdminLabrary.formularios.principales
         {
             using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
             {
+                dgvLectores.Rows.Clear();
                 var lista = from lec in db.Lectores
                              where lec.estado == 0
                             select new
@@ -36,23 +37,16 @@ namespace AdminLabrary.formularios.principales
                                 ID = lec.Id_Lector,Nombre=lec.Nombres, Apellidos = lec.Apellidos
                                 
                             };
-                dgvLectores.DataSource = lista.ToList();
+              foreach(var i in lista)
+                {
+                    dgvLectores.Rows.Add(i.ID, i.Nombre, i.Apellidos);
+                }
             }
 
         }
 
         frmLectorCRUD nuevo = new frmLectorCRUD();
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            nuevo.limpiar();
-            nuevo.btnGuardar.Show();
-            nuevo.btnEditar.Hide();
-            nuevo.btnEliminar.Hide();
-            nuevo.btnGuardar.Enabled = true;
-            btnEditar.Enabled = false;
-            btnEliminar.Enabled = false;
-            nuevo.ShowDialog();
-        }
+     
 
         private void seleccionar()
         {
@@ -64,31 +58,31 @@ namespace AdminLabrary.formularios.principales
             nuevo.txtApellidos.Text = apellido;
         }
 
-        private void dgvLectores_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            btnEditar.Enabled = true;
-            btnEliminar.Enabled = true;
-        }
+       
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void dgvLectores_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (dgvLectores.RowCount > 0)
+            if (e.ColumnIndex == this.dgvLectores.Columns["NUEV"].Index && e.RowIndex != -1)
+            {
+                nuevo.limpiar();
+                nuevo.btnGuardar.Show();
+                nuevo.btnEditar.Hide();
+                nuevo.btnEliminar.Hide();
+                nuevo.btnGuardar.Enabled = true;
+
+                nuevo.ShowDialog();
+            }
+            else if (e.ColumnIndex == this.dgvLectores.Columns["EDITAR"].Index && e.RowIndex != -1)
             {
                 seleccionar();
                 nuevo.btnGuardar.Hide();
                 nuevo.btnEditar.Show();
                 nuevo.btnEliminar.Hide();
                 nuevo.btnEditar.Enabled = true;
-                btnEliminar.Enabled = false;
-                btnEditar.Enabled = false;
+
                 nuevo.ShowDialog();
             }
-           
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (dgvLectores.RowCount > 0)
+            else if (e.ColumnIndex == this.dgvLectores.Columns["ELIMINAR"].Index && e.RowIndex != -1)
             {
                 nuevo.btnGuardar.Hide();
                 nuevo.btnEditar.Hide();
@@ -99,7 +93,12 @@ namespace AdminLabrary.formularios.principales
                 seleccionar();
                 nuevo.ShowDialog();
             }
-           
+
+        }
+
+        private void dgvLectores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

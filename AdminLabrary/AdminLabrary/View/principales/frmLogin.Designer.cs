@@ -34,8 +34,12 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.btnIniciarsesion = new System.Windows.Forms.Button();
             this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.picOcultar = new System.Windows.Forms.PictureBox();
+            this.picVer = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picOcultar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picVer)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -105,12 +109,40 @@
             this.txtContraseña.Size = new System.Drawing.Size(184, 29);
             this.txtContraseña.TabIndex = 25;
             // 
+            // picOcultar
+            // 
+            this.picOcultar.BackColor = System.Drawing.Color.White;
+            this.picOcultar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picOcultar.Image = ((System.Drawing.Image)(resources.GetObject("picOcultar.Image")));
+            this.picOcultar.Location = new System.Drawing.Point(728, 401);
+            this.picOcultar.Name = "picOcultar";
+            this.picOcultar.Size = new System.Drawing.Size(30, 26);
+            this.picOcultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picOcultar.TabIndex = 28;
+            this.picOcultar.TabStop = false;
+            this.picOcultar.Click += new System.EventHandler(this.picVer_Click);
+            // 
+            // picVer
+            // 
+            this.picVer.BackColor = System.Drawing.Color.White;
+            this.picVer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picVer.Image = ((System.Drawing.Image)(resources.GetObject("picVer.Image")));
+            this.picVer.Location = new System.Drawing.Point(729, 401);
+            this.picVer.Name = "picVer";
+            this.picVer.Size = new System.Drawing.Size(29, 26);
+            this.picVer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picVer.TabIndex = 27;
+            this.picVer.TabStop = false;
+            this.picVer.Click += new System.EventHandler(this.picVer_Click);
+            // 
             // frmLogin
             // 
             this.AcceptButton = this.btnIniciarsesion;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(871, 613);
+            this.Controls.Add(this.picOcultar);
+            this.Controls.Add(this.picVer);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.btnIniciarsesion);
             this.Controls.Add(this.txtContraseña);
@@ -124,6 +156,8 @@
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picOcultar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picVer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +170,7 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Button btnIniciarsesion;
         private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.PictureBox picOcultar;
+        private System.Windows.Forms.PictureBox picVer;
     }
 }

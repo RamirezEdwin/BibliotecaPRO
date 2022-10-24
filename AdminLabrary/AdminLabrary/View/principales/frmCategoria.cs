@@ -27,12 +27,17 @@ namespace AdminLabrary.formularios.principales
         }
         public void CargarDatos()
         {
+            dgvCat.Rows.Clear();
             using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
             {
                 var lista = from cat in db.Categorias
                             where cat.estado ==0
                             select new {ID = cat.Id_categoria,Categoria =cat.Categoria };
-                dgvCat.DataSource = lista.ToList();
+
+                foreach( var i in lista) {
+                    dgvCat.Rows.Add(i.ID,i.Categoria);
+                  }
+              
                 
             }
 
@@ -47,46 +52,35 @@ namespace AdminLabrary.formularios.principales
 
         private void dgvCat_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnEditar.Enabled = true;
-            btnEliminar.Enabled = true;
+            
 
         }
 
         frmCategoriasCRUD categoria = new frmCategoriasCRUD();
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            categoria.btnGuardar.Show();
-            categoria.btnEditar.Hide();
-            categoria.btnEliminar.Hide();
-            categoria.btnGuardar.Enabled = true;
-            categoria.limpiar();
-            btnEditar.Enabled = false;
-            btnEliminar.Enabled = false;
-            categoria.ShowDialog();
-          
-        }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+
+        private void dgvCat_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvCat.RowCount>0)
+            if (e.ColumnIndex == this.dgvCat.Columns["NUEVO"].Index && e.RowIndex != -1)
             {
-
+                categoria.btnGuardar.Show();
+                categoria.btnEditar.Hide();
+                categoria.btnEliminar.Hide();
+                categoria.btnGuardar.Enabled = true;
+                categoria.limpiar();
+                categoria.ShowDialog();
+            }
+            else if (e.ColumnIndex == this.dgvCat.Columns["EDITAR"].Index && e.RowIndex != -1)
+            {
                 seleccionar();
                 categoria.btnEditar.Enabled = true;
                 categoria.btnGuardar.Hide();
                 categoria.btnEditar.Show();
                 categoria.btnEliminar.Hide();
                 categoria.ShowDialog();
-                btnEditar.Enabled = false;
-                btnEliminar.Enabled = false;
             }
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (dgvCat.RowCount > 0)
+            else if (e.ColumnIndex == this.dgvCat.Columns["ELIMINAR"].Index && e.RowIndex != -1)
             {
-
                 seleccionar();
                 categoria.btnEliminar.Enabled = true;
                 categoria.btnGuardar.Hide();
@@ -94,12 +88,11 @@ namespace AdminLabrary.formularios.principales
                 categoria.btnEliminar.Show();
                 categoria.txtCategoria.Enabled = false;
                 categoria.ShowDialog();
-                btnEditar.Enabled = false;
-                btnEliminar.Enabled = false;
             }
-        
+
         }
 
-       
     }
 }
+    
+

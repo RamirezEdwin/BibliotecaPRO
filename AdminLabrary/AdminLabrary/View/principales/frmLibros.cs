@@ -19,24 +19,24 @@ namespace AdminLabrary.formularios.principales
         public frmLibros()
         {
             InitializeComponent();
-            
+
         }
 
-       
+
 
         private void frmLibros_Load(object sender, EventArgs e)
         {
             rbtnLibro.Checked = true;
-            CargaDratos();
+            CargaDatos();
         }
 
-        public void CargaDratos()
+        public void CargaDatos()
         {
             using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
             {
                 string buscar = txtBuscar.Text;
                 dgvLibros.Rows.Clear();
-                if(rbtnLibro.Checked == true)
+                if (rbtnLibro.Checked == true)
                 {
                     var lista = from li in db.Libros
                                 from au in db.Autores
@@ -103,52 +103,25 @@ namespace AdminLabrary.formularios.principales
                     }
                 }
 
-              
+
 
             }
 
         }
 
         public frmLibrosCRUD Libros = new frmLibrosCRUD();
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            Libros.btnGuardar.Show();
-            Libros.btnGuardar.Enabled = true;
-            Libros.btnActualizar.Hide();
-            Libros.btnEliminar.Hide();
-            Libros.limpiar();
-            Libros.indi = 0;
-            btnEliminar.Enabled = false;
-            btnEditar.Enabled = false;
-            Libros.ShowDialog();
-
-        }
+       
 
         private void dgvLibros_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnEditar.Enabled = true;
-            btnEliminar.Enabled = true;
+
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            if (dgvLibros.RowCount > 0)
-            {
-                Libros.btnGuardar.Hide();
-                Libros.btnActualizar.Show();
-                Libros.btnActualizar.Enabled = true;
-                Libros.btnEliminar.Hide();
-                btnEliminar.Enabled = false;
-                Libros.indi = 0;
-                btnEditar.Enabled = false;
-                seleccionar();
-                Libros.ShowDialog();
-            }
-        }
+    
         void seleccionar()
         {
             int Id = int.Parse(dgvLibros.CurrentRow.Cells[0].Value.ToString());
-            int Id_autor= int.Parse(dgvLibros.CurrentRow.Cells[8].Value.ToString());
+            int Id_autor = int.Parse(dgvLibros.CurrentRow.Cells[8].Value.ToString());
             int Id_Editorial = int.Parse(dgvLibros.CurrentRow.Cells[9].Value.ToString());
             string Id_Categoria = (dgvLibros.CurrentRow.Cells[10].Value.ToString());
             string autor = dgvLibros.CurrentRow.Cells[5].Value.ToString();
@@ -157,7 +130,7 @@ namespace AdminLabrary.formularios.principales
             string cantidad = dgvLibros.CurrentRow.Cells[2].Value.ToString();
             string año = dgvLibros.CurrentRow.Cells[3].Value.ToString();
             string numero = dgvLibros.CurrentRow.Cells[4].Value.ToString();
-           
+
             Libros.txtAutor.Text = autor;
             Libros.txtEditorial.Text = editorial;
             Libros.txtNombre.Text = nombre;
@@ -167,8 +140,8 @@ namespace AdminLabrary.formularios.principales
             Libros.ID_Libro = Id;
             Libros.ID_Autor = Id_autor;
             Libros.ID_Editorial = Id_Editorial;
-            Libros.ID_Cate= Id_Categoria ;
-            Libros.id = int.Parse(Id_Categoria)-1;
+            Libros.ID_Cate = Id_Categoria;
+            Libros.id = int.Parse(Id_Categoria) - 1;
 
         }
 
@@ -176,24 +149,52 @@ namespace AdminLabrary.formularios.principales
         {
             if (dgvLibros.RowCount > 0)
             {
-                Libros.btnGuardar.Hide();
-                Libros.btnActualizar.Hide();
-                Libros.btnSeleccionarA.Hide();
-                Libros.btnSeleccionarE.Hide();
-                Libros.btnEliminar.Show();
-                Libros.btnEliminar.Enabled = true;
-                btnEliminar.Enabled = false;
-                btnEditar.Enabled = false;
-                Libros.indi = 1;
-                seleccionar();
-                Libros.ShowDialog();
+
             }
-                
+
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            CargaDratos();
+            CargaDatos();
+        }
+
+        private void dgvLibros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+                if (e.ColumnIndex == this.dgvLibros.Columns["NUEVO"].Index && e.RowIndex != -1)
+                {
+                    Libros.btnGuardar.Show();
+                    Libros.btnGuardar.Enabled = true;
+                    Libros.btnActualizar.Hide();
+                    Libros.btnEliminar.Hide();
+                    Libros.limpiar();
+                    Libros.indi = 0;
+                    Libros.ShowDialog();
+                }
+                else if (e.ColumnIndex == this.dgvLibros.Columns["EDITAR"].Index && e.RowIndex != -1)
+                {
+                    Libros.btnGuardar.Hide();
+                    Libros.btnActualizar.Show();
+                    Libros.btnActualizar.Enabled = true;
+                    Libros.btnEliminar.Hide();
+                    Libros.indi = 0;
+                    seleccionar();
+                    Libros.ShowDialog();
+                }
+                else if (e.ColumnIndex == this.dgvLibros.Columns["ELIMINAR"].Index && e.RowIndex != -1)
+                {
+                    Libros.btnGuardar.Hide();
+                    Libros.btnActualizar.Hide();
+                    Libros.btnSeleccionarA.Hide();
+                    Libros.btnSeleccionarE.Hide();
+                    Libros.btnEliminar.Show();
+                    Libros.btnEliminar.Enabled = true;
+                    Libros.indi = 1;
+                    seleccionar();
+                    Libros.ShowDialog();
+                }
+            }
         }
     }
-}
+

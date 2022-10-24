@@ -56,30 +56,10 @@ namespace AdminLabrary.formularios.principales
 
         
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            if (dgvAdmi.RowCount > 0)
-            {
-                admin.btnEditar.Show();
-                admin.btnEliminar.Hide();
-                admin.btnSeleccionar.Show();
-                admin.btnGuardar.Hide();
-                admin.btnEditar.Show();
-                admin.btnEditar.Enabled = true;
-                btnEditar.Enabled = false;
-                admin.rbtnAdmi.Checked = true;
-                Seleccionar();
-                admin.ShowDialog();
-            }
-                
-           
-            
-
-        }
-
+       
         private void dgvAdmi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnEditar.Enabled = true;
+         
            
         }
         void Seleccionar()
@@ -98,7 +78,21 @@ namespace AdminLabrary.formularios.principales
 
         private void dgvAdmi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.ColumnIndex == this.dgvAdmi.Columns["EDITAR"].Index && e.RowIndex != -1)
+            {
+                if (dgvAdmi.RowCount > 0)
+                {
+                    admin.btnEditar.Show();
+                    admin.btnEliminar.Hide();
+                    admin.btnSeleccionar.Show();
+                    admin.btnGuardar.Hide();
+                    admin.btnEditar.Show();
+                    admin.btnEditar.Enabled = true;
+                    admin.rbtnAdmi.Checked = true;
+                    Seleccionar();
+                    admin.ShowDialog();
+                }
+            }
         }
     }
 }

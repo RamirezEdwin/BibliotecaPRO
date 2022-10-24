@@ -53,6 +53,8 @@
             this.IDLibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Entregadoid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Recibir = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -84,8 +86,9 @@
             // 
             this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtBuscar.Location = new System.Drawing.Point(718, 156);
+            this.txtBuscar.Location = new System.Drawing.Point(718, 124);
             this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtBuscar.Size = new System.Drawing.Size(211, 26);
             this.txtBuscar.TabIndex = 16;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
@@ -93,6 +96,7 @@
             // btnRetrazo
             // 
             this.btnRetrazo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnRetrazo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnRetrazo.BackColor = System.Drawing.Color.Chartreuse;
             this.btnRetrazo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRetrazo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
@@ -137,7 +141,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(899, 156);
+            this.pictureBox1.Location = new System.Drawing.Point(899, 124);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -260,42 +264,42 @@
             // 
             // LECTOR
             // 
-            this.LECTOR.FillWeight = 128.8279F;
+            this.LECTOR.FillWeight = 119.5357F;
             this.LECTOR.HeaderText = "LECTOR";
             this.LECTOR.Name = "LECTOR";
             this.LECTOR.ReadOnly = true;
             // 
             // LIBRO
             // 
-            this.LIBRO.FillWeight = 161.0348F;
+            this.LIBRO.FillWeight = 149.4195F;
             this.LIBRO.HeaderText = "LIBRO";
             this.LIBRO.Name = "LIBRO";
             this.LIBRO.ReadOnly = true;
             // 
             // CANTIDAD
             // 
-            this.CANTIDAD.FillWeight = 64.41393F;
+            this.CANTIDAD.FillWeight = 59.76783F;
             this.CANTIDAD.HeaderText = "CANTIDAD";
             this.CANTIDAD.Name = "CANTIDAD";
             this.CANTIDAD.ReadOnly = true;
             // 
             // ENTREGADO
             // 
-            this.ENTREGADO.FillWeight = 64.41393F;
+            this.ENTREGADO.FillWeight = 59.76783F;
             this.ENTREGADO.HeaderText = "ENTREGADO POR";
             this.ENTREGADO.Name = "ENTREGADO";
             this.ENTREGADO.ReadOnly = true;
             // 
             // FECHAS
             // 
-            this.FECHAS.FillWeight = 107.3566F;
+            this.FECHAS.FillWeight = 99.61308F;
             this.FECHAS.HeaderText = "FECHA  DE SALIDA";
             this.FECHAS.Name = "FECHAS";
             this.FECHAS.ReadOnly = true;
             // 
             // FECHAP
             // 
-            this.FECHAP.FillWeight = 107.3566F;
+            this.FECHAP.FillWeight = 99.61308F;
             this.FECHAP.HeaderText = "FECHA PREVISTA ENTREGA";
             this.FECHAP.Name = "FECHAP";
             this.FECHAP.ReadOnly = true;
@@ -325,8 +329,8 @@
             // 
             // Recibir
             // 
-            this.Recibir.FillWeight = 32F;
-            this.Recibir.HeaderText = "";
+            this.Recibir.FillWeight = 77.68674F;
+            this.Recibir.HeaderText = "RECIBIR";
             this.Recibir.Image = ((System.Drawing.Image)(resources.GetObject("Recibir.Image")));
             this.Recibir.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Recibir.MinimumWidth = 23;
@@ -334,11 +338,34 @@
             this.Recibir.ReadOnly = true;
             this.Recibir.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Location = new System.Drawing.Point(782, 173);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "FILTRO";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(782, 108);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "BUSCAR";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // frmPrestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 551);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvPrestamos);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
@@ -385,5 +412,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IDLibro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Entregadoid;
         private System.Windows.Forms.DataGridViewImageColumn Recibir;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

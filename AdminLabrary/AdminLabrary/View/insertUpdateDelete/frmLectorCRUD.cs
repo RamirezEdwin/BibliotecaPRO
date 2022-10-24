@@ -88,8 +88,9 @@ namespace AdminLabrary.View.insertUpdateDelete
                 db.SaveChanges();
                 limpiar();
                 frmPrincipal.lector.CargarDatos();
+                Console.WriteLine("eliminar" + id);
                 this.Close();
-
+               
             }
         }
 

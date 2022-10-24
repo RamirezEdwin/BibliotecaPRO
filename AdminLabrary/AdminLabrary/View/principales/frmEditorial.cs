@@ -1,12 +1,7 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using AdminLabrary.Model;
 using AdminLabrary.View.insertUpdateDelete;
@@ -29,36 +24,28 @@ namespace AdminLabrary.formularios.principales
 
         public void CargarDatos()
         {
+            dgvEditorial.Rows.Clear();
             using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
             {
                 var lista = from ed in db.Editoriales
                             where ed.estado==0
                             select new {ID = ed.Id_Editorial,Editorial= ed.Editorial,
                                 Fundada=ed.Fundada,Direccion= ed.Direccion };
-                dgvEditorial.DataSource = lista.ToList();
-
+               foreach(var i in lista)
+                {
+                    dgvEditorial.Rows.Add(i.ID, i.Editorial, i.Fundada, i.Direccion);
+                }
             }
 
         }
 
         private void dgvEditorial_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnEditar.Enabled = true;
-            btnEliminar.Enabled = true;
+           
         }
 
         public static frmEditorialesCRUD Editorial = new frmEditorialesCRUD();
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            Editorial.btnGuardar.Enabled = true;
-            Editorial.btnGuardar.Show();
-            Editorial.btnEditar.Hide();
-            Editorial.btnEliminar.Hide();
-            Editorial.limpiar();
-            btnEditar.Enabled = false;
-            btnEliminar.Enabled = false;
-            Editorial.ShowDialog();
-        }
+       
         void seleccionar()
         {
             int Id = int.Parse(dgvEditorial.CurrentRow.Cells[0].Value.ToString());
@@ -72,25 +59,38 @@ namespace AdminLabrary.formularios.principales
             Editorial.dtpFecha.Text = fundada;
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+    
+
+    
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (dgvEditorial.RowCount > 0)
+
+        }
+
+        private void dgvEditorial_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == this.dgvEditorial.Columns["NUEVO"].Index && e.RowIndex != -1)
+            {
+
+                Editorial.btnGuardar.Enabled = true;
+                Editorial.btnGuardar.Show();
+                Editorial.btnEditar.Hide();
+                Editorial.btnEliminar.Hide();
+                Editorial.limpiar();
+
+                Editorial.ShowDialog();
+            }
+            else if (e.ColumnIndex == this.dgvEditorial.Columns["EDITAR"].Index && e.RowIndex != -1)
             {
                 seleccionar();
                 Editorial.btnEditar.Enabled = true;
                 Editorial.btnGuardar.Hide();
                 Editorial.btnEditar.Show();
                 Editorial.btnEliminar.Hide();
-                btnEditar.Enabled = true;
-                btnEliminar.Enabled = false;
                 Editorial.ShowDialog();
             }
-            
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (dgvEditorial.RowCount > 0)
+            else if (e.ColumnIndex == this.dgvEditorial.Columns["ELIMINAR"].Index && e.RowIndex != -1)
             {
                 seleccionar();
                 Editorial.btnEliminar.Enabled = true;
@@ -100,11 +100,12 @@ namespace AdminLabrary.formularios.principales
                 Editorial.txtDirecion.Enabled = false;
                 Editorial.txtEditorial.Enabled = false;
                 Editorial.dtpFecha.Enabled = false;
-                btnEditar.Enabled = false;
-                btnEliminar.Enabled = false;
                 Editorial.ShowDialog();
             }
-            
+
         }
+
     }
 }
+    
+

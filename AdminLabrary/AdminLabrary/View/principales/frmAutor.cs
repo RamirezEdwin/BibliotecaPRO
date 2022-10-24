@@ -29,10 +29,11 @@ namespace AdminLabrary.formularios.principales
 
         public void CargarDatos()
         {
+            dgvAutores.Rows.Clear();
             using (BibliotecaprogramEntities db = new BibliotecaprogramEntities())
             {
                 var lista = from autores in db.Autores
-                            where autores.estado ==0
+                            where autores.estado == 0
                             select new
                             {
                                 ID = autores.Id_autor,
@@ -42,7 +43,12 @@ namespace AdminLabrary.formularios.principales
                                 Nacionalidad = autores.Nacionalidad
                             };
 
-                dgvAutores.DataSource = lista.ToList();
+                foreach (var i in lista)
+                {
+                    dgvAutores.Rows.Add(i.ID, i.Nombre, i.Nacionalidad, i.Fecha_Nacimiento);
+                }
+
+               
             }
 
         }
@@ -51,36 +57,40 @@ namespace AdminLabrary.formularios.principales
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            autor.btnGuardar.Show();
-            autor.btnEditar.Hide();
-            autor.btnEliminar.Hide();
-            autor.btnGuardar.Enabled = true;
-            autor.limpiar();
-            autor.ShowDialog();
+            
 
         }
 
         private void dgvAutores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnEditar.Enabled = true;
-            btnEliminar.Enabled = true;
+           
         }
 
         void seleccionar()
         {
             string id = dgvAutores.CurrentRow.Cells[0].Value.ToString();
             string nombre = dgvAutores.CurrentRow.Cells[1].Value.ToString();
-            string fecha = dgvAutores.CurrentRow.Cells[2].Value.ToString();
-            string nacionalidad = dgvAutores.CurrentRow.Cells[3].Value.ToString();
+            string nacionalidad = dgvAutores.CurrentRow.Cells[2].Value.ToString();
+            string fecha = dgvAutores.CurrentRow.Cells[3].Value.ToString();
             autor.txtNacionalidad.Text = nacionalidad;
             autor.txtNombre.Text = nombre;
             autor.dtpFecha.Text = fecha;
             autor.ID = int.Parse(id);
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+     
+        private void dgvAutores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvAutores.RowCount > 0)
+            if (e.ColumnIndex == this.dgvAutores.Columns["NUEVO"].Index && e.RowIndex != -1)
+            {
+                autor.btnGuardar.Show();
+                autor.btnEditar.Hide();
+                autor.btnEliminar.Hide();
+                autor.btnGuardar.Enabled = true;
+                autor.limpiar();
+                autor.ShowDialog();
+            }
+            else if (e.ColumnIndex == this.dgvAutores.Columns["EDITAR"].Index && e.RowIndex != -1)
             {
                 seleccionar();
                 autor.btnGuardar.Hide();
@@ -89,18 +99,7 @@ namespace AdminLabrary.formularios.principales
                 autor.btnEditar.Enabled = true;
                 autor.ShowDialog();
             }
-            
-        }
-
-        private void dgvAutores_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (dgvAutores.RowCount > 0)
+            else if (e.ColumnIndex == this.dgvAutores.Columns["ELIMINAR"].Index && e.RowIndex != -1)
             {
                 seleccionar();
                 autor.btnGuardar.Hide();
@@ -110,9 +109,16 @@ namespace AdminLabrary.formularios.principales
                 autor.dtpFecha.Enabled = false;
                 autor.txtNacionalidad.Enabled = false;
                 autor.txtNombre.Enabled = false;
-                btnEliminar.Enabled = false;
-                btnEditar.Enabled = false;
                 autor.ShowDialog();
+            }
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvAutores.RowCount > 0)
+            {
+                
             }
         }
 
