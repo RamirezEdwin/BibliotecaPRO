@@ -53,6 +53,8 @@
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnEliminar.Location = new System.Drawing.Point(537, 311);
@@ -66,6 +68,8 @@
             // btnActualizar
             // 
             this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnActualizar.Location = new System.Drawing.Point(317, 311);
@@ -79,6 +83,8 @@
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnGuardar.Location = new System.Drawing.Point(90, 311);
@@ -92,6 +98,8 @@
             // btnSeleccionarA
             // 
             this.btnSeleccionarA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSeleccionarA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnSeleccionarA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnSeleccionarA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionarA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnSeleccionarA.Location = new System.Drawing.Point(269, 179);
@@ -116,6 +124,8 @@
             // btnSeleccionarE
             // 
             this.btnSeleccionarE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSeleccionarE.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnSeleccionarE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnSeleccionarE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionarE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnSeleccionarE.Location = new System.Drawing.Point(618, 179);
@@ -263,7 +273,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(761, 388);
             this.Controls.Add(this.dtpAño);
             this.Controls.Add(this.btnEliminar);

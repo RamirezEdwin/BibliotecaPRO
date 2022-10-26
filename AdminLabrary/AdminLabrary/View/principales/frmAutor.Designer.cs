@@ -69,7 +69,7 @@
             this.EDITAR,
             this.ELIMINAR});
             this.dgvAutores.GridColor = System.Drawing.Color.Lime;
-            this.dgvAutores.Location = new System.Drawing.Point(0, 222);
+            this.dgvAutores.Location = new System.Drawing.Point(12, 94);
             this.dgvAutores.Name = "dgvAutores";
             this.dgvAutores.ReadOnly = true;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
@@ -77,7 +77,7 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvAutores.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvAutores.Size = new System.Drawing.Size(938, 334);
+            this.dgvAutores.Size = new System.Drawing.Size(928, 445);
             this.dgvAutores.TabIndex = 0;
             this.dgvAutores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAutores_CellClick);
             this.dgvAutores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAutores_CellContentClick);

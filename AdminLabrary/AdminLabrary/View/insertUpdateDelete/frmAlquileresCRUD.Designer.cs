@@ -58,12 +58,12 @@
             // 
             // btnSeleccionarLibro
             // 
-            this.btnSeleccionarLibro.BackColor = System.Drawing.Color.Lime;
+            this.btnSeleccionarLibro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))));
             this.btnSeleccionarLibro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeleccionarLibro.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnSeleccionarLibro.FlatAppearance.BorderSize = 2;
-            this.btnSeleccionarLibro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnSeleccionarLibro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnSeleccionarLibro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnSeleccionarLibro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnSeleccionarLibro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionarLibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.btnSeleccionarLibro.Location = new System.Drawing.Point(291, 90);
@@ -76,12 +76,12 @@
             // 
             // btnRecibir
             // 
-            this.btnRecibir.BackColor = System.Drawing.Color.Lime;
+            this.btnRecibir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))));
             this.btnRecibir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRecibir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnRecibir.FlatAppearance.BorderSize = 2;
-            this.btnRecibir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnRecibir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnRecibir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnRecibir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnRecibir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRecibir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecibir.Location = new System.Drawing.Point(167, 203);
@@ -94,12 +94,12 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Lime;
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))));
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnGuardar.FlatAppearance.BorderSize = 2;
-            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(12, 203);
@@ -114,7 +114,7 @@
             // 
             this.lblLibro.AutoSize = true;
             this.lblLibro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLibro.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblLibro.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblLibro.Location = new System.Drawing.Point(97, 68);
             this.lblLibro.Name = "lblLibro";
             this.lblLibro.Size = new System.Drawing.Size(63, 20);
@@ -125,7 +125,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.label1.Location = new System.Drawing.Point(97, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 20);
@@ -134,12 +134,12 @@
             // 
             // btnSeleccionarLector
             // 
-            this.btnSeleccionarLector.BackColor = System.Drawing.Color.Lime;
+            this.btnSeleccionarLector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))));
             this.btnSeleccionarLector.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeleccionarLector.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnSeleccionarLector.FlatAppearance.BorderSize = 2;
-            this.btnSeleccionarLector.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnSeleccionarLector.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnSeleccionarLector.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnSeleccionarLector.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnSeleccionarLector.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionarLector.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.btnSeleccionarLector.Location = new System.Drawing.Point(291, 35);
@@ -154,7 +154,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.label2.Location = new System.Drawing.Point(77, 126);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 20);
@@ -174,7 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(486, 246);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCantidad);

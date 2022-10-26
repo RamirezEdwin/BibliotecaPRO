@@ -65,7 +65,7 @@
             this.EDITAR,
             this.ELIMINAR});
             this.dgvLectores.GridColor = System.Drawing.Color.Lime;
-            this.dgvLectores.Location = new System.Drawing.Point(12, 216);
+            this.dgvLectores.Location = new System.Drawing.Point(12, 94);
             this.dgvLectores.Name = "dgvLectores";
             this.dgvLectores.ReadOnly = true;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
@@ -73,7 +73,7 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvLectores.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvLectores.Size = new System.Drawing.Size(917, 298);
+            this.dgvLectores.Size = new System.Drawing.Size(928, 445);
             this.dgvLectores.TabIndex = 3;
             this.dgvLectores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLectores_CellContentClick);
             this.dgvLectores.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvLectores_CellMouseClick);

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrestamos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnVer = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnRetrazo = new System.Windows.Forms.Button();
@@ -66,13 +66,13 @@
             this.btnVer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVer.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnVer.FlatAppearance.BorderSize = 2;
-            this.btnVer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnVer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnVer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnVer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVer.Image = ((System.Drawing.Image)(resources.GetObject("btnVer.Image")));
             this.btnVer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVer.Location = new System.Drawing.Point(281, 156);
+            this.btnVer.Location = new System.Drawing.Point(172, 161);
             this.btnVer.Name = "btnVer";
             this.btnVer.Size = new System.Drawing.Size(144, 45);
             this.btnVer.TabIndex = 15;
@@ -99,13 +99,13 @@
             this.btnRetrazo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRetrazo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnRetrazo.FlatAppearance.BorderSize = 2;
-            this.btnRetrazo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnRetrazo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnRetrazo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnRetrazo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnRetrazo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRetrazo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRetrazo.Image = ((System.Drawing.Image)(resources.GetObject("btnRetrazo.Image")));
             this.btnRetrazo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRetrazo.Location = new System.Drawing.Point(541, 156);
+            this.btnRetrazo.Location = new System.Drawing.Point(340, 161);
             this.btnRetrazo.Name = "btnRetrazo";
             this.btnRetrazo.Size = new System.Drawing.Size(151, 45);
             this.btnRetrazo.TabIndex = 20;
@@ -121,13 +121,13 @@
             this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnNuevo.FlatAppearance.BorderSize = 2;
-            this.btnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(12, 156);
+            this.btnNuevo.Location = new System.Drawing.Point(1, 161);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(142, 45);
             this.btnNuevo.TabIndex = 21;
@@ -162,10 +162,10 @@
             // 
             this.dgvPrestamos.AllowUserToAddRows = false;
             this.dgvPrestamos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvPrestamos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvPrestamos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPrestamos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -188,11 +188,11 @@
             this.dgvPrestamos.Location = new System.Drawing.Point(-2, 223);
             this.dgvPrestamos.Name = "dgvPrestamos";
             this.dgvPrestamos.ReadOnly = true;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvPrestamos.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvPrestamos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPrestamos.Size = new System.Drawing.Size(952, 324);
             this.dgvPrestamos.TabIndex = 2;
             this.dgvPrestamos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrestamos_CellContentClick_1);

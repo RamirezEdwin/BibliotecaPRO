@@ -111,7 +111,7 @@
             // 
             // picOcultar
             // 
-            this.picOcultar.BackColor = System.Drawing.Color.White;
+            this.picOcultar.BackColor = System.Drawing.Color.Teal;
             this.picOcultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picOcultar.Image = ((System.Drawing.Image)(resources.GetObject("picOcultar.Image")));
             this.picOcultar.Location = new System.Drawing.Point(728, 401);
@@ -124,10 +124,10 @@
             // 
             // picVer
             // 
-            this.picVer.BackColor = System.Drawing.Color.White;
+            this.picVer.BackColor = System.Drawing.Color.Teal;
             this.picVer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picVer.Image = ((System.Drawing.Image)(resources.GetObject("picVer.Image")));
-            this.picVer.Location = new System.Drawing.Point(729, 401);
+            this.picVer.Location = new System.Drawing.Point(728, 401);
             this.picVer.Name = "picVer";
             this.picVer.Size = new System.Drawing.Size(29, 26);
             this.picVer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSolicitudes));
             this.dgvSolicitudes = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.IdSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lector = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Libros = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,8 +43,7 @@
             this.EDITAR = new System.Windows.Forms.DataGridViewImageColumn();
             this.ELIMINAR = new System.Windows.Forms.DataGridViewImageColumn();
             this.RECIBIR = new System.Windows.Forms.DataGridViewImageColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnRetrazo = new System.Windows.Forms.Button();
+            this.lblMessage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -87,6 +87,17 @@
             this.dgvSolicitudes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSolicitudes_CellClick);
             this.dgvSolicitudes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSolicitudes_CellContentClick);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(621, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(329, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
             // IdSolicitud
             // 
             this.IdSolicitud.HeaderText = "ID";
@@ -96,21 +107,21 @@
             // 
             // Lector
             // 
-            this.Lector.FillWeight = 187.1614F;
+            this.Lector.FillWeight = 185.7716F;
             this.Lector.HeaderText = "LECTOR";
             this.Lector.Name = "Lector";
             this.Lector.ReadOnly = true;
             // 
             // Libros
             // 
-            this.Libros.FillWeight = 187.1614F;
+            this.Libros.FillWeight = 185.7716F;
             this.Libros.HeaderText = "LIBRO";
             this.Libros.Name = "Libros";
             this.Libros.ReadOnly = true;
             // 
             // Cantidad
             // 
-            this.Cantidad.FillWeight = 187.1614F;
+            this.Cantidad.FillWeight = 185.7716F;
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
@@ -131,7 +142,7 @@
             // 
             // NUEVA
             // 
-            this.NUEVA.FillWeight = 42.35353F;
+            this.NUEVA.FillWeight = 42.03903F;
             this.NUEVA.HeaderText = "NUEVA";
             this.NUEVA.Image = ((System.Drawing.Image)(resources.GetObject("NUEVA.Image")));
             this.NUEVA.Name = "NUEVA";
@@ -139,7 +150,7 @@
             // 
             // EDITAR
             // 
-            this.EDITAR.FillWeight = 41.35303F;
+            this.EDITAR.FillWeight = 41.04596F;
             this.EDITAR.HeaderText = "EDITAR";
             this.EDITAR.Image = ((System.Drawing.Image)(resources.GetObject("EDITAR.Image")));
             this.EDITAR.Name = "EDITAR";
@@ -147,7 +158,7 @@
             // 
             // ELIMINAR
             // 
-            this.ELIMINAR.FillWeight = 51.70761F;
+            this.ELIMINAR.FillWeight = 51.32365F;
             this.ELIMINAR.HeaderText = "ELIMINAR";
             this.ELIMINAR.Image = ((System.Drawing.Image)(resources.GetObject("ELIMINAR.Image")));
             this.ELIMINAR.Name = "ELIMINAR";
@@ -155,44 +166,21 @@
             // 
             // RECIBIR
             // 
-            this.RECIBIR.FillWeight = 43.69691F;
-            this.RECIBIR.HeaderText = "RECIBIR";
+            this.RECIBIR.FillWeight = 48.87177F;
+            this.RECIBIR.HeaderText = "ACEPTAR";
             this.RECIBIR.Image = ((System.Drawing.Image)(resources.GetObject("RECIBIR.Image")));
             this.RECIBIR.Name = "RECIBIR";
             this.RECIBIR.ReadOnly = true;
             // 
-            // pictureBox1
+            // lblMessage
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(621, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(329, 74);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnRetrazo
-            // 
-            this.btnRetrazo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnRetrazo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRetrazo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRetrazo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnRetrazo.FlatAppearance.BorderSize = 2;
-            this.btnRetrazo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnRetrazo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnRetrazo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRetrazo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRetrazo.Image = ((System.Drawing.Image)(resources.GetObject("btnRetrazo.Image")));
-            this.btnRetrazo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRetrazo.Location = new System.Drawing.Point(12, 29);
-            this.btnRetrazo.Name = "btnRetrazo";
-            this.btnRetrazo.Size = new System.Drawing.Size(151, 45);
-            this.btnRetrazo.TabIndex = 22;
-            this.btnRetrazo.Text = "HISTORIAL CON RETRASO";
-            this.btnRetrazo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRetrazo.UseVisualStyleBackColor = false;
-            this.btnRetrazo.Click += new System.EventHandler(this.btnRetrazo_Click);
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(585, 75);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(200, 13);
+            this.lblMessage.TabIndex = 20;
+            this.lblMessage.Text = "Para nuevo registro de click  en \"nueva\"";
+            this.lblMessage.Click += new System.EventHandler(this.lblMessage_Click);
             // 
             // frmSolicitudes
             // 
@@ -200,7 +188,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(952, 551);
-            this.Controls.Add(this.btnRetrazo);
+            this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvSolicitudes);
             this.Name = "frmSolicitudes";
@@ -209,12 +197,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.Button btnRetrazo;
         public System.Windows.Forms.DataGridView dgvSolicitudes;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdSolicitud;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lector;
@@ -226,5 +214,6 @@
         private System.Windows.Forms.DataGridViewImageColumn EDITAR;
         private System.Windows.Forms.DataGridViewImageColumn ELIMINAR;
         private System.Windows.Forms.DataGridViewImageColumn RECIBIR;
+        private System.Windows.Forms.Label lblMessage;
     }
 }

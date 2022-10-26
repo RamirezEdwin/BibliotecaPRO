@@ -57,6 +57,7 @@ namespace AdminLabrary.View.principales
                         {
                             dgvSolicitudes.Rows.Add(iterar.ID, iterar.Lector, iterar.Libros, iterar.Cantidad,
                             iterar.Id_Lector, iterar.Id_Libro);
+                            lblMessage.Visible = false;
                         }
                     }
                 }
@@ -87,6 +88,7 @@ namespace AdminLabrary.View.principales
                         {
                             dgvSolicitudes.Rows.Add(iterar.ID, iterar.Lector, iterar.Libros, iterar.Cantidad,
                             iterar.Id_Lector, iterar.Id_Libro);
+                            lblMessage.Visible = false;
                         }
                     }
                 }
@@ -127,29 +129,9 @@ namespace AdminLabrary.View.principales
 
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (dgvSolicitudes.RowCount > 0)
-            {
-
-            }
-        }
 
 
-
-        private void btnRetrazo_Click(object sender, EventArgs e)
-        {
-            frmHistorial histo = new frmHistorial();
-            histo.ShowDialog();
-        }
-
-        private void btnRecibir_Click(object sender, EventArgs e)
-        {
-            if (dgvSolicitudes.RowCount > 0)
-            {
-
-            }
-        }
+  
 
         private void dgvSolicitudes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -212,5 +194,10 @@ namespace AdminLabrary.View.principales
         private void pictureBox2_Click(object sender, EventArgs e)
         {
                     }
+
+        private void lblMessage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     } 

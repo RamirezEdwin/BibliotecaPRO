@@ -49,13 +49,13 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Lime;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))));
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.Enabled = false;
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnEliminar.FlatAppearance.BorderSize = 2;
-            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(323, 227);
@@ -68,13 +68,13 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.Lime;
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))));
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.Enabled = false;
             this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnEditar.FlatAppearance.BorderSize = 2;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Location = new System.Drawing.Point(155, 227);
@@ -87,13 +87,13 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Lime;
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))));
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.Enabled = false;
             this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnGuardar.FlatAppearance.BorderSize = 2;
-            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(3, 227);
@@ -123,7 +123,7 @@
             // 
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseña.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblContraseña.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblContraseña.Location = new System.Drawing.Point(103, 125);
             this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContraseña.Name = "lblContraseña";
@@ -135,7 +135,7 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblUsuario.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblUsuario.Location = new System.Drawing.Point(120, 62);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
@@ -156,7 +156,7 @@
             // 
             this.lblLector.AutoSize = true;
             this.lblLector.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLector.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblLector.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lblLector.Location = new System.Drawing.Point(120, 9);
             this.lblLector.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLector.Name = "lblLector";
@@ -166,13 +166,13 @@
             // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.BackColor = System.Drawing.Color.Lime;
+            this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))), ((int)(((byte)(94)))));
             this.btnSeleccionar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeleccionar.Enabled = false;
             this.btnSeleccionar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnSeleccionar.FlatAppearance.BorderSize = 2;
-            this.btnSeleccionar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnSeleccionar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnSeleccionar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnSeleccionar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.Location = new System.Drawing.Point(324, 32);
@@ -186,8 +186,8 @@
             // rbtnLector
             // 
             this.rbtnLector.AutoSize = true;
-            this.rbtnLector.BackColor = System.Drawing.Color.RoyalBlue;
-            this.rbtnLector.ForeColor = System.Drawing.SystemColors.Control;
+            this.rbtnLector.BackColor = System.Drawing.Color.White;
+            this.rbtnLector.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.rbtnLector.Location = new System.Drawing.Point(36, 191);
             this.rbtnLector.Name = "rbtnLector";
             this.rbtnLector.Size = new System.Drawing.Size(72, 24);
@@ -199,8 +199,8 @@
             // rbtnAdmi
             // 
             this.rbtnAdmi.AutoSize = true;
-            this.rbtnAdmi.BackColor = System.Drawing.Color.RoyalBlue;
-            this.rbtnAdmi.ForeColor = System.Drawing.SystemColors.Control;
+            this.rbtnAdmi.BackColor = System.Drawing.Color.White;
+            this.rbtnAdmi.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.rbtnAdmi.Location = new System.Drawing.Point(175, 191);
             this.rbtnAdmi.Name = "rbtnAdmi";
             this.rbtnAdmi.Size = new System.Drawing.Size(134, 24);
@@ -211,7 +211,7 @@
             // 
             // picOcultar
             // 
-            this.picOcultar.BackColor = System.Drawing.Color.White;
+            this.picOcultar.BackColor = System.Drawing.Color.Transparent;
             this.picOcultar.Image = ((System.Drawing.Image)(resources.GetObject("picOcultar.Image")));
             this.picOcultar.Location = new System.Drawing.Point(283, 148);
             this.picOcultar.Name = "picOcultar";
@@ -223,7 +223,7 @@
             // 
             // picVer
             // 
-            this.picVer.BackColor = System.Drawing.Color.White;
+            this.picVer.BackColor = System.Drawing.Color.Transparent;
             this.picVer.Image = ((System.Drawing.Image)(resources.GetObject("picVer.Image")));
             this.picVer.Location = new System.Drawing.Point(283, 148);
             this.picVer.Name = "picVer";
@@ -237,7 +237,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(461, 270);
             this.Controls.Add(this.rbtnAdmi);
             this.Controls.Add(this.rbtnLector);

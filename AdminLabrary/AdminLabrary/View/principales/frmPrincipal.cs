@@ -380,7 +380,6 @@ namespace AdminLabrary.formularios.principales
                 frmPrincipal.Lib.dgvLibros.Columns["NUEVO"].Visible = false;
                 frmPrincipal.Lib.dgvLibros.Columns["EDITAR"].Visible = false;
                 frmPrincipal.Lib.dgvLibros.Columns["ELIMINAR"].Visible = false;
-                frmPrincipal.Sol.btnRetrazo.Hide();
                 btnPrestamos.Hide();
                 btnAdmin.Hide();
                 btnCategoria.Hide();
@@ -394,7 +393,6 @@ namespace AdminLabrary.formularios.principales
                 frmPrincipal.Lib.dgvLibros.Columns["NUEVO"].Visible = true;
                 frmPrincipal.Lib.dgvLibros.Columns["EDITAR"].Visible = true;
                 frmPrincipal.Lib.dgvLibros.Columns["ELIMINAR"].Visible = true;
-                frmPrincipal.Sol.btnRetrazo.Show();
                 btnPrestamos.Show();
                 btnAdmin.Show();
                 btnCategoria.Show();

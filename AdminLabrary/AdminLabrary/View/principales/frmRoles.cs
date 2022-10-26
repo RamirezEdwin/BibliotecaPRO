@@ -112,7 +112,8 @@ namespace AdminLabrary.View.principales
                     admin.rbtnLector.Checked = true;
                     admin.Limpiar();
                     admin.ShowDialog();
-                }
+                admin.btnSeleccionar.Visible = true;
+            }
                 else if (e.ColumnIndex == this.dgvAdmi.Columns["EDITAR"].Index && e.RowIndex != -1)
                 {
                     admin.btnGuardar.Hide();

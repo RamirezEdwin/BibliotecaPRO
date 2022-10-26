@@ -67,7 +67,7 @@
             this.EDITAR,
             this.ELIMINAR});
             this.dgvEditorial.GridColor = System.Drawing.Color.Lime;
-            this.dgvEditorial.Location = new System.Drawing.Point(0, 222);
+            this.dgvEditorial.Location = new System.Drawing.Point(12, 94);
             this.dgvEditorial.Name = "dgvEditorial";
             this.dgvEditorial.ReadOnly = true;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
@@ -75,7 +75,7 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvEditorial.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvEditorial.Size = new System.Drawing.Size(952, 374);
+            this.dgvEditorial.Size = new System.Drawing.Size(928, 445);
             this.dgvEditorial.TabIndex = 2;
             this.dgvEditorial.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEditorial_CellClick);
             this.dgvEditorial.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEditorial_CellContentClick);

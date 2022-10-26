@@ -19,8 +19,9 @@ namespace AdminLabrary.View.principales
         public frmLogin()
         {
             InitializeComponent();
-          
 
+            picVer.Visible = true;
+            picOcultar.Visible = false;
         }
 
         public static frmPrincipal f = new frmPrincipal();
@@ -129,19 +130,19 @@ namespace AdminLabrary.View.principales
 
         private void picVer_Click(object sender, EventArgs e)
         {
-            if (mostrar == 0)
+            if (mostrar == 1)
             {
                 picVer.Hide();
                 picOcultar.Show();
-                txtContraseña.UseSystemPasswordChar = false;
-                mostrar = 1;
+                txtContraseña.UseSystemPasswordChar = true;
+                mostrar = 0;
             }
             else
             {
                 picVer.Show();
                 picOcultar.Hide();
-                txtContraseña.UseSystemPasswordChar = true;
-                mostrar = 0;
+                txtContraseña.UseSystemPasswordChar = false;
+                mostrar = 1;
             }
         }
     }

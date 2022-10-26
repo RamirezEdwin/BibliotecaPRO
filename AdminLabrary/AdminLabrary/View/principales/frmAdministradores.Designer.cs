@@ -32,13 +32,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdministradores));
             this.dgvAdmi = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.USUARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CONTRASEÑA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LECTOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDLE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EDITAR = new System.Windows.Forms.DataGridViewImageColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +65,7 @@
             this.IDLE,
             this.EDITAR});
             this.dgvAdmi.GridColor = System.Drawing.Color.DimGray;
-            this.dgvAdmi.Location = new System.Drawing.Point(12, 211);
+            this.dgvAdmi.Location = new System.Drawing.Point(12, 94);
             this.dgvAdmi.Name = "dgvAdmi";
             this.dgvAdmi.ReadOnly = true;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
@@ -73,10 +73,22 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvAdmi.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvAdmi.Size = new System.Drawing.Size(953, 328);
+            this.dgvAdmi.Size = new System.Drawing.Size(928, 445);
             this.dgvAdmi.TabIndex = 2;
             this.dgvAdmi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdmi_CellClick);
             this.dgvAdmi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdmi_CellContentClick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(577, -10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(363, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // ID
             // 
@@ -87,7 +99,7 @@
             // 
             // USUARIO
             // 
-            this.USUARIO.FillWeight = 141.6244F;
+            this.USUARIO.FillWeight = 140.1016F;
             this.USUARIO.HeaderText = "USUARIO";
             this.USUARIO.Name = "USUARIO";
             this.USUARIO.ReadOnly = true;
@@ -101,7 +113,7 @@
             // 
             // LECTOR
             // 
-            this.LECTOR.FillWeight = 141.6244F;
+            this.LECTOR.FillWeight = 140.1016F;
             this.LECTOR.HeaderText = "LECTOR";
             this.LECTOR.Name = "LECTOR";
             this.LECTOR.ReadOnly = true;
@@ -115,23 +127,11 @@
             // 
             // EDITAR
             // 
-            this.EDITAR.FillWeight = 16.75127F;
+            this.EDITAR.FillWeight = 19.79696F;
             this.EDITAR.HeaderText = "EDITAR";
             this.EDITAR.Image = ((System.Drawing.Image)(resources.GetObject("EDITAR.Image")));
             this.EDITAR.Name = "EDITAR";
             this.EDITAR.ReadOnly = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(577, -10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(363, 80);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
             // 
             // frmAdministradores
             // 

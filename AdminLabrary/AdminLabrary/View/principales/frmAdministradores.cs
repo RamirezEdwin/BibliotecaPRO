@@ -90,6 +90,7 @@ namespace AdminLabrary.formularios.principales
                     admin.btnEditar.Enabled = true;
                     admin.rbtnAdmi.Checked = true;
                     Seleccionar();
+                    admin.btnSeleccionar.Visible = false;
                     admin.ShowDialog();
                 }
             }
