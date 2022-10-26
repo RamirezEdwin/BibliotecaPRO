@@ -52,7 +52,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Lime;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnEliminar.Location = new System.Drawing.Point(537, 311);
@@ -65,7 +65,7 @@
             // 
             // btnActualizar
             // 
-            this.btnActualizar.BackColor = System.Drawing.Color.Lime;
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnActualizar.Location = new System.Drawing.Point(317, 311);
@@ -78,7 +78,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Lime;
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnGuardar.Location = new System.Drawing.Point(90, 311);
@@ -91,7 +91,7 @@
             // 
             // btnSeleccionarA
             // 
-            this.btnSeleccionarA.BackColor = System.Drawing.Color.Lime;
+            this.btnSeleccionarA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSeleccionarA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionarA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnSeleccionarA.Location = new System.Drawing.Point(269, 179);
@@ -115,7 +115,7 @@
             // 
             // btnSeleccionarE
             // 
-            this.btnSeleccionarE.BackColor = System.Drawing.Color.Lime;
+            this.btnSeleccionarE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSeleccionarE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionarE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnSeleccionarE.Location = new System.Drawing.Point(618, 179);

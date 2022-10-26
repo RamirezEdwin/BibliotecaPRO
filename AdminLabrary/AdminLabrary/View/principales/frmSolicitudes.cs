@@ -153,7 +153,7 @@ namespace AdminLabrary.View.principales
 
         private void dgvSolicitudes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-                if (e.ColumnIndex == this.dgvSolicitudes.Columns["NUEVA"].Index && e.RowIndex != -1)
+                if (e.ColumnIndex == this.dgvSolicitudes.Columns["NUEVA"].Index )
                 {
                     solicitud.btnGuardar.Show();
                     solicitud.btnGuardar.Enabled = true;
@@ -208,6 +208,9 @@ namespace AdminLabrary.View.principales
                 }
 
             }
-        
-       }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+                    }
+    }
     } 

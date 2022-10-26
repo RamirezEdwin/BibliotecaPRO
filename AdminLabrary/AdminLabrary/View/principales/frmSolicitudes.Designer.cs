@@ -32,9 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSolicitudes));
             this.dgvSolicitudes = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnRetrazo = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.IdSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lector = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Libros = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,9 +42,10 @@
             this.EDITAR = new System.Windows.Forms.DataGridViewImageColumn();
             this.ELIMINAR = new System.Windows.Forms.DataGridViewImageColumn();
             this.RECIBIR = new System.Windows.Forms.DataGridViewImageColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnRetrazo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvSolicitudes
@@ -75,8 +73,8 @@
             this.EDITAR,
             this.ELIMINAR,
             this.RECIBIR});
-            this.dgvSolicitudes.GridColor = System.Drawing.Color.Lime;
-            this.dgvSolicitudes.Location = new System.Drawing.Point(-2, 222);
+            this.dgvSolicitudes.GridColor = System.Drawing.Color.Gray;
+            this.dgvSolicitudes.Location = new System.Drawing.Point(12, 94);
             this.dgvSolicitudes.Name = "dgvSolicitudes";
             this.dgvSolicitudes.ReadOnly = true;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
@@ -84,54 +82,10 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvSolicitudes.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvSolicitudes.Size = new System.Drawing.Size(952, 374);
+            this.dgvSolicitudes.Size = new System.Drawing.Size(928, 445);
             this.dgvSolicitudes.TabIndex = 10;
             this.dgvSolicitudes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSolicitudes_CellClick);
             this.dgvSolicitudes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSolicitudes_CellContentClick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(621, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(329, 74);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnRetrazo
-            // 
-            this.btnRetrazo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnRetrazo.BackColor = System.Drawing.Color.Chartreuse;
-            this.btnRetrazo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRetrazo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnRetrazo.FlatAppearance.BorderSize = 2;
-            this.btnRetrazo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnRetrazo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnRetrazo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRetrazo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRetrazo.Image = ((System.Drawing.Image)(resources.GetObject("btnRetrazo.Image")));
-            this.btnRetrazo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRetrazo.Location = new System.Drawing.Point(32, 50);
-            this.btnRetrazo.Name = "btnRetrazo";
-            this.btnRetrazo.Size = new System.Drawing.Size(151, 45);
-            this.btnRetrazo.TabIndex = 22;
-            this.btnRetrazo.Text = "HISTORIAL CON RETRASO";
-            this.btnRetrazo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRetrazo.UseVisualStyleBackColor = false;
-            this.btnRetrazo.Click += new System.EventHandler(this.btnRetrazo_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(189, -14);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(499, 263);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 20;
-            this.pictureBox2.TabStop = false;
             // 
             // IdSolicitud
             // 
@@ -207,22 +161,53 @@
             this.RECIBIR.Name = "RECIBIR";
             this.RECIBIR.ReadOnly = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(621, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(329, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnRetrazo
+            // 
+            this.btnRetrazo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnRetrazo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRetrazo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRetrazo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRetrazo.FlatAppearance.BorderSize = 2;
+            this.btnRetrazo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRetrazo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnRetrazo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRetrazo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRetrazo.Image = ((System.Drawing.Image)(resources.GetObject("btnRetrazo.Image")));
+            this.btnRetrazo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRetrazo.Location = new System.Drawing.Point(12, 29);
+            this.btnRetrazo.Name = "btnRetrazo";
+            this.btnRetrazo.Size = new System.Drawing.Size(151, 45);
+            this.btnRetrazo.TabIndex = 22;
+            this.btnRetrazo.Text = "HISTORIAL CON RETRASO";
+            this.btnRetrazo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRetrazo.UseVisualStyleBackColor = false;
+            this.btnRetrazo.Click += new System.EventHandler(this.btnRetrazo_Click);
+            // 
             // frmSolicitudes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(952, 551);
             this.Controls.Add(this.btnRetrazo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvSolicitudes);
-            this.Controls.Add(this.pictureBox2);
             this.Name = "frmSolicitudes";
             this.Text = "frmSolicitudes";
             this.Load += new System.EventHandler(this.frmSolicitudes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -230,7 +215,6 @@
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Button btnRetrazo;
-        private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.DataGridView dgvSolicitudes;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdSolicitud;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lector;

@@ -29,19 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrestamos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnVer = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnRetrazo = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dgvPrestamos = new System.Windows.Forms.DataGridView();
-            this.rbtnLector = new System.Windows.Forms.RadioButton();
-            this.rbtnLibro = new System.Windows.Forms.RadioButton();
-            this.rbtnAdministrador = new System.Windows.Forms.RadioButton();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LECTOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LIBRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,18 +49,20 @@
             this.IDLibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Entregadoid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Recibir = new System.Windows.Forms.DataGridViewImageColumn();
+            this.rbtnLector = new System.Windows.Forms.RadioButton();
+            this.rbtnLibro = new System.Windows.Forms.RadioButton();
+            this.rbtnAdministrador = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVer
             // 
             this.btnVer.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnVer.BackColor = System.Drawing.Color.Chartreuse;
+            this.btnVer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnVer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVer.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnVer.FlatAppearance.BorderSize = 2;
@@ -97,7 +95,7 @@
             // 
             this.btnRetrazo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnRetrazo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnRetrazo.BackColor = System.Drawing.Color.Chartreuse;
+            this.btnRetrazo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnRetrazo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRetrazo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnRetrazo.FlatAppearance.BorderSize = 2;
@@ -119,7 +117,7 @@
             // btnNuevo
             // 
             this.btnNuevo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnNuevo.BackColor = System.Drawing.Color.Chartreuse;
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnNuevo.FlatAppearance.BorderSize = 2;
@@ -151,7 +149,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(221)))));
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(633, -1);
             this.pictureBox3.Name = "pictureBox3";
@@ -160,26 +158,14 @@
             this.pictureBox3.TabIndex = 24;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-2, -1);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(942, 218);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 25;
-            this.pictureBox2.TabStop = false;
-            // 
             // dgvPrestamos
             // 
             this.dgvPrestamos.AllowUserToAddRows = false;
             this.dgvPrestamos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvPrestamos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvPrestamos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPrestamos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -202,57 +188,14 @@
             this.dgvPrestamos.Location = new System.Drawing.Point(-2, 223);
             this.dgvPrestamos.Name = "dgvPrestamos";
             this.dgvPrestamos.ReadOnly = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvPrestamos.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvPrestamos.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPrestamos.Size = new System.Drawing.Size(952, 324);
             this.dgvPrestamos.TabIndex = 2;
             this.dgvPrestamos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrestamos_CellContentClick_1);
-            // 
-            // rbtnLector
-            // 
-            this.rbtnLector.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbtnLector.AutoSize = true;
-            this.rbtnLector.BackColor = System.Drawing.Color.Transparent;
-            this.rbtnLector.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.rbtnLector.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
-            this.rbtnLector.Location = new System.Drawing.Point(718, 189);
-            this.rbtnLector.Name = "rbtnLector";
-            this.rbtnLector.Size = new System.Drawing.Size(55, 17);
-            this.rbtnLector.TabIndex = 17;
-            this.rbtnLector.TabStop = true;
-            this.rbtnLector.Text = "Lector";
-            this.rbtnLector.UseVisualStyleBackColor = false;
-            // 
-            // rbtnLibro
-            // 
-            this.rbtnLibro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbtnLibro.AutoSize = true;
-            this.rbtnLibro.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.rbtnLibro.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
-            this.rbtnLibro.Location = new System.Drawing.Point(779, 189);
-            this.rbtnLibro.Name = "rbtnLibro";
-            this.rbtnLibro.Size = new System.Drawing.Size(48, 17);
-            this.rbtnLibro.TabIndex = 18;
-            this.rbtnLibro.TabStop = true;
-            this.rbtnLibro.Text = "Libro";
-            this.rbtnLibro.UseVisualStyleBackColor = true;
-            // 
-            // rbtnAdministrador
-            // 
-            this.rbtnAdministrador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbtnAdministrador.AutoSize = true;
-            this.rbtnAdministrador.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.rbtnAdministrador.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
-            this.rbtnAdministrador.Location = new System.Drawing.Point(841, 188);
-            this.rbtnAdministrador.Name = "rbtnAdministrador";
-            this.rbtnAdministrador.Size = new System.Drawing.Size(88, 17);
-            this.rbtnAdministrador.TabIndex = 19;
-            this.rbtnAdministrador.TabStop = true;
-            this.rbtnAdministrador.Text = "Administrador";
-            this.rbtnAdministrador.UseVisualStyleBackColor = true;
             // 
             // ID
             // 
@@ -338,6 +281,49 @@
             this.Recibir.ReadOnly = true;
             this.Recibir.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // rbtnLector
+            // 
+            this.rbtnLector.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbtnLector.AutoSize = true;
+            this.rbtnLector.BackColor = System.Drawing.Color.Transparent;
+            this.rbtnLector.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.rbtnLector.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
+            this.rbtnLector.Location = new System.Drawing.Point(718, 189);
+            this.rbtnLector.Name = "rbtnLector";
+            this.rbtnLector.Size = new System.Drawing.Size(55, 17);
+            this.rbtnLector.TabIndex = 17;
+            this.rbtnLector.TabStop = true;
+            this.rbtnLector.Text = "Lector";
+            this.rbtnLector.UseVisualStyleBackColor = false;
+            // 
+            // rbtnLibro
+            // 
+            this.rbtnLibro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbtnLibro.AutoSize = true;
+            this.rbtnLibro.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.rbtnLibro.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
+            this.rbtnLibro.Location = new System.Drawing.Point(779, 189);
+            this.rbtnLibro.Name = "rbtnLibro";
+            this.rbtnLibro.Size = new System.Drawing.Size(48, 17);
+            this.rbtnLibro.TabIndex = 18;
+            this.rbtnLibro.TabStop = true;
+            this.rbtnLibro.Text = "Libro";
+            this.rbtnLibro.UseVisualStyleBackColor = true;
+            // 
+            // rbtnAdministrador
+            // 
+            this.rbtnAdministrador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbtnAdministrador.AutoSize = true;
+            this.rbtnAdministrador.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.rbtnAdministrador.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
+            this.rbtnAdministrador.Location = new System.Drawing.Point(841, 188);
+            this.rbtnAdministrador.Name = "rbtnAdministrador";
+            this.rbtnAdministrador.Size = new System.Drawing.Size(88, 17);
+            this.rbtnAdministrador.TabIndex = 19;
+            this.rbtnAdministrador.TabStop = true;
+            this.rbtnAdministrador.Text = "Administrador";
+            this.rbtnAdministrador.UseVisualStyleBackColor = true;
+            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -363,6 +349,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(952, 551);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -376,13 +363,11 @@
             this.Controls.Add(this.rbtnLector);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnVer);
-            this.Controls.Add(this.pictureBox2);
             this.Name = "frmPrestamos";
             this.Text = "frmPrestamos";
             this.Load += new System.EventHandler(this.frmPrestamos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -396,7 +381,6 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView dgvPrestamos;
         private System.Windows.Forms.RadioButton rbtnLector;
         private System.Windows.Forms.RadioButton rbtnLibro;
