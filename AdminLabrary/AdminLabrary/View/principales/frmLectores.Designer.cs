@@ -40,15 +40,17 @@
             this.EDITAR = new System.Windows.Forms.DataGridViewImageColumn();
             this.ELIMINAR = new System.Windows.Forms.DataGridViewImageColumn();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLectores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvLectores
             // 
             this.dgvLectores.AllowUserToAddRows = false;
             this.dgvLectores.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvLectores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -75,7 +77,7 @@
             this.EDITAR,
             this.ELIMINAR});
             this.dgvLectores.GridColor = System.Drawing.Color.Teal;
-            this.dgvLectores.Location = new System.Drawing.Point(12, 94);
+            this.dgvLectores.Location = new System.Drawing.Point(12, 146);
             this.dgvLectores.Name = "dgvLectores";
             this.dgvLectores.ReadOnly = true;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal;
@@ -83,7 +85,7 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvLectores.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvLectores.Size = new System.Drawing.Size(928, 445);
+            this.dgvLectores.Size = new System.Drawing.Size(928, 393);
             this.dgvLectores.TabIndex = 3;
             this.dgvLectores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLectores_CellContentClick);
             this.dgvLectores.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvLectores_CellMouseClick);
@@ -137,23 +139,37 @@
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(701, -12);
+            this.pictureBox2.Location = new System.Drawing.Point(263, -4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(239, 79);
+            this.pictureBox2.Size = new System.Drawing.Size(451, 131);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-742, 125);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(2437, 19);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
             // 
             // frmLectores
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(952, 551);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.dgvLectores);
             this.Name = "frmLectores";
             this.Load += new System.EventHandler(this.frmLectores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLectores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -169,5 +185,6 @@
         private System.Windows.Forms.DataGridViewImageColumn NUEV;
         private System.Windows.Forms.DataGridViewImageColumn EDITAR;
         private System.Windows.Forms.DataGridViewImageColumn ELIMINAR;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

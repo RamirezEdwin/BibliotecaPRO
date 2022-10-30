@@ -54,7 +54,7 @@
             // 
             this.dgvAutores.AllowUserToAddRows = false;
             this.dgvAutores.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvAutores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;

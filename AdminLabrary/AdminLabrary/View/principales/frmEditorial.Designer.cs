@@ -41,15 +41,17 @@
             this.EDITAR = new System.Windows.Forms.DataGridViewImageColumn();
             this.ELIMINAR = new System.Windows.Forms.DataGridViewImageColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditorial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvEditorial
             // 
             this.dgvEditorial.AllowUserToAddRows = false;
             this.dgvEditorial.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvEditorial.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -77,7 +79,7 @@
             this.EDITAR,
             this.ELIMINAR});
             this.dgvEditorial.GridColor = System.Drawing.Color.Teal;
-            this.dgvEditorial.Location = new System.Drawing.Point(12, 94);
+            this.dgvEditorial.Location = new System.Drawing.Point(10, 108);
             this.dgvEditorial.Name = "dgvEditorial";
             this.dgvEditorial.ReadOnly = true;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Teal;
@@ -85,7 +87,7 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvEditorial.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvEditorial.Size = new System.Drawing.Size(928, 445);
+            this.dgvEditorial.Size = new System.Drawing.Size(928, 433);
             this.dgvEditorial.TabIndex = 2;
             this.dgvEditorial.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEditorial_CellClick);
             this.dgvEditorial.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEditorial_CellContentClick);
@@ -145,12 +147,24 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(646, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(328, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(294, 66);
+            this.pictureBox1.Size = new System.Drawing.Size(294, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-682, 87);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(2437, 19);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
             // 
             // frmEditorial
             // 
@@ -158,6 +172,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(952, 551);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvEditorial);
             this.Name = "frmEditorial";
@@ -165,6 +180,7 @@
             this.Load += new System.EventHandler(this.FpEditoriales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditorial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -183,5 +199,6 @@
         private System.Windows.Forms.DataGridViewImageColumn NUEVO;
         private System.Windows.Forms.DataGridViewImageColumn EDITAR;
         private System.Windows.Forms.DataGridViewImageColumn ELIMINAR;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
